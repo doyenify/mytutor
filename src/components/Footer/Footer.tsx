@@ -6,7 +6,7 @@ const Footer = () => {
           style={{backgroundColor: "#F0EBE9" , height: "300px" }}
     >
     
-        <h3 style={{color: "#985421"}}>my </h3> <h3 style={{color: "#050A27"}}>Tutor</h3> 
+        <h3 style={{display: "inline", color: "#985421"}}>my<h3 style={{display: "inline", color: "#050A27"}}>Tutor</h3> </h3> 
      
        <div className='footer-writeup' style={{color: "#050A27"}}>
             <p> <b> Embark on an exciting language learning journey with me as your Estonian language tutor. <br />

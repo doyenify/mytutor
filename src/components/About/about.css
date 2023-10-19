@@ -1,0 +1,23 @@
+.abouthero {
+    margin-top: 20px;
+    height: 90vh;
+}
+@media (min-width: 150px) and (max-width: 690px) {
+    .aboutherotext {
+        padding-top: 45px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 35px;
+    }
+    .abouthero {
+        margin-top: 20px;
+        width: 400px;
+        height: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .abouttutor {
+        width: 100%;
+    }
+}

@@ -12,9 +12,9 @@ import './home.css';
 const home = () => {
   return (
     //    Entire Home Section
-    <div>
+    <div style={{width: "100%", overflowX: "hidden"}}>
        {/* hero section */}
-        <div className='hero-container' style={{backgroundColor: "#CBB9B2" , height: "100vh" }}> 
+        <div className='hero-container' style={{backgroundColor: "#CBB9B2" }}> 
             <Row>
                 <Col className='hero-col-1 col-12 col-sm-6 d-flex justify-content-center align-items-center'>
                  <div>
@@ -50,7 +50,7 @@ const home = () => {
         </div>
         {/* service section */}
         <div>
-           <div className='hero-service-section' style={{backgroundColor: "#CBB9B2" , height: "100vh" }}>
+           <div className='hero-service-section' style={{backgroundColor: "#CBB9B2"}}>
             <Row>
                 <Col className='col-12 col-sm-6 d-flex justify-content-center align-items-center'><img src={tutortwo} alt="Tutor two" style={{width:"500px",height:""}}/> </Col>
                 <Col className='col-12 col-sm-6 d-flex justify-content-center align-items-center'>
@@ -59,40 +59,67 @@ const home = () => {
                     <Col className='mb-4'>
                         <Card style={{ width: '18rem' }}>
                         <Card.Body>
-                            <Card.Title>  <img src={bookone} alt="Tutor two"/> <br /> Language  Tutoring</Card.Title>
-                            <Card.Text>
-                            Some quick example text to build on the card .
-                            </Card.Text>
+                           
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <img src={bookone} alt="Tutor two"/> 
+                                </div>
+                                <div className="col-md-8">
+                                    <h5>Language  Tutoring</h5>
+                                    <p>Some quick example text to build on the card .</p>
+                                    
+                                </div>
+                            </div>
+                            
                         </Card.Body>
                         </Card>  
                     </Col>       
                     <Col className='mb-4'>
                         <Card style={{ width: '18rem' }}>
                         <Card.Body>
-                            <Card.Title>  <img src={bookone} alt="Tutor two"/> <br /> Interpretation Service</Card.Title>
-                            <Card.Text>
-                            Some quick example text to build on the card .
-                            </Card.Text>
+                            
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <img src={bookone} alt="Tutor two"/> 
+                                </div>
+                                <div className="col-md-8">
+                                    <h5>Interpretation Service</h5>
+                                    <p>Some quick example text to build on the card .</p>
+                                    
+                                </div>
+                            </div>
                         </Card.Body>
                         </Card>
                    </Col>
                    <Col className='mb-4'>
                         <Card style={{ width: '18rem' }}>
                         <Card.Body>
-                            <Card.Title>  <img src={booktwo} alt="Tutor two"/> <br /> Translation Service</Card.Title>
-                            <Card.Text>
-                            Some quick example text to build on the card .
-                            </Card.Text>
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <img src={booktwo} alt="Tutor two"/>
+                                </div>
+                                <div className="col-md-8">
+                                    <h5>Translation Service</h5>
+                                    <p>Some quick example text to build on the card .</p>
+                                    
+                                </div>
+                            </div>
                         </Card.Body>
                         </Card>
                    </Col>
                    <Col className='mb-4'>
                         <Card style={{ width: '18rem' }}>
                         <Card.Body>
-                            <Card.Title>  <img src={booktwo} alt="Tutor two"/> <br /> Language Assessment</Card.Title>
-                            <Card.Text>
-                            Some quick example text to build on the card .
-                            </Card.Text>
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <img src={booktwo} alt="Tutor two"/>
+                                </div>
+                                <div className="col-md-8">
+                                    <h5>Language Assessment</h5>
+                                    <p>Some quick example text to build on the card .</p>
+                                    
+                                </div>
+                            </div>
                         </Card.Body>
                         </Card>
                    </Col>
@@ -101,14 +128,19 @@ const home = () => {
             </Row>
            </div> 
            {/* Courses Section */}
-           <div className='home-video'> 
-               <h3 className='text-center mt-5'>Check Our Courses Out</h3>
-                <Row>
-                    <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                    <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                    <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                </Row>
+           <div className="container coursessection"  >
+            <div className='home-video'> 
+                <h3 className='text-center mt-5'>Check Our Courses Out</h3>
+                <div style={{marginTop: "35px"}}>
+                    <Row>
+                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
+                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
+                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
+                    </Row>
+                </div>
+            </div>
            </div>
+           
         </div>
     </div>
   )

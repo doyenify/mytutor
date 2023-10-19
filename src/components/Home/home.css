@@ -1,10 +1,21 @@
+.hero-img{
+    margin-top: 20px;
+    height: 90vh;
+}
+
+.coursessection {
+    margin-top: 125px;
+}
 
 @media screen and (max-width: 640px) {
+    .coursessection {
+        margin-top: 125px;
+    }
 
-   .hero-container{
+   /* .hero-container{
 
      height: 100vh;
-    }
+    } */
 
     .hero-col-1{
      padding-top: 100px;
@@ -13,18 +24,19 @@
     }
 
     .hero-img{
+        margin-top: 20px;
         width: 400px;
         height: auto;
         margin-right: 20px;
         margin-left: 20px;
     }
 
-    .home-video{
+    /* .home-video{
         padding-top: 800px;
-    }
+    } */
     .home-card{
         justify-content: center;
         align-items: center;
-        padding-left: 100px;
+        padding-left: 50px;
     }
 }

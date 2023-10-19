@@ -2,15 +2,25 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
+import { useNavigate } from 'react-router-dom';
+// import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
 
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const toHome = () => {
+    navigate("/")
+  }
+
+  const toAbout = () => {
+    navigate("/About")
+  }
   return (
     <div>
         <Navbar    expand="lg" fixed="top" style={{backgroundColor: "#fffff6"}}>
         <Container fluid>
-        <Navbar.Brand href="#" style={{marginLeft: "90px", color: "#985421", fontWeight:"bold", fontSize:"30px"}} >myTutor</Navbar.Brand>
+        <Navbar.Brand style={{marginLeft: "90px", color: "#985421", fontWeight:"bold", fontSize:"30px"}} onClick={toHome}>myTutor</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,7 +28,7 @@ const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#"
+            <Nav.Link  onClick={toHome}
              style={{
               marginLeft: "20px",
               color: "#3F556B", 
@@ -27,7 +37,7 @@ const Header = () => {
               >
               Home
               </Nav.Link>
-              <Nav.Link href="/About"
+              <Nav.Link onClick={toAbout}
                style={{
                 marginLeft: "20px",
                 color: "#3F556B", 
@@ -45,7 +55,7 @@ const Header = () => {
               Estonian Lesson
               </Nav.Link>
             </Nav>
-            <GoogleTranslate/>
+            {/* <GoogleTranslate/> */}
             <Button className='bookaservice-btn mx-2' 
              style={{backgroundColor: "#985421", borderRadius: "50px", width: "150px"}} >
              Price
