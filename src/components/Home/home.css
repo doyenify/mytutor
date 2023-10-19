@@ -1,0 +1,30 @@
+
+@media screen and (max-width: 640px) {
+
+   .hero-container{
+
+     height: 100vh;
+    }
+
+    .hero-col-1{
+     padding-top: 100px;
+     margin-right: 20px;
+     margin-left: 20px;
+    }
+
+    .hero-img{
+        width: 400px;
+        height: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .home-video{
+        padding-top: 800px;
+    }
+    .home-card{
+        justify-content: center;
+        align-items: center;
+        padding-left: 100px;
+    }
+}
