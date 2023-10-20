@@ -16,17 +16,25 @@ const Header = () => {
   const toAbout = () => {
     navigate("/About")
   }
+
+  const toLesson = () => {
+    navigate("/Estonianlesson")
+  }
+
+  const toContact = () => {
+    navigate("/Contact")
+  }
+
   return (
     <div>
         <Navbar    expand="lg" fixed="top" style={{backgroundColor: "#fffff6"}}>
         <Container fluid>
-        <Navbar.Brand style={{marginLeft: "90px", color: "#985421", fontWeight:"bold", fontSize:"30px"}} onClick={toHome}>myTutor</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Brand style={{marginLeft: "90px", color: "#985421", fontWeight:"bold", fontSize:"30px", cursor: "pointer"}} onClick={toHome}>myTutor</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse >
           <Nav
             className="me-auto  my-lg-0 ms-5"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
+            
           >
             <Nav.Link  onClick={toHome}
              style={{
@@ -45,7 +53,8 @@ const Header = () => {
                 fontSize:"18px"}}
               >
               About</Nav.Link>
-             <Nav.Link href="/Estonianlesson"
+              
+             <Nav.Link onClick={toLesson}
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
@@ -60,7 +69,7 @@ const Header = () => {
              style={{backgroundColor: "#985421", borderRadius: "50px", width: "150px"}} >
              Price
             </Button>
-            <Button href="/Contact" className='bookaservice-btn mx-2'
+            <Button onClick={toContact} className='bookaservice-btn mx-2'
              style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "150px"}} >
              Contact
             </Button>

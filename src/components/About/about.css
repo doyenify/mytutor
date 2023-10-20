@@ -2,7 +2,35 @@
     margin-top: 20px;
     height: 90vh;
 }
+.aboutherotext {
+    padding-top: 55px;
+   
+}
+
+.firstabout {
+    padding-left: 40px; 
+    padding-top: 100px; 
+    padding-bottom: 100px
+}
+
+.activeabout {
+    color: #ffffff;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.inactiveabout {
+    color: #000000;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
 @media (min-width: 150px) and (max-width: 690px) {
+    .firstabout {
+        padding-left: 20px; 
+        padding-top: 100px; 
+        padding-bottom: 100px
+    }
+
     .aboutherotext {
         padding-top: 45px;
         padding-left: 15px;
@@ -18,6 +46,7 @@
     }
 
     .abouttutor {
+        padding: 10px;
         width: 100%;
     }
 }

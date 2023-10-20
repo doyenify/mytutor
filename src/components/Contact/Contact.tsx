@@ -20,7 +20,7 @@ const validationSchema = yup.object().shape({
 
 const Contact = () => {
   return (
-    <div>
+    <div style={{width: "100%", overflowX: "hidden", overflowY: "hidden"}}>
        {/* banner  */}
        <div className='text-center mt-5 d-flex justify-content-center align-items-center'
         style={{backgroundColor: "#CBB9B2" , height: "200px" }}>
@@ -31,19 +31,48 @@ const Contact = () => {
         <Row className='mt-5'>
            {/* <Row className='ms-4 mt-5' ><h3>Get in Touch With Us</h3></Row> */}
            <Col className='ms-5 mt-1 '>
-          <div className='mt-3' > <img src={home} style={{width:"35px", height: "35px"}} alt="home"/> <h5>Address</h5> <p>Lorem ipsum dolor sit amet consectetur</p></div>
-          <div className='mt-3'> <img src={email}  style={{width:"35px", height: "35px"}} alt="email"/> <h5>Email Address</h5><p>Lorem ipsum dolor sit amet consectetur</p></div>
-          <div className='mt-3'> <img src={phone}  style={{width:"35px", height: "35px"}}alt="phone"/> <h5>Phone Number</h5> <p>Lorem ipsum dolor sit amet consectetur</p></div>
+          <div className='mt-3' > 
+            <div className="row">
+              <div className="col-md-1">
+                <img src={home} style={{width:"35px", height: "35px"}} alt="home"/>
+              </div>
+              <div className="col-md-11">
+                <h5>Address</h5> <p>Lorem ipsum dolor sit amet consectetur</p></div>
+              </div>
+            </div>
+          
+          <div className='mt-3'>
+            <div className="row">
+              <div className="col-md-1">
+              <img src={email}  style={{width:"35px", height: "35px"}} alt="email"/> 
+              </div>
+              <div className="col-md-11">
+                <h5>Email Address</h5><p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+          </div>
+          <div className='mt-3'> 
+            <div className="row">
+              <div className="col-md-1">
+                <img src={phone}  style={{width:"35px", height: "35px"}}alt="phone"/> 
+              </div>
+              <div className="col-md-11">
+                <h5>Phone Number</h5> <p>Lorem ipsum dolor sit amet consectetur</p>
+              </div>
+            </div>
+          </div>
           </Col>
           {/* form column */}
           <Col className=' d-flex justify-content-center align-items-center'>
            <div className='me-5' 
            style={{
+            marginLeft: "30px",
             backgroundColor: "#CBB9B2" , 
-            height: "550px", 
             borderRadius: "20px", 
             paddingTop: "50px", 
-            paddingLeft: "30px" }}
+            paddingLeft: "30px",
+            paddingBottom: "50px", 
+            }}
            >
            <Formik
                   initialValues={{

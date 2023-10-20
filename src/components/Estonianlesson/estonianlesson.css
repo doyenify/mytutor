@@ -1,0 +1,16 @@
+.lessonHero {
+    margin-top: 20px;
+    height: 90vh;
+}
+
+@media screen and (max-width: 640px) {
+    .lessonHero {
+        margin-top: 20px;
+        width: 400px;
+        height: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+
+}

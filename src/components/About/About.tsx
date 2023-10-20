@@ -1,31 +1,80 @@
-import { Row, Col, Button } from 'react-bootstrap';
+import {useState} from "react"
+import { Row, Col } from 'react-bootstrap';
 import tutorone from '../../img/tutorone.png';
+import myTutor from '../../img/myTutor.png';
+import individualLe from '../../img/individualLe.png';
+import Fcompanies from '../../img/Fcompanies.png';
+import LearningChi from '../../img/LearningChi.png';
 import "./about.css"
 
 const About = () => {
+  const [about, setAbout] =  useState(true);
+  const [individualL, setIndividualL] =  useState(false);
+  const [companies, setCompanies] =  useState(false);
+  const [learningC, setLearningC] =  useState(false);
+
+  const showAbout = () => {
+    setAbout(true)
+    setIndividualL(false)
+    setCompanies(false)
+    setLearningC(false)
+  }
+
+  const showIndividualL = () => {
+    setAbout(false)
+    setIndividualL(true)
+    setCompanies(false)
+    setLearningC(false)
+  }
+
+  const showCompanies = () => {
+    setAbout(false)
+    setIndividualL(false)
+    setCompanies(true)
+    setLearningC(false)
+  }
+
+  const showLearningC = () => {
+    setAbout(false)
+    setIndividualL(false)
+    setCompanies(false)
+    setLearningC(true)
+  }
+  
+
   return (
     <div style={{width: "100%", overflowX: "hidden"}}>
       {/* hero section */}
       <div className='hero-container' style={{backgroundColor: "#CBB9B2"}}> 
             <Row>
                 <Col className='col-12 col-sm-6 mt-5 d-flex justify-content-center align-items-center'>
-                 <div><img src={tutorone} className="abouthero" alt="Tutor"/></div>
+                 <div className="firstabout">
+                    <img src={myTutor}  className="abouttutor" alt="Tutor"/>
+                    <div className="row">
+                      <div className="col-md-10">
+                        <h5>Language is the mirror of society; it reflects the culture and values of a community.</h5>
+                      </div>
+                      <div className="col-md-2">
+                        
+                      </div>
+                    </div>
+                    
+                 </div>
                  </Col>
                 <Col className='col-12 col-sm-6 d-flex justify-content-center align-items-center'>
                  <div className="aboutherotext">
-                   <h1>Learning Estonian <br /> With Us is Fun <br /> And Easy</h1>
-                   <h5>We are a good starting point for those who  want to <br /> 
-                       improve its Estonian language to fluency </h5>
-                 <Button className='her0-contact-btn' style={{backgroundColor: "#3F556B"}} >
-                  Get Started
-                 </Button>     
+                   <h4 className={about ? "activeabout": "inactiveabout"} onClick={showAbout}>About</h4>
+                   <h4 className={individualL ? "activeabout": "inactiveabout"} onClick={showIndividualL}>Individual Learning</h4>
+                   <h4 className={companies ? "activeabout": "inactiveabout"} onClick={showCompanies}>For Companies</h4>
+                   <h4 className={learningC ? "activeabout": "inactiveabout"} onClick={showLearningC}>Learning for children</h4>
                  </div>
                  </Col>  
              </Row>
         </div>
         {/* about section */}
         <div>
-              <Row>
+           {about ? (<>
+            <Row>
                 <Row style={{marginTop: "75px"}}><h1 className='ms-5 mt-4'>Overview</h1></Row>
                 <Col className='col-12 col-sm-6 mt-3 ' style={{paddingLeft: "55px", paddingRight: "55px"}}> 
           
@@ -79,6 +128,117 @@ const About = () => {
                     <div><img src={tutorone} className="abouttutor" alt="Tutor"/></div>
                     </Col>
               </Row>
+           </>):(<></>)}
+
+           {individualL ? (<>
+              <div className="container">
+                  <div className="row" style={{marginTop: "100px", marginBottom: "100px"}}>
+                    <div className="col-md-6">
+                      <div className="row">
+                        <div className="col-md-1">
+
+                        </div>
+                        <div className="col-md-9">
+                          <img src={individualLe} alt="individualLe" style={{width: "100%", marginBottom: "20px"}} />
+                        </div>
+                        <div className="col-md-2">
+                          
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                        <h4>FOR INDIVIDUALS</h4>
+                        <p style={{marginTop: "20px"}}>
+                          Individual learning refers to the process of acquiring knowledge, skills, or understanding on one's own, independent of a formal classroom setting or direct instruction from a teacher. It emphasizes self-directed learning, where individuals take responsibility for their own education and pursue learning goals according to their interests, pace, and preferred learning methods.
+                        </p>
+
+                        <p style={{marginTop: "20px"}}>
+                          Individual learning can take various forms, such as reading books, conducting research, participating in online courses, watching educational videos, engaging in practical hands-on activities, or seeking mentorship.
+                        </p>
+
+                        <p style={{marginTop: "20px"}}>
+                          It offers flexibility, autonomy, and the opportunity for personalized learning experiences tailored to an individual's unique needs and preferences. Individual learning can occur throughout one's life and is often complemented by collaborative learning and social interactions with peers, mentors, or experts in the field
+                        </p>
+                    </div>
+                  </div>
+              </div>
+           </>):(<></>)}
+
+           {companies ? (<>
+            <div className="container">
+                  <div className="row" style={{marginTop: "100px", marginBottom: "100px"}}>
+                    <div className="col-md-6">
+                        <h4>FOR COMPANIES</h4>
+                        <p style={{marginTop: "20px"}}>
+                          Individual learning refers to the process of acquiring knowledge, skills, or understanding on one's own, independent of a formal classroom setting or direct instruction from a teacher. It emphasizes self-directed learning, where individuals take responsibility for their own education and pursue learning goals according to their interests, pace, and preferred learning methods.
+                        </p>
+
+                        <p style={{marginTop: "20px"}}>
+                          Individual learning can take various forms, such as reading books, conducting research, participating in online courses, watching educational videos, engaging in practical hands-on activities, or seeking mentorship.
+                        </p>
+
+                        <p style={{marginTop: "20px"}}>
+                          It offers flexibility, autonomy, and the opportunity for personalized learning experiences tailored to an individual's unique needs and preferences. Individual learning can occur throughout one's life and is often complemented by collaborative learning and social interactions with peers, mentors, or experts in the field
+                        </p>
+                    </div>
+
+                    <div className="col-md-6">
+                      <div className="row">
+                        <div className="col-md-1">
+
+                        </div>
+                        <div className="col-md-9">
+                          <img src={Fcompanies} alt="Fcompanies" style={{width: "100%", marginBottom: "20px"}} />
+                        </div>
+                        <div className="col-md-2">
+                          
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+              </div>
+           </>):(<></>)}
+
+           {learningC ? (<>
+            <div className="container">
+                  <div className="row" style={{marginTop: "100px", marginBottom: "100px"}}>
+                    <div className="col-md-6">
+                        <h4>LEARNING FOR CHILDREN</h4>
+                        <p style={{marginTop: "20px"}}>
+                          Individual learning refers to the process of acquiring knowledge, skills, or understanding on one's own, independent of a formal classroom setting or direct instruction from a teacher. It emphasizes self-directed learning, where individuals take responsibility for their own education and pursue learning goals according to their interests, pace, and preferred learning methods.
+                        </p>
+
+                        <p style={{marginTop: "20px"}}>
+                          Individual learning can take various forms, such as reading books, conducting research, participating in online courses, watching educational videos, engaging in practical hands-on activities, or seeking mentorship.
+                        </p>
+
+                        <p style={{marginTop: "20px"}}>
+                          It offers flexibility, autonomy, and the opportunity for personalized learning experiences tailored to an individual's unique needs and preferences. Individual learning can occur throughout one's life and is often complemented by collaborative learning and social interactions with peers, mentors, or experts in the field
+                        </p>
+                    </div>
+
+                    <div className="col-md-6">
+                      <div className="row">
+                        <div className="col-md-1">
+
+                        </div>
+                        <div className="col-md-9">
+                          <img src={LearningChi} alt="LearningChi" style={{width: "100%", marginBottom: "20px"}} />
+                        </div>
+                        <div className="col-md-2">
+                          
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+              </div>
+           </>):(<></>)}
+              
          </div>
       </div>
     )
