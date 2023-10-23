@@ -2,9 +2,12 @@ import { Row, Col, Button } from 'react-bootstrap';
 import tutorone from '../../img/tutorone.png';
 import Videocourse from '../Videocourse/Videocourse';
 import "./estonianlesson.css"
-
+import { useTranslation } from 'react-i18next';
 
 const Estonianlesson = () => {
+
+  const {t} = useTranslation();
+
   return (
     <div style={{width: "100%", overflowX: "hidden"}}>
        {/* hero section */}
@@ -15,11 +18,11 @@ const Estonianlesson = () => {
                  </Col>
                 <Col className='col-12 col-sm-6 d-flex justify-content-center align-items-center'>
                  <div style={{padding: "20px"}}>
-                   <h1>Learning Estonian <br /> With Us is Fun <br /> And Easy</h1>
-                   <h5>We are a good starting point for those who  want to <br /> 
-                       improve its Estonian language to fluency </h5>
+                   <h1>{t('Learning Estonian')} <br /> {t('With Us is Fun')} <br /> {t('And Easy')}</h1>
+                   <h5>{t('We are a good starting point for those who  want to')} <br /> 
+                   {t('improve its Estonian language to fluency')} </h5>
                  <Button className='her0-contact-btn' style={{backgroundColor: "#3F556B"}} >
-                  Get Started
+                 {t('Get Started')}
                  </Button>     
                  </div>
                  </Col>  
@@ -28,7 +31,7 @@ const Estonianlesson = () => {
      {/* beginner courses */}
      <div className="container">
         <div>
-                  <h3 className='ms-5 mt-5'>Beginner</h3>
+                  <h3 className='ms-5 mt-5'>{t('Beginner')}</h3>
                     <Row>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>
@@ -37,7 +40,7 @@ const Estonianlesson = () => {
         </div>
           {/* Intermediate courses */}
           <div>
-                  <h3 className='ms-5 mt-5'>intermediate </h3>
+                  <h3 className='ms-5 mt-5'>{t('intermediate')} </h3>
                     <Row>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>
@@ -46,7 +49,7 @@ const Estonianlesson = () => {
         </div>
           {/* Advanced courses */}
           <div>
-                  <h3 className='ms-5 mt-5'>Advanced</h3>
+                  <h3 className='ms-5 mt-5'>{t('Advanced')}</h3>
                     <Row>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>

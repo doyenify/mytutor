@@ -8,6 +8,7 @@ import * as yup from 'yup';
 import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from 'react-i18next';
 
 const validationSchema = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -19,12 +20,14 @@ const validationSchema = yup.object().shape({
 
 
 const Contact = () => {
+  const {t} = useTranslation();
+
   return (
     <div style={{width: "100%", overflowX: "hidden", overflowY: "hidden"}}>
        {/* banner  */}
        <div className='text-center mt-5 d-flex justify-content-center align-items-center'
         style={{backgroundColor: "#CBB9B2" , height: "200px" }}>
-        <h1 className="" >Get in Touch With Us</h1>
+        <h1 className="" >{t('Get in Touch With Us')}</h1>
        </div>
        {/* contact details */}
        <div>
@@ -37,7 +40,7 @@ const Contact = () => {
                 <img src={home} style={{width:"35px", height: "35px"}} alt="home"/>
               </div>
               <div className="col-md-11">
-                <h5>Address</h5> <p>Lorem ipsum dolor sit amet consectetur</p></div>
+                <h5>{t('Address')}</h5> <p>Lorem ipsum dolor sit amet consectetur</p></div>
               </div>
             </div>
           
@@ -47,7 +50,7 @@ const Contact = () => {
               <img src={email}  style={{width:"35px", height: "35px"}} alt="email"/> 
               </div>
               <div className="col-md-11">
-                <h5>Email Address</h5><p>Lorem ipsum dolor sit amet consectetur</p>
+                <h5>{t('Email Address')}</h5><p>Lorem ipsum dolor sit amet consectetur</p>
               </div>
             </div>
           </div>
@@ -57,7 +60,7 @@ const Contact = () => {
                 <img src={phone}  style={{width:"35px", height: "35px"}}alt="phone"/> 
               </div>
               <div className="col-md-11">
-                <h5>Phone Number</h5> <p>Lorem ipsum dolor sit amet consectetur</p>
+                <h5>{t('Phone Number')}</h5> <p>Lorem ipsum dolor sit amet consectetur</p>
               </div>
             </div>
           </div>
@@ -123,7 +126,7 @@ const Contact = () => {
                           controlId="validationCustom01"
                         >
                           <Form.Label className="input-label">
-                            Name
+                            {t('Name')}
                           </Form.Label>
                           <Form.Control
                             className="contact-input"
@@ -144,7 +147,7 @@ const Contact = () => {
                           controlId="validationCustom01"
                         >
                           <Form.Label className="input-label">
-                            Email Address
+                            {t('Email Address')}
                           </Form.Label>
                           <Form.Control
                             className="contact-input"
@@ -167,7 +170,7 @@ const Contact = () => {
                           controlId="validationCustom01"
                       >
                           <Form.Label className="input-label">
-                            Language Level
+                            {t('Language Level')}
                           </Form.Label>
                           <Form.Control
                             className="contact-input"
@@ -187,7 +190,7 @@ const Contact = () => {
                           className="mb-5"
                           controlId="validationCustom01"
                         >
-                          <Form.Label className="input-label">Lesson Type</Form.Label>
+                          <Form.Label className="input-label">{t('Lesson Type')}</Form.Label>
                           <Form.Control
                             className="contact-input"
                             type="text"
@@ -208,7 +211,7 @@ const Contact = () => {
                           controlId="validationCustom01"
                         >
                           <Form.Label className="input-label">
-                            Course Expectation
+                            {t('Course Expectation')}
                           </Form.Label>
                           <Form.Control
                             className="contact-input"
@@ -236,7 +239,7 @@ const Contact = () => {
                         disabled={isSubmitting}
                         type="submit"
                       >
-                        Request
+                        {t('Request')}
                       </Button>
                       <ToastContainer /> 
                     </Form>
