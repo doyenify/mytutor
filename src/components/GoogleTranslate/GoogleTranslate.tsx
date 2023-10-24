@@ -4,15 +4,15 @@ import './googletranslate.css';
 
 const GoogleTranslate: React.FC = () => {
   useEffect(() => {
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
+    (window as any).googleTranslateElementInit = () => {
+      new (window as any).google.translate.TranslateElement(
         {
           pageLanguage: 'en',
           includedLanguages: 'en,et,ru',
-          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
           autoDisplay: false,
         },
-        'google_translate_element'
+        'google_translate_element',
       );
     };
 

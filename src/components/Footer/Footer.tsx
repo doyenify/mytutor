@@ -1,17 +1,20 @@
 import {Facebook, Instagram, Linkedin, Twitter,Youtube} from 'react-bootstrap-icons';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const {t} = useTranslation();
+
   return (
     <div  className='footer-container text-center mt-5 d-flex flex-column align-items-center justify-content-center' 
           style={{backgroundColor: "#F0EBE9" , height: "300px" }}
     >
     
-        <h3 style={{color: "#985421"}}>my </h3> <h3 style={{color: "#050A27"}}>Tutor</h3> 
+        <h3 style={{display: "inline", color: "#985421"}}>my<h3 style={{display: "inline", color: "#050A27"}}>Tutor</h3> </h3> 
      
        <div className='footer-writeup' style={{color: "#050A27"}}>
-            <p> <b> Embark on an exciting language learning journey with me as your Estonian language tutor. <br />
-                   Together, we'll conquer challenges, explore the beauty of the language, 
-                   and achieve your language goals. 
+            <p> <b> {t('Embark on an exciting language learning journey with me as your Estonian language tutor')}. <br />
+                   {t("Together, we'll conquer challenges, explore the beauty of the language")}, 
+                   {t("and achieve your language goals")}. 
             </b> </p>
         </div>
         <div>
