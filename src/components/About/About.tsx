@@ -95,7 +95,7 @@ const About = () => {
                         </div>
                       </div>
                       
-                      <h5 style={{fontWeight: "bold", marginTop: "20px"}}><div style={{backgroundColor: "#CBB9B2", height: "20px", width: "20px", borderRadius: "20px", display: "inline-block", marginRight: "15px"}}></div><span style={{position: "relative", top: "-2px"}}>My Teaching Style:</span></h5>
+                      <h5 style={{fontWeight: "bold", marginTop: "20px"}}><div style={{backgroundColor: "#CBB9B2", height: "20px", width: "20px", borderRadius: "20px", display: "inline-block", marginRight: "15px"}}></div><span style={{position: "relative", top: "-2px"}}>{t('My Teaching Style')}:</span></h5>
                       <div className="row">
                         <div className="col-md-9">
                           <p>{t('My teaching style is dynamic, interactive, and tailored to')} 
