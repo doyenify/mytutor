@@ -1,7 +1,5 @@
 import { Row, Col, Button } from 'react-bootstrap';
 import tutorone from '../../img/tutorone.png';
-import Videocourse from '../Videocourse/Videocourse';
-import "./estonianlesson.css"
 import { useTranslation } from 'react-i18next';
 
 const Estonianlesson = () => {
@@ -33,27 +31,25 @@ const Estonianlesson = () => {
         <div>
                   <h3 className='ms-5 mt-5'>{t('Beginner')}</h3>
                     <Row>
-                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
+                        
                     </Row>
         </div>
           {/* Intermediate courses */}
           <div>
                   <h3 className='ms-5 mt-5'>{t('intermediate')} </h3>
                     <Row>
+                        {/* <Col className='col-12 col-sm-4'><Videocourse/></Col>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
+                        <Col className='col-12 col-sm-4'><Videocourse/></Col> */}
                     </Row>
         </div>
           {/* Advanced courses */}
           <div>
                   <h3 className='ms-5 mt-5'>{t('Advanced')}</h3>
                     <Row>
+                        {/* <Col className='col-12 col-sm-4'><Videocourse/></Col>
                         <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
-                        <Col className='col-12 col-sm-4'><Videocourse/></Col>
+                        <Col className='col-12 col-sm-4'><Videocourse/></Col> */}
                     </Row>
         </div>
      </div>

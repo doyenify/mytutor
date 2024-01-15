@@ -9,16 +9,22 @@ import kelelogo from '../../img/kelelogo.png';
 import { useNavigate } from 'react-router-dom';
 // import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
 import { useTranslation } from 'react-i18next';
+import React, { useState } from "react";
+import ReactFlagsSelect from "react-flags-select";
 
 const Header = () => {
   const navigate = useNavigate();
 
   const {t, i18n} = useTranslation();
 
-  const onClickLanguageChange = (e: any) => {
-    const language = e.target.value;
+  const [selected, setSelected] = useState("EE");
+
+  const onClickLanguageChange = (code: any) => {
+    const language = code.toLowerCase();
     i18n.changeLanguage(language)
 }
+  React.useEffect(() => onClickLanguageChange(selected), [])
+
 
   const toHome = () => {
     navigate("/")
@@ -44,6 +50,11 @@ const Header = () => {
     navigate("/Information")
   }
 
+  // const options = [
+  //   { value: 'en', label: <div><img src={copyIcon} height="30px" width="30px"/>Chocolate </div> },
+  //   { value: 'es', label: 'EST' },
+  //   { value: 'ru', label: '' },
+  // ];
 
   return (
     <div>
@@ -104,11 +115,17 @@ const Header = () => {
               {t('Information')}
               </Nav.Link>
             </Nav>
-            <select onChange={onClickLanguageChange}>
-            <option value="en">English </option>
+            {/* <select onChange={onClickLanguageChange}>
+            <option value="en">ENG <img src={engflag} alt="" /></option>
             <option value="es">Estonian</option>
             <option value="es">Russian</option> 
-           </select>
+           </select> */}
+
+       <ReactFlagsSelect
+       selected={selected}
+       onSelect={(code) => onClickLanguageChange(code)}
+       countries={["EE", "GB", "RU" ]}
+       />;
             {/* <GoogleTranslate/> */}
             {/* <Button className='bookaservice-btn mx-2' 
              style={{backgroundColor: "#985421", borderRadius: "50px", width: "150px"}} >

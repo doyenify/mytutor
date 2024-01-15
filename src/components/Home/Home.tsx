@@ -1,6 +1,5 @@
 import { Row, Col, Button , Card} from 'react-bootstrap';
 import tutorone from '../../img/tutorone.png';
-import tutortwo from '../../img/tutortwo.png';
 import aboutimg from '../../img/aboutimg.png';
 import circlearrow from '../../img/circlearrow.png';
 import rusflag from '../../img/rusflag.png';
@@ -13,7 +12,7 @@ import booktwo from '../../img/booktwo.png';
 import sun from '../../img/sun.png';
 import './home.css';
 import { useTranslation } from 'react-i18next';
-import { FileX } from 'react-bootstrap-icons';
+
 
 const Home = () => {
 
@@ -167,7 +166,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ENGLISH FOR ADULTS')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'>consultation<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3'> {t('exams and organize training sessions based on clients preferences.')}consultation<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
