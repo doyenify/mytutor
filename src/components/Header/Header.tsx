@@ -2,6 +2,10 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import rusflag from '../../img/rusflag.png';
+import estflag from '../../img/estflag.png';
+import engflag from '../../img/engflag.png';
+import kelelogo from '../../img/kelelogo.png';
 import { useNavigate } from 'react-router-dom';
 // import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
 import { useTranslation } from 'react-i18next';
@@ -32,11 +36,21 @@ const Header = () => {
     navigate("/Contact")
   }
 
+  const toCourses = () => {
+    navigate("/Courses")
+  }
+
+  const toInformation = () => {
+    navigate("/Information")
+  }
+
+
   return (
     <div>
-        <Navbar    expand="lg" fixed="top" style={{backgroundColor: "#fffff6"}}>
+        <Navbar    expand="lg" fixed="top" style={{backgroundColor: "#ffffff"}}>
         <Container fluid>
-        <Navbar.Brand style={{marginLeft: "90px", color: "#985421", fontWeight:"bold", fontSize:"30px", cursor: "pointer"}} onClick={toHome}>myTutor</Navbar.Brand>
+        <Navbar.Brand style={{marginLeft: "90px", color: "#985421", fontWeight:"bold", fontSize:"30px", cursor: "pointer"}} 
+         onClick={toHome}> <img className='' src={kelelogo} style={{height:"", width: ""}} alt="russian flag"/></Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse >
           <Nav
@@ -47,8 +61,8 @@ const Header = () => {
              style={{
               marginLeft: "20px",
               color: "#3F556B", 
-              fontWeight:"bold",
-              fontSize:"18px"}}
+              fontWeight:"",
+              fontSize:"16px"}}
               >
               {t('Home')}
               </Nav.Link>
@@ -56,8 +70,8 @@ const Header = () => {
                style={{
                 marginLeft: "20px",
                 color: "#3F556B", 
-                fontWeight:"bold",
-                fontSize:"18px"}}
+                fontWeight:"",
+                fontSize:"16px"}}
               >
               {t('About')}</Nav.Link>
               
@@ -65,23 +79,43 @@ const Header = () => {
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
-              fontWeight:"bold",
-              fontSize:"18px"}}
+              fontWeight:"",
+              fontSize:"16px"}}
               >
               {t('Estonian Lesson')}
               </Nav.Link>
+
+              <Nav.Link onClick={toCourses}
+              style={{
+              marginLeft: "20px",
+              color: "#3F556B", 
+              fontWeight:"",
+              fontSize:"16px"}}
+              >
+              {t('Courses')}
+              </Nav.Link>
+              <Nav.Link onClick={toInformation}
+              style={{
+              marginLeft: "20px",
+              color: "#3F556B", 
+              fontWeight:"",
+              fontSize:"16px"}}
+              >
+              {t('Information')}
+              </Nav.Link>
             </Nav>
             <select onChange={onClickLanguageChange}>
-            <option value="en">English</option>
+            <option value="en">English </option>
             <option value="es">Estonian</option>
-        </select>
+            <option value="es">Russian</option> 
+           </select>
             {/* <GoogleTranslate/> */}
-            <Button className='bookaservice-btn mx-2' 
+            {/* <Button className='bookaservice-btn mx-2' 
              style={{backgroundColor: "#985421", borderRadius: "50px", width: "150px"}} >
              {t('Price')}
-            </Button>
+            </Button> */}
             <Button onClick={toContact} className='bookaservice-btn mx-2'
-             style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "150px"}} >
+             style={{backgroundColor: "#FBE081", color:"#3F556B", borderRadius: "50px", width: "100px"}} >
              {t('Contact')}
             </Button>
         </Navbar.Collapse>
