@@ -15,6 +15,8 @@ const Header = () => {
   const {t, i18n} = useTranslation();
 
   const [selected, setSelected] = useState("EE");
+  console.log(setSelected , "this is setselected");
+  
 
   const onClickLanguageChange = (code: any) => {
     const language = code.toLowerCase();
