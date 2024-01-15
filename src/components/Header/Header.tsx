@@ -15,22 +15,23 @@ const Header = () => {
   const {t, i18n} = useTranslation();
 
   const [selected, setSelected] = useState("EE");
-  console.log(setSelected , "this is setselected");
+  // console.log(setSelected , "this is setselected");
   
 
-//   const onClickLanguageChange = (code: any) => {
-//     const language = code.toLowerCase();
-//     i18n.changeLanguage(language)
-// }
-const onClickLanguageChange = React.useCallback((code: any) => {
+  const onClickLanguageChange = (code: any) => {
+    setSelected(code);
+    const language = code.toLowerCase();
+    i18n.changeLanguage(language)
+}
+const fetchLanguage = React.useCallback((code: any) => {
   const language = code.toLowerCase();
   i18n.changeLanguage(language);
 }, [i18n]);
   // React.useEffect(() => onClickLanguageChange(selected), [])
 
   React.useEffect(() => {
-    onClickLanguageChange(selected);
-  }, [onClickLanguageChange, selected]);
+    fetchLanguage(selected);
+  }, [fetchLanguage, selected]);
   
   const toHome = () => {
     navigate("/")
