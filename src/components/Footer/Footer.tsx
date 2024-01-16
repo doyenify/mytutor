@@ -1,4 +1,5 @@
 import {Facebook, Instagram, Linkedin, Twitter,Youtube} from 'react-bootstrap-icons';
+import kelelogo from '../../img/kelelogo.png';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -6,10 +7,10 @@ const Footer = () => {
 
   return (
     <div  className='footer-container text-center mt-5 d-flex flex-column align-items-center justify-content-center' 
-          style={{backgroundColor: "#F0EBE9" , height: "300px" }}
+          style={{backgroundColor: "#FEF8E1" , height: "300px" }}
     >
     
-        <h3 style={{display: "inline", color: "#985421"}}>my<h3 style={{display: "inline", color: "#050A27"}}>Tutor</h3> </h3> 
+    <img className='mb-3' src={kelelogo} style={{height:"", width: ""}} alt="russian flag"/>
      
        <div className='footer-writeup' style={{color: "#050A27"}}>
             <p> <b> {t('Embark on an exciting language learning journey with me as your Estonian language tutor')}. <br />
