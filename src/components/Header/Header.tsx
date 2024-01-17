@@ -22,13 +22,12 @@ const Header = () => {
     setSelected(code);
     const language = code.toLowerCase();
     i18n.changeLanguage(language)
-}
-const fetchLanguage = React.useCallback((code: any) => {
+  }
+  const fetchLanguage = React.useCallback((code: any) => {
   const language = code.toLowerCase();
   i18n.changeLanguage(language);
-}, [i18n]);
-  // React.useEffect(() => onClickLanguageChange(selected), [])
-
+  }, [i18n]);
+  
   React.useEffect(() => {
     fetchLanguage(selected);
   }, [fetchLanguage, selected]);
@@ -56,12 +55,6 @@ const fetchLanguage = React.useCallback((code: any) => {
   const toInformation = () => {
     navigate("/Information")
   }
-
-  // const options = [
-  //   { value: 'en', label: <div><img src={copyIcon} height="30px" width="30px"/>Chocolate </div> },
-  //   { value: 'es', label: 'EST' },
-  //   { value: 'ru', label: '' },
-  // ];
 
   return (
     <div>
@@ -139,14 +132,14 @@ const fetchLanguage = React.useCallback((code: any) => {
              {t('Price')}
             </Button> */}
             <Button onClick={toContact} className='bookaservice-btn mx-2'
-             style={{backgroundColor: "#FBE081", color:"#3F556B", borderRadius: "50px", width: "100px"}} >
+             style={{backgroundColor: "#FBE081", color:"#3F556B", borderRadius: "50px", width: "150px"}} >
              {t('Contact')}
             </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
     </div>
+  
   )
 }
 export default Header

@@ -27,31 +27,31 @@ const Home = () => {
     <div style={{width: "100%", overflowX: "hidden"}}>
        {/* hero section */}
         
-        <div className='hero-container' style={{backgroundColor: "#FBDC6E", height:"85vh" }}> 
+        <div className='hero-container d-flex justify-content-center align-items-center' style={{backgroundColor: "#FBDC6E", }}> 
             <Row>
                 <Col className='hero-col-1 col-12 col-sm-6 d-flex justify-content-center align-items-center'>
-                 <div>
-                   <div style={{fontSize: "24px"}}>{t('Lets get acquainted!')}</div>
-                   <h1>{t('I am Natalia Komarova,')} <br /> 
-                   {t('CEO and language')}  <br /> 
-                   {t('instructor at Keelerõõmud')}  <br /> 
-                   {t('Keeltekool OÜ')}</h1>
-                   <div>{t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')} <br /> 
-                   {t('THE WAY FOR OTHERS Mustafa Kemal Ataturk')}</div>
-                   <div className='' style={{display: "flex", marginTop: "15px"}}>
-                 <Button className='her0-contact-btn' 
-                  style={{backgroundColor: "transparent", color: "#000000" , borderRadius: "50px", width: "120px", fontWeight: "bold", marginTop:"10px", marginRight:"20px"}}>
-                  {t('About me')}
-                 </Button> 
-                 <Button className='her0-contact-btn' 
-                  style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
-                  {t('Contact')}
-                 </Button> 
-                 </div>    
+                <div className='ps-5 pt-5 p5-5'>
+                    <div style={{fontSize: "24px"}}>{t('Lets get acquainted!')}</div>
+                    <h1>{t('I am Natalia Komarova,')}
+                    {t('CEO and language')}   
+                    {t('instructor at Keelerõõmud')}  
+                    {t('Keeltekool OÜ')}</h1>
+                    <div>{t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')}
+                    {t('THE WAY FOR OTHERS Mustafa Kemal Ataturk')}</div>
+                    <div className='' style={{display: "flex", marginTop: "15px"}}>
+                    <Button className='her0-contact-btn' 
+                    style={{backgroundColor: "transparent", color: "#000000" , borderRadius: "50px", width: "120px", fontWeight: "bold", marginTop:"10px", marginRight:"20px"}}>
+                    {t('About me')}
+                    </Button> 
+                    <Button className='her0-contact-btn' 
+                    style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
+                    {t('Contact')}
+                    </Button> 
+                    </div>    
                  </div>
                  </Col>
-                 <Col className=' col-12 col-sm-6 mt-5'>
-                 <div><img className='hero-img' src={tutorone} style={{height:"478px", width: "auto"}} alt="Tutor"/></div>
+                 <Col className='hero-img hero-col-2 col-12 col-sm-6 mt-md-5 d-flex justify-content-end'>
+                 <div><img className='hero-img pt-md-5 me-md-5' src={tutorone} style={{}} alt="Tutor"/></div>
                  </Col>
              </Row>
         </div>
@@ -61,12 +61,12 @@ const Home = () => {
             <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
             <div><img className='aboutimg' src={aboutimg} style={{height:"478px", width: "auto"}} alt="about me"/></div>
             </Col>
-            <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-                <div>
+            <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <div className='about-content'>
                     <div style={{display:"flex"}} > 
-                    <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('About me')}</Button> </div>
-                    <div className='ms-5'> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
-                     </div>
+                        <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('About me')}</Button> </div>
+                        <div className='ms-5'> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
+                    </div>
                     <div className='mt-3'>
                        {t('I am a professional teacher of Estonian and English language. I have over 20 years of')}
                        {t('experience teaching in basic and high schools, and I have conducted language courses in')}
@@ -83,7 +83,7 @@ const Home = () => {
         </Row>
         </div>
         {/* Who I teach */}
-       <div className= "mb-5">
+       <div className= "who-content mb-5">
              <div style={{ display: 'flex', justifyContent: 'center'}} > 
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Who I teach')} </Button> </div>
                     <div className='ms-5'> {t('How I work')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
@@ -120,10 +120,10 @@ const Home = () => {
      <div>
         <Row>
         <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-                <div>
+                <div className='work-content'>
                     <div style={{display:"flex"}} > 
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('How I work')} </Button> </div>
-                    <div className='ms-5'> {t('Courses')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
+                    <div className='ms-5 mb-3'> {t('Courses')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
                      </div>
                     <div className='mt-3'> {t('I work with groups of adults and school students, providing both')} <br />
                     {t('group and individual lessons. Classes can be held either in')} <br />
@@ -134,7 +134,7 @@ const Home = () => {
                     </div>
             </Col>
             <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-            <div><img className='aboutimg img-fluid' src={workimg} style={{height:"478px", width: "auto"}} alt="about me"/></div>
+            <div><img className='workimg' src={workimg} style={{height:"478px", width: "auto"}} alt="about me"/></div>
             </Col>
            
         </Row>
@@ -166,7 +166,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ENGLISH FOR ADULTS')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'> {t('exams and organize training sessions based on clients preferences.')}consultation<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3'> {t('consultation')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -190,7 +190,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ENGLISH FOR SCHOOL STUDENTS')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'>consultation<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3'>{t('consultation')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -212,7 +212,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ESTONIAN FOR ADULTS')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'>consultation<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3'>{t('consultation')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -234,7 +234,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ESTONIAN FOR SCHOOL STUDENTS')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'>consultation<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3'>{t('consultation')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -253,11 +253,16 @@ const Home = () => {
            alt="sun"/> 
           </div>
           <div  className='text-center mt-5'>
-           <p>If you are interested in learning, you can please book a consultation with me by clicking this.
-             (A consultation link), <br />
-              to be able to assess your skills and for proper mentorship.</p>
-          I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty, 
-            <br />conquer challenges, and achieve their set goals.
+           <p>
+           {t('If you are interested in learning, you can please book a consultation with me by clicking this.')}
+             <br />
+             {t('to be able to assess your skills and for proper mentorship.')}
+              </p>
+              {t('I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty,')}
+             
+            <br />
+            {t('conquer challenges, and achieve their set goals.')}
+            
            
           </div> 
           </div>
