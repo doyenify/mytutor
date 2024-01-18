@@ -51,7 +51,7 @@ const Home = () => {
                  </div>
                  </Col>
                  <Col className='hero-img hero-col-2 col-12 col-sm-6 mt-md-5 d-flex justify-content-end'>
-                 <div><img className='hero-img pt-md-5 me-md-5' src={tutorone} style={{}} alt="Tutor"/></div>
+                 <div><img className='hero-img pt-md-5 me-md-5' src={tutorone} alt="Tutor"/></div>
                  </Col>
              </Row>
         </div>
@@ -69,8 +69,8 @@ const Home = () => {
                     </div>
                     <div className='mt-3'>
                        {t('I am a professional teacher of Estonian and English language. I have over 20 years of')}
-                       {t('experience teaching in basic and high schools, and I have conducted language courses in')}
-                       {t('both Estonian and English for adult')} 
+                        {t('experience teaching in basic and high schools, and I have conducted language courses in')} 
+                         {t('both Estonian and English for adult')} 
                         <br />
                         <br />
                         {t('I love promoting joyful language learning, I emphasize collaborative student-teacher')} 
