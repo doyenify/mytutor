@@ -4,10 +4,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import kelelogo from '../../img/kelelogo.png';
 import { useNavigate } from 'react-router-dom';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 // import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
 import { useTranslation } from 'react-i18next';
 import React, { useState } from "react";
 import ReactFlagsSelect from "react-flags-select";
+import Estonianlesson from '../Estonianlesson/Estonianlesson';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -36,20 +38,21 @@ const Header = () => {
     navigate("/")
   }
 
-  const toAbout = () => {
-    navigate("/About")
-  }
-
-  const toLesson = () => {
-    navigate("/Estonianlesson")
-  }
-
   const toContact = () => {
     navigate("/Contact")
   }
 
   const toCourses = () => {
     navigate("/Courses")
+  }
+
+  const navigateToMathematics = () => {
+    // Replace '/mathematics' with the actual route you want to navigate to for Mathematics
+    navigate("/mathematics");
+  }
+  const navigateToGeo = () => {
+    // Replace '/mathematics' with the actual route you want to navigate to for Mathematics
+    navigate("/Geography");
   }
 
   const toInformation = () => {
@@ -65,9 +68,7 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse >
           <Nav
-            className="me-auto  my-lg-0 ms-5"
-            
-          >
+            className="me-auto  my-lg-0 ms-5">
             <Nav.Link  onClick={toHome}
              style={{
               marginLeft: "20px",
@@ -77,16 +78,16 @@ const Header = () => {
               >
               {t('Home')}
               </Nav.Link>
-              <Nav.Link onClick={toAbout}
+              {/* <Nav.Link onClick={toAbout}
                style={{
                 marginLeft: "20px",
                 color: "#3F556B", 
                 fontWeight:"",
                 fontSize:"16px"}}
               >
-              {t('About')}</Nav.Link>
+              {t('About')}</Nav.Link> */}
               
-             <Nav.Link onClick={toLesson}
+             {/* <Nav.Link onClick={toLesson}
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
@@ -94,9 +95,9 @@ const Header = () => {
               fontSize:"16px"}}
               >
               {t('Estonian Lesson')}
-              </Nav.Link>
-
-              <Nav.Link onClick={toCourses}
+              </Nav.Link> */}
+     
+              {/* <Nav.Link onClick={toCourses}
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
@@ -104,8 +105,8 @@ const Header = () => {
               fontSize:"16px"}}
               >
               {t('Courses')}
-              </Nav.Link>
-              <Nav.Link onClick={toInformation}
+              </Nav.Link> */}
+              {/* <Nav.Link onClick={toInformation}
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
@@ -113,7 +114,54 @@ const Header = () => {
               fontSize:"16px"}}
               >
               {t('Information')}
-              </Nav.Link>
+              </Nav.Link> */}
+              <NavDropdown title={t('Courses')} id="courses-dropdown"
+                style={{
+                  marginLeft: "20px",
+                  color: "#3F556B",
+                  fontWeight: "",
+                  fontSize: "16px"
+                }}>
+                <NavDropdown.Item onClick={navigateToMathematics}>
+                {t('English For Adults')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('English For School Students')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('Estonian For Adults')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('Estonian For School Students')}
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown title={t('Information')} id="information-dropdown"
+                style={{
+                  marginLeft: "20px",
+                  color: "#3F556B",
+                  fontWeight: "",
+                  fontSize: "16px"
+                }}>
+                <NavDropdown.Item onClick={navigateToMathematics}>
+                  {t('Schedule')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('Curriculum')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('Efficient Educational Programs')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('Qualified Teachers')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('Learning Environment')}
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={navigateToGeo}>
+                  {t('Payment Terms')}
+                </NavDropdown.Item>
+              </NavDropdown>
+              
             </Nav>
             {/* <select onChange={onClickLanguageChange}>
             <option value="en">ENG <img src={engflag} alt="" /></option>

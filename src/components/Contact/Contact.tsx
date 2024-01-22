@@ -1,7 +1,8 @@
 import { Row, Col, Button, Form } from 'react-bootstrap';
-import home from '../../img/home.png';
-import email from '../../img/email.png';
-import phone from '../../img/phone.png';
+import homeimg from '../../img/homeimg.png';
+import emailimg from '../../img/emailimg.png';
+import phoneimg from '../../img/phoneimg.png';
+import bankimg from '../../img/bankimg.png';
 
 import { Formik} from "formik";
 import * as yup from 'yup';
@@ -26,7 +27,7 @@ const Contact = () => {
     <div style={{width: "100%", overflowX: "hidden", overflowY: "hidden"}}>
        {/* banner  */}
        <div className='text-center mt-5 d-flex justify-content-center align-items-center'
-        style={{backgroundColor: "#CBB9B2" , height: "200px" }}>
+        style={{backgroundColor: "#E2E5E9" , height: "200px" }}>
         <h1 className="" >{t('Get in Touch With Us')}</h1>
        </div>
        {/* contact details */}
@@ -37,30 +38,43 @@ const Contact = () => {
           <div className='mt-3' > 
             <div className="row">
               <div className="col-md-1">
-                <img src={home} style={{width:"35px", height: "35px"}} alt="home"/>
+                <img src={homeimg} style={{width:"35px", height: "35px"}} alt="home"/>
               </div>
               <div className="col-md-11">
-                <h5>{t('Address')}</h5> <p>Lorem ipsum dolor sit amet consectetur</p></div>
+                <h5>{t('Address')}</h5> <p>Kangelaste 36,Narva linn, 
+                Ida-Viru maakond, 20608
+                </p></div>
               </div>
             </div>
           
           <div className='mt-3'>
             <div className="row">
               <div className="col-md-1">
-              <img src={email}  style={{width:"35px", height: "35px"}} alt="email"/> 
+              <img src={emailimg}  style={{width:"35px", height: "35px"}} alt="email"/> 
               </div>
               <div className="col-md-11">
-                <h5>{t('Email Address')}</h5><p>Lorem ipsum dolor sit amet consectetur</p>
+                <h5>{t('Email Address')}</h5><p>keeleroomud.keeltekool@gmail.com
+                </p>
               </div>
             </div>
           </div>
           <div className='mt-3'> 
             <div className="row">
               <div className="col-md-1">
-                <img src={phone}  style={{width:"35px", height: "35px"}}alt="phone"/> 
+                <img src={phoneimg}  style={{width:"35px", height: "35px"}}alt="phone"/> 
               </div>
               <div className="col-md-11">
-                <h5>{t('Phone Number')}</h5> <p>Lorem ipsum dolor sit amet consectetur</p>
+                <h5>{t('Phone Number')}</h5> <p>+37255687860</p>
+              </div>
+            </div>
+            </div>
+            <div className='mt-3'> 
+            <div className="row">
+              <div className="col-md-1">
+                <img src={bankimg}  style={{width:"35px", height: "35px"}}alt="phone"/> 
+              </div>
+              <div className="col-md-11">
+                <h5>{t('Bank Number')}</h5> <p>Swedbank  EE302200221083473734 </p>
               </div>
             </div>
           </div>
@@ -70,7 +84,7 @@ const Contact = () => {
            <div className='me-5' 
            style={{
             marginLeft: "30px",
-            backgroundColor: "#CBB9B2" , 
+            backgroundColor: "#E2E5E9" , 
             borderRadius: "20px", 
             paddingTop: "50px", 
             paddingLeft: "30px",
@@ -231,10 +245,11 @@ const Contact = () => {
                       </div>
                       <Button
                         className=" col-2 send-btn submit"
-                        style={{backgroundColor:"#3F556B",
+                        style={{backgroundColor:"#FCE79C",
                         marginLeft: "10px", 
                         marginTop:"10px", 
                         borderRadius: "50px", 
+                        color: "#3F556B",
                         width: "150px"}}
                         disabled={isSubmitting}
                         type="submit"

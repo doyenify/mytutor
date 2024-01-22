@@ -6,6 +6,7 @@
     "Keeltekool OÜ": "Keeltekool OÜ",
     "A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT": "ХОРОШИЙ УЧИТЕЛЬ ПОДОБЕН СВЕЧЕ - ОН РАСХОДУЕТ СЕБЯ, ЧТОБЫ ЗАГОРЕТЬСЯ",
     "THE WAY FOR OTHERS Mustafa Kemal Ataturk": "ПУТЬ ДЛЯ ДРУГИХ Mustafa Kemal Ataturk",
+    "Home": "Главная",
     "About me": "Обо мне",
     "Contact": "Связаться с",
     "Who I teach": "Кому я преподаю",
@@ -37,9 +38,23 @@
     "ENGLISH FOR SCHOOL STUDENTS": "АНГЛИЙСКИЙ ДЛЯ ШКОЛЬНИКОВ",
     "ESTONIAN FOR ADULTS":  "ЭСТОНСКИЙ ЯЗЫК ДЛЯ ВЗРОСЛЫХ",
     "ESTONIAN FOR SCHOOL STUDENTS": "ЭСТОНСКИЙ ЯЗЫК ДЛЯ ШКОЛЬНИКОВ",
+
+    "English For Adults": "Английский для взрослых",
+    "English For School Students": "Английский язык для школьников",
+    "Estonian For Adults":"Эстонский язык для взрослых",
+    "Estonian For School Students": "Эстонский язык для школьников",
+
     "If you are interested in learning, you can please book a consultation with me by clicking this. (A consultation link),": "Если вы заинтересованы в обучении, вы можете записаться на консультацию ко мне, нажав на эту ссылку. (Ссылка на консультацию),",
     "to be able to assess your skills and for proper mentorship.": "чтобы иметь возможность оценить ваши навыки и получить надлежащее наставничество.",
     "I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty,": "Я приглашаю всех энтузиастов, независимо от возраста, с радостью изучать иностранные языки, познавать их красоту,",
     "conquer challenges, and achieve their set goals.": "преодолевать трудности и достигать поставленных целей.",
-   "consultation": "консультация"
+   "consultation": "консультация",
+   "Information": "Информация",
+   "Schedule": "Расписание",
+   "Curriculum": "Учебный план",
+   "Efficient Educational Programs": "Эффективные образовательные программы",
+   "Qualified Teachers": "Квалифицированные преподаватели",
+   "Learning Environment": "Учебная среда",
+   "Payment Terms": "Условия оплаты"
+   
 }
