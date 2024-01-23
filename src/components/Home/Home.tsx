@@ -77,9 +77,9 @@ const Home = () => {
                         <div className='ms-5'> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
                     </div>
                     <div className='mt-3'>
-                       {t('I am a professional teacher of Estonian and English language. I have over 20 years of')}
-                        {t('experience teaching in basic and high schools, and I have conducted language courses in')} 
-                         {t('both Estonian and English for adult')} 
+                       {t('I am a professional teacher of Estonian and English language. I have over 20 years of')} 
+                        {t('experience teaching in basic and high schools, and I have conducted language courses in')}   
+                        {t('both Estonian and English for adult')} 
                         <br />
                         <br />
                         {t('I love promoting joyful language learning, I emphasize collaborative student-teacher')} 
@@ -263,7 +263,7 @@ const Home = () => {
           </div>
           <div  className='text-center mt-5'>
            <p>
-           {t('If you are interested in learning, you can please book a consultation with me by clicking this.')}
+           {t('If you are interested in learning, you can please book a consultation with me by clicking this. (A consultation link),')}
              <br />
              {t('to be able to assess your skills and for proper mentorship.')}
               </p>
