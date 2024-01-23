@@ -9,7 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useTranslation } from 'react-i18next';
 import React, { useState } from "react";
 import ReactFlagsSelect from "react-flags-select";
-import Estonianlesson from '../Estonianlesson/Estonianlesson';
+// import Estonianlesson from '../Estonianlesson/Estonianlesson';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -42,22 +42,50 @@ const Header = () => {
     navigate("/Contact")
   }
 
-  const toCourses = () => {
-    navigate("/Courses")
+ 
+  const navigateToSchedule = () => {
+   
+    navigate("/Schedule");
+  }
+  const navigateToCurriculum = () => {
+   
+    navigate("/Curriculum");
+  }
+  const navigateToEffEduPro = () => {
+   
+    navigate("/EffEduPro");
+  }
+  const navigateToQuaTeachers = () => {
+   
+    navigate("/QualifiedTeachers");
+  }
+  const navigateToLearningEnv = () => {
+   
+    navigate("/LearningEnv");
+  }
+  const navigateToPayTerms = () => {
+   
+    navigate("/PayTerms");
   }
 
-  const navigateToMathematics = () => {
-    // Replace '/mathematics' with the actual route you want to navigate to for Mathematics
-    navigate("/mathematics");
+  const navigateToEngForAdult = () => {
+   
+    navigate("/EnglishForAdult");
   }
-  const navigateToGeo = () => {
-    // Replace '/mathematics' with the actual route you want to navigate to for Mathematics
-    navigate("/Geography");
+  const navigateToEngForSchStu = () => {
+   
+    navigate("/EnglishForSchool");
+  }
+  const navigateToEstForAdult = () => {
+   
+    navigate("/EstonianForAdults");
+  }
+  const navigateToEstForSchStu = () => {
+   
+    navigate("/EstonianForSchool");
   }
 
-  const toInformation = () => {
-    navigate("/Information")
-  }
+
 
   return (
     <div>
@@ -122,16 +150,16 @@ const Header = () => {
                   fontWeight: "",
                   fontSize: "16px"
                 }}>
-                <NavDropdown.Item onClick={navigateToMathematics}>
+                <NavDropdown.Item onClick={navigateToEngForAdult}>
                 {t('English For Adults')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToEngForSchStu}>
                   {t('English For School Students')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToEstForAdult}>
                   {t('Estonian For Adults')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToEstForSchStu}>
                   {t('Estonian For School Students')}
                 </NavDropdown.Item>
               </NavDropdown>
@@ -142,22 +170,22 @@ const Header = () => {
                   fontWeight: "",
                   fontSize: "16px"
                 }}>
-                <NavDropdown.Item onClick={navigateToMathematics}>
+                <NavDropdown.Item onClick={navigateToSchedule}>
                   {t('Schedule')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToCurriculum}>
                   {t('Curriculum')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToEffEduPro}>
                   {t('Efficient Educational Programs')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToQuaTeachers}>
                   {t('Qualified Teachers')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToLearningEnv}>
                   {t('Learning Environment')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToGeo}>
+                <NavDropdown.Item onClick={navigateToPayTerms}>
                   {t('Payment Terms')}
                 </NavDropdown.Item>
               </NavDropdown>

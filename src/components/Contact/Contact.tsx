@@ -44,6 +44,13 @@ const Contact = () => {
                 <h5>{t('Address')}</h5> <p>Kangelaste 36,Narva linn, 
                 Ida-Viru maakond, 20608
                 </p></div>
+               <iframe title="address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.6397950427397!2d28.168379976437475!3d59.38903760624067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469437e349fb01e3%3A0x6ab52b0bc5a9168!2sKangelaste%20prospekt%2036%2C%2020608%20Narva%2C%20Estonia!5e0!3m2!1sen!2sng!4v1706014835873!5m2!1sen!2sng" 
+               width="400" 
+               height="350"
+               style={{  border: "0" }}
+               loading="lazy"
+                >
+                 </iframe>
               </div>
             </div>
           
@@ -174,48 +181,6 @@ const Contact = () => {
                           />
                           <Form.Control.Feedback type="invalid">
                             {errors.email}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-                      </div>
-
-                      <div className="col-12 col-md-6">
-                        <Form.Group
-                          className="mb-3"
-                          controlId="validationCustom01"
-                      >
-                          <Form.Label className="input-label">
-                            {t('Language Level')}
-                          </Form.Label>
-                          <Form.Control
-                            className="contact-input"
-                            type="text"
-                            name="lastName"
-                            value={values.languageLevel}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            isInvalid={!!errors.languageLevel}
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {errors.languageLevel}
-                          </Form.Control.Feedback>
-                        </Form.Group>
-
-                        <Form.Group
-                          className="mb-5"
-                          controlId="validationCustom01"
-                        >
-                          <Form.Label className="input-label">{t('Lesson Type')}</Form.Label>
-                          <Form.Control
-                            className="contact-input"
-                            type="text"
-                            name="phone"
-                            value={values.lessonType}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            isInvalid={!!errors.lessonType}
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {errors.lessonType}
                           </Form.Control.Feedback>
                         </Form.Group>
                       </div>

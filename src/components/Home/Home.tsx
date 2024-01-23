@@ -12,9 +12,15 @@ import booktwo from '../../img/booktwo.png';
 import sun from '../../img/sun.png';
 import './home.css';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+// import Consultation from '../Consultation/Consultation';
+
+
+
 
 
 const Home = () => {
+    const navigate = useNavigate();
 
     const {t} = useTranslation();
 
@@ -22,6 +28,9 @@ const Home = () => {
     //     const language = e.target.value;
     //     i18n.changeLanguage(language)
     // }
+    const toConsultation = () => {
+        navigate("/Consultation")
+      }
   return (
     //    Entire Home Section
     <div style={{width: "100%", overflowX: "hidden"}}>
@@ -261,12 +270,17 @@ const Home = () => {
               {t('I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty,')}
              
             <br />
-            {t('conquer challenges, and achieve their set goals.')}
-            
-           
+            {t('conquer challenges, and achieve their set goals.')} 
           </div> 
           </div>
-     
+         <div className='d-flex justify-content-center align-item-center mt-5'>
+        {/* <Link to="/Consultation"> */}
+         <Button className='her0-consulation-btn ' onClick={toConsultation}
+         style={{backgroundColor: "#FCE79C", color: "#3F556B" , borderRadius: "50px", width: "200px", marginTop:"10px"}}>
+         {t('consultation')}
+         </Button> 
+         {/* </Link> */}
+       </div>
         </div>
     </div>
   )
