@@ -1,4 +1,13 @@
 {   
+    "Get in Touch With Us": "Свяжитесь с нами",
+    "Address": "Адрес",
+    "Email Address": "Адрес электронной почты",
+    "Phone Number": "Номер телефона",
+    "Name": "Имя",
+    "Language Level": "Уровень языка",
+    "Lesson Type": "Тип урока",
+    "Course Expectation": "Ожидания от курса",
+
     "Lets get acquainted!": "Давайте знакомиться!",
     "I am Natalia Komarova,": "Я Наталья Комарова,",
     "CEO and language": "Генеральный директор и язык",
@@ -55,6 +64,7 @@
    "Efficient Educational Programs": "Эффективные образовательные программы",
    "Qualified Teachers": "Квалифицированные преподаватели",
    "Learning Environment": "Учебная среда",
-   "Payment Terms": "Условия оплаты"
+   "Payment Terms": "Условия оплаты",
+   "Bank": "Банк"
    
 }

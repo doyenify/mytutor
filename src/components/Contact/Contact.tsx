@@ -81,7 +81,7 @@ const Contact = () => {
                 <img src={bankimg}  style={{width:"35px", height: "35px"}}alt="phone"/> 
               </div>
               <div className="col-md-11">
-                <h5>{t('Bank Number')}</h5> <p>Swedbank  EE302200221083473734 </p>
+                <h5>{t('Bank')}</h5> <p>Swedbank  EE302200221083473734 </p>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                           <Form.Control
                             className="contact-input"
                             as="textarea"
-                            placeholder="Write your message"
+                            placeholder=""
                             rows={3}
                             name="message"
                             value={values.courseExpectation}
@@ -219,7 +219,7 @@ const Contact = () => {
                         disabled={isSubmitting}
                         type="submit"
                       >
-                        {t('Request')}
+                        {t('Submit')}
                       </Button>
                       <ToastContainer /> 
                     </Form>
