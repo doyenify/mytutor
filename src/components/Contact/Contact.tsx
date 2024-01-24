@@ -4,7 +4,7 @@ import emailimg from '../../img/emailimg.png';
 import phoneimg from '../../img/phoneimg.png';
 import bankimg from '../../img/bankimg.png';
 
-import { Formik} from "formik";
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
@@ -15,6 +15,7 @@ const validationSchema = yup.object().shape({
   name: yup.string().required('Name is required'),
   email: yup.string().email('Invalid email').required('Email is required'),
   languageLevel: yup.string().required('Language Level is required'),
+  course: yup.string().required('Courses is required'),
   lessonType: yup.string().required('Lesson Type is required'),
   courseExpectation: yup.string().required('Message is required'),
 });
@@ -102,29 +103,72 @@ const Contact = () => {
                   initialValues={{
                     name: "",
                     email: "",
+                    course: "",
                     languageLevel: "",
                     lessonType: "",
                     courseExpectation: ""
     
                   }}
-
                   onSubmit={(values, { setSubmitting, resetForm }) => {
-                    axios.post('https://sheet.best/api/sheets/3d3daed8-f416-44c0-b33b-8da2fcce6814', values)
-                    .then(response => {
-                      console.log('loggin in', response);
-                      setSubmitting(false);
+                    
+  
+                    const bodytodoyen = JSON.stringify({  
+                        "sender":{  
+                            "name":"KEELERÕÕMUD Website ",
+                            "email":"olagbemiifeolwa@gmail.com"
+                        },
+                        "to":[  
+                            {  
+                                "email":"tecfesc@gmail.com",
+                                
+                            }
+                        ],
+                        "subject":"KEELERÕÕMUD Service Requiry '{{params.services}}'",
+                        "htmlContent":`<html><head></head><body>
+                                        <h1>A new request on our services</h1>
+                                        <p>Student Name: {{params.name}}, requested a quote</p>
+                                        <p>Student Email: {{params.email}}</p>
+                                        <p>Student Course: {{params.phone}}</p>
+                                        <p>Student Language Level: {{params.services}}</p>
+                                        <p>Student Lesson Type: {{params.message}}</p>
+                                    </body></html>`,
+                        "params": {
+                            "name": values.name,
+                            "email": values.email,
+                            "course": values.course,
+                            "languageLevel": values.languageLevel,
+                            "lessonType": values.lessonType,
+                            "courseExpectation": values.courseExpectation
+                            }
+                        })
+                      console.log(values, "this is");
+                      axios.post('https://us-central1-doyenifypanelapi.cloudfunctions.net/app/contact-Message',  values)
+                       
+                      .then(response => {
+                        axios.post("https://api.brevo.com/v3/smtp/email", bodytodoyen, {
+                      headers: {
+                          'accept': 'application/json',
+                          'api-key': process.env.REACT_APP_BREVO_API_KEY, 
+                          'content-type': 'application/json'
+                          
+                      },
+                      
+                  }).then( response => console.log(response, "this body to doyen")).catch((brevoError) => console.log(brevoError))
+                        console.log('loggin in', response);
+                        setSubmitting(false);
+                        resetForm();
+                        resetForm();
+                        toast.success('We have received your Message, We will get back to you shortly');
+                      })
+  
+                      .catch(error => {
+                        console.error('error submitting form', error);
+                        setSubmitting(false);
+                        toast.error("Sorry we could not receive your Message. Please check your connection and try again")
+                      });
                       resetForm();
-                      resetForm();
-                      toast.success('We have received your message, We will get back to you shortly');
-                    })
-
-                    .catch(error => {
-                      console.error('error submitting form', error);
-                      setSubmitting(false);
-                      toast.error("Sorry we could not receive your message. Please check your connection and try again")
-                    });
-                    resetForm();
-                  }}
+                    }}
+                   
                  
                   validationSchema={validationSchema}
                 >
@@ -141,7 +185,7 @@ const Contact = () => {
                       onSubmit={handleSubmit}
                       className="row form-wrapper me-5"
                     >
-                      <div className="col-12 col-md-6">
+                      <div className="col-12 ">
                         <Form.Group
                           className="mb-3"
                           controlId="validationCustom01"
@@ -152,7 +196,7 @@ const Contact = () => {
                           <Form.Control
                             className="contact-input"
                             type="text"
-                            name="firstName"
+                            name="name"
                             value={values.name}
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -185,28 +229,77 @@ const Contact = () => {
                         </Form.Group>
                       </div>
                       <div className="col-12">
-                        <Form.Group
-                          className="mb-3"
-                          controlId="validationCustom01"
-                        >
-                          <Form.Label className="input-label">
-                            {t('Course Expectation')}
-                          </Form.Label>
-                          <Form.Control
-                            className="contact-input"
-                            as="textarea"
-                            placeholder=""
-                            rows={3}
-                            name="message"
-                            value={values.courseExpectation}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            isInvalid={!!errors.courseExpectation}
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {errors.courseExpectation}
-                          </Form.Control.Feedback>
-                        </Form.Group>
+
+    <Form.Group className="mb-3" controlId="lessonType">
+    <Form.Label className="input-label">{t('Course')}</Form.Label>
+    <Form.Control
+      className="contact-input"
+      type="text"
+      name="course"
+      value={values.course}
+      onChange={handleChange}
+      onBlur={handleBlur}
+      isInvalid={!!errors.course}
+    />
+    <Form.Control.Feedback type="invalid">
+      {errors.course}
+    </Form.Control.Feedback>
+  </Form.Group>
+    <Form.Group className="mb-3" controlId="languageLevel">
+    <Form.Label className="input-label">{t('Language Level')}</Form.Label>
+    <Form.Control
+      className="contact-input"
+      as="select"
+      name="languageLevel"
+      value={values.languageLevel}
+      onChange={handleChange}
+      onBlur={handleBlur}
+      isInvalid={!!errors.languageLevel}
+    >
+      <option value="" disabled>Select Language Level</option>
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="C1">C1</option>
+    </Form.Control>
+    <Form.Control.Feedback type="invalid">
+      {errors.languageLevel}
+    </Form.Control.Feedback>
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="lessonType">
+    <Form.Label className="input-label">{t('Lesson Type')}</Form.Label>
+    <Form.Control
+      className="contact-input"
+      type="text"
+      name="lessonType"
+      value={values.lessonType}
+      onChange={handleChange}
+      onBlur={handleBlur}
+      isInvalid={!!errors.lessonType}
+    />
+    <Form.Control.Feedback type="invalid">
+      {errors.lessonType}
+    </Form.Control.Feedback>
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="validationCustom01">
+    <Form.Label className="input-label">{t('Course Expectation')}</Form.Label>
+    <Form.Control
+      className="contact-input"
+      as="textarea"  // Change this line
+      placeholder=""
+      rows={3}
+      name="courseExpectation"
+      value={values.courseExpectation}
+      onChange={handleChange}
+      onBlur={handleBlur}
+      isInvalid={!!errors.courseExpectation}
+    />
+    <Form.Control.Feedback type="invalid">
+      {errors.courseExpectation}
+    </Form.Control.Feedback>
+  </Form.Group>
                       </div>
                       <Button
                         className=" col-2 send-btn submit"

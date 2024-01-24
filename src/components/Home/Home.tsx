@@ -10,13 +10,11 @@ import courseImg from '../../img/course-img.png';
 import workimg from '../../img/workimg.png';
 import booktwo from '../../img/booktwo.png';
 import sun from '../../img/sun.png';
+import 'animate.css';
 import './home.css';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 // import Consultation from '../Consultation/Consultation';
-
-
-
 
 
 const Home = () => {
@@ -29,7 +27,7 @@ const Home = () => {
     //     i18n.changeLanguage(language)
     // }
     const toConsultation = () => {
-        navigate("/Consultation")
+        navigate("/consultation")
       }
   return (
     //    Entire Home Section
@@ -48,13 +46,13 @@ const Home = () => {
                     <div>{t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')}
                     {t('THE WAY FOR OTHERS Mustafa Kemal Ataturk')}</div>
                     <div className='' style={{display: "flex", marginTop: "15px"}}>
-                    <Button className='her0-contact-btn' 
+                    <Button className='her0-contact-btn' href='#aboutme'
                     style={{backgroundColor: "transparent", color: "#000000" , borderRadius: "50px", width: "120px", fontWeight: "bold", marginTop:"10px", marginRight:"20px"}}>
                     {t('About me')}
                     </Button> 
-                    <Button className='her0-contact-btn' 
+                    <Button className='her0-contact-btn' onClick={toConsultation} 
                     style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
-                    {t('Contact')}
+                    {t('Consultation')}
                     </Button> 
                     </div>    
                  </div>
@@ -65,7 +63,7 @@ const Home = () => {
              </Row>
         </div>
         {/* about me  section */}
-        <div>
+        <div id='aboutme'>
         <Row>
             <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
             <div><img className='aboutimg' src={aboutimg} style={{height:"478px", width: "auto"}} alt="about me"/></div>
@@ -74,7 +72,7 @@ const Home = () => {
                 <div className='about-content'>
                     <div style={{display:"flex"}} > 
                         <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('About me')}</Button> </div>
-                        <div className='ms-5'> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
+                        <div className='ms-5 animate__animated animate__wobble'> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
                     </div>
                     <div className='mt-3'>
                        {t('I am a professional teacher of Estonian and English language. I have over 20 years of')} 
