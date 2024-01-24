@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 // import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
 import { useTranslation } from 'react-i18next';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactFlagsSelect from "react-flags-select";
 // import Estonianlesson from '../Estonianlesson/Estonianlesson';
 
@@ -30,7 +30,7 @@ const Header = () => {
   i18n.changeLanguage(language);
   }, [i18n]);
   
-  React.useEffect(() => {
+  useEffect(() => {
     fetchLanguage(selected);
   }, [fetchLanguage, selected]);
   
