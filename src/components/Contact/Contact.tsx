@@ -141,7 +141,7 @@ const Contact = () => {
                             "courseExpectation": values.courseExpectation
                             }
                         })
-                      console.log(values, "this is");
+                      console.log(values, "this is ");
                       axios.post('https://us-central1-doyenifypanelapi.cloudfunctions.net/app/contact-Message',  values)
                        
                       .then(response => {

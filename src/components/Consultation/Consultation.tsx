@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { InlineWidget } from "react-calendly";
 
@@ -10,7 +10,7 @@ const Consultation = () => {
     <div 
     className='d-flex justify-content-center align-items-center' 
     style={{paddingTop: "100px"}}> 
-    Book Consultation
+    {t('Book Consultation')}
     </div>
     <div className="App">
       <InlineWidget url="https://calendly.com/olagbemiifeoluwa" />
