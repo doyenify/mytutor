@@ -13,6 +13,12 @@ import './App.css';
 import EnglishForSchool from "./components/Courses/EnglishForSchool";
 import EstonianForAdults from "./components/Courses/EstonianForAdults";
 import EstonianForSchool from "./components/Courses/EstonianForSchool";
+import Schedule from "./components/Information/Schedule";
+import Curriculum from "./components/Information/Curriculum";
+import EffEduPro from "./components/Information/EffEduPro";
+import QuaTeacher from "./components/Information/QuaTeacher";
+import LearningEnv from "./components/Information/LearningEnv";
+import PayTerm from "./components/Information/PayTerm";
 
 function App() {
   return (
@@ -28,6 +34,12 @@ function App() {
           <Route path="EnglishForSchool" element={<EnglishForSchool/>} />
           <Route path="EstonianForAdults" element={<EstonianForAdults/>} />
           <Route path="EstonianForSchool" element={<EstonianForSchool/>} />
+          <Route path="Schedule" element={<Schedule/>} />
+          <Route path="Curriculum" element={<Curriculum/>} />
+          <Route path="EffEduPro" element={<EffEduPro/>} />
+          <Route path="QualifiedTeachers" element={<QuaTeacher/>} />
+          <Route path="LearningEnv" element={<LearningEnv/>} />
+          <Route path="PayTerms" element={<PayTerm/>} />
           <Route path="/Consultation" element={<Consultation/>} />
           <Route path="Contact" element={<Contact/>} />
           </Routes>

@@ -40,7 +40,7 @@ const Home = () => {
                 <div className='ps-5 pt-5 p5-5'>
                     <div style={{fontSize: "24px"}}>{t('Lets get acquainted!')}</div>
                     <h1>{t('I am Natalia Komarova,')}
-                    {t('CEO and language')}   
+                    {t('CEO and language')} <br />  
                     {t('instructor at Keelerõõmud')}  
                     {t('Keeltekool OÜ')}</h1>
                     <div>{t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')}
@@ -52,7 +52,7 @@ const Home = () => {
                     </Button> 
                     <Button className='her0-contact-btn' onClick={toConsultation} 
                     style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
-                    {t('Consultation')}
+                    {t('consultation')}
                     </Button> 
                     </div>    
                  </div>
@@ -72,7 +72,7 @@ const Home = () => {
                 <div className='about-content'>
                     <div style={{display:"flex"}} > 
                         <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('About me')}</Button> </div>
-                        <div className='ms-5 animate__animated animate__wobble'> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
+                        <a className='ms-5 swinging-link' href="#Whoiteach" style={{ textDecoration: 'none' }}> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                     </div>
                     <div className='mt-3'>
                        {t('I am a professional teacher of Estonian and English language. I have over 20 years of')} 
@@ -90,10 +90,10 @@ const Home = () => {
         </Row>
         </div>
         {/* Who I teach */}
-       <div className= "who-content mb-5">
+       <div className= "who-content mb-5" id='Whoiteach'>
              <div style={{ display: 'flex', justifyContent: 'center'}} > 
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Who I teach')} </Button> </div>
-                    <div className='ms-5'> {t('How I work')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
+                    <a className='ms-5 swinging-link' href="#howiwork" style={{ textDecoration: 'none' }}> {t('How I work')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
               </div>
                 
                 <div className='row justify-content-center'>
@@ -124,13 +124,13 @@ const Home = () => {
        </div>
 
      {/* work image */}
-     <div>
+     <div id='howiwork'>
         <Row>
         <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
                 <div className='work-content'>
                     <div style={{display:"flex"}} > 
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('How I work')} </Button> </div>
-                    <div className='ms-5 mb-3'> {t('Courses')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </div>
+                    <a className='ms-5 mb-3 swinging-link' href="#courses" style={{ textDecoration: 'none' }}> {t('Courses')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                      </div>
                     <div className='mt-3'> {t('I work with groups of adults and school students, providing both')} <br />
                     {t('group and individual lessons. Classes can be held either in')} <br />
@@ -148,8 +148,8 @@ const Home = () => {
         </div>
 
 
-        {/* service section */}
-        <div >
+        {/* course section */}
+        <div id='courses'>
            <div className='hero-service-section mt-5' style={{marginTop: "20px"}}>
             <Row>
                 <Col className='col-12 col-sm-5 d-flex justify-content-center align-items-center'><img src={courseImg} alt="Tutor two" style={{width:"300px",height:""}}/> </Col>
@@ -173,12 +173,11 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ENGLISH FOR ADULTS')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'> {t('consultation')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link'onClick={toConsultation} style={{cursor:'pointer'}}> {t('consultation')} <img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
-                            </div>
-                            
+                            </div>  
                         </Card.Body>
                         </Card>  
                     </Col>       
@@ -197,7 +196,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ENGLISH FOR SCHOOL STUDENTS')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'>{t('consultation')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -219,7 +218,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ESTONIAN FOR ADULTS')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'>{t('consultation')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -241,7 +240,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('ESTONIAN FOR SCHOOL STUDENTS')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3'>{t('consultation')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>

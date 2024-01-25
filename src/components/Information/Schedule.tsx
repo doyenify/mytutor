@@ -8,7 +8,7 @@ import circlearrow from '../../img/circlearrow.png';
 import { useNavigate } from 'react-router-dom';
 
 
-const EnglishForAdult = () => {
+const Schedule = () => {
     const {t} = useTranslation();
     const navigate = useNavigate();
 
@@ -49,4 +49,4 @@ const EnglishForAdult = () => {
   )
 }
 
-export default EnglishForAdult
+export default Schedule
