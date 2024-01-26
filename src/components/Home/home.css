@@ -1,11 +1,8 @@
 .hero-img{
     margin-top: 20px;
-    /* height: 100vh; */
+    
 }
 
-.coursessection {
-    margin-top: 125px;
-}
 
 .swinging-link {
     animation: swing 1s infinite;
@@ -24,40 +21,25 @@
   }
 
 @media screen and (max-width: 640px) {
-    .coursessection {
-        margin-top: 125px;
-    }
 
-   /* .hero-container{
-
-     height: 100vh;
-    } */
     .hero-container{
         height: 100vh;
     }
-    .hero-col-1{
-     margin-right: 200px;
-     margin-left: 50px;
-    }
-
+  
    
     .hero-img{
-        /* margin-top: 20px; */
         padding-top: 20px;
         width: 70%;
-        /* height: 150px; */
         margin-right: 20px;
         margin-left: 40px;
     }
 
     .aboutimg{
-        margin-top: -300px;
         width: auto;
         height:200px;
     }
 
     .about-content{
-        margin-top: -350px;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -65,13 +47,13 @@
     .work-content{
         margin-left: 20px;
         margin-right: 20px;
-        margin-top: -400px;
+      
     }
 
     .workimg{
         width: auto;
         height:200px;
-        margin-top: -400px;
+      
     }
     .who-content{
         display: flex;
@@ -79,9 +61,7 @@
         margin-left: 20px;
         margin-right: 20px; 
     }
-    /* .home-video{
-        padding-top: 800px;
-    } */
+   
     .home-card{
         justify-content: center;
         align-items: center;

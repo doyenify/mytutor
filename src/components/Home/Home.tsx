@@ -65,8 +65,8 @@ const Home = () => {
         {/* about me  section */}
         <div id='aboutme'>
         <Row>
-            <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-            <div><img className='aboutimg' src={aboutimg} style={{height:"478px", width: "auto"}} alt="about me"/></div>
+            <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: ''}}>
+            <div><img className='aboutimg' src={aboutimg} style={{height:"450px", width: "auto"}} alt="about me"/></div>
             </Col>
             <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div className='about-content'>
@@ -91,13 +91,14 @@ const Home = () => {
         </div>
         {/* Who I teach */}
        <div className= "who-content mb-5" id='Whoiteach'>
+        <Row>
              <div style={{ display: 'flex', justifyContent: 'center'}} > 
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Who I teach')} </Button> </div>
                     <a className='ms-5 swinging-link' href="#howiwork" style={{ textDecoration: 'none' }}> {t('How I work')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
               </div>
                 
                 <div className='row justify-content-center'>
-                    <div className='col-sm-3 col col-md-5'>
+                    <div className='col-sm-3 col'>
                         <div className='mt-5 p-3 px-4' style={{backgroundColor:"#E2E5E9", width:"300px", marginLeft: "auto", marginRight: "auto"}}>
                             <div className="d-flex justify-content-end mb-4">
                                 <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
@@ -108,11 +109,11 @@ const Home = () => {
 
                         </div >
                     </div>
-                    <div className='col-sm-3 col col-md-5'>
+                    <div className='col-sm-3 col'>
                         <div className='mt-5 p-3 px-4' style={{backgroundColor:"#FEF8E1", width:"300px", marginLeft: "auto", marginRight: "auto"}}>
                             <div className="d-flex justify-content-end mb-4">
                                 <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
-                                <img className='ms-3' src={estflag} style={{height:"30px", width: "30px"}} alt="estonian flag"/>
+                                <img className='ms-3' src={engflag} style={{height:"30px", width: "30px"}} alt="english flag"/>
                             </div>
                             <p style={{height: "100px"}}> {t('I teach Estonian as a')} <br /> {t('second language to both Russian')}  
                             <br /> {t('and English')} <br />
@@ -121,12 +122,13 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+        </Row>
        </div>
 
      {/* work image */}
      <div id='howiwork'>
         <Row>
-        <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div className='work-content'>
                     <div style={{display:"flex"}} > 
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('How I work')} </Button> </div>
@@ -140,8 +142,8 @@ const Home = () => {
                     </div>
                     </div>
             </Col>
-            <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
-            <div><img className='workimg' src={workimg} style={{height:"478px", width: "auto"}} alt="about me"/></div>
+            <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: ''}}>
+            <div><img className='workimg' src={workimg} style={{height:"478px", width: "auto"}} alt="work pict"/></div>
             </Col>
            
         </Row>
@@ -150,9 +152,9 @@ const Home = () => {
 
         {/* course section */}
         <div id='courses'>
-           <div className='hero-service-section mt-5' style={{marginTop: "20px"}}>
+           <div className='hero-service-section' style={{marginTop: ""}}>
             <Row>
-                <Col className='col-12 col-sm-5 d-flex justify-content-center align-items-center'><img src={courseImg} alt="Tutor two" style={{width:"300px",height:""}}/> </Col>
+                <Col className='col-12 col-sm-5 d-flex justify-content-center align-items-center'><img src={courseImg} alt="Tutor two" style={{width:"400px",height:""}}/> </Col>
                 <Col className='col-12 col-sm-7 d-flex justify-content-center align-items-center'>
                 <Row className='home-card'>
                     <Row className='mb-5' ><div><h2>
