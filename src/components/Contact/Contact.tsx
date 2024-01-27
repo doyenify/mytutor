@@ -3,10 +3,8 @@ import homeimg from '../../img/homeimg.png';
 import emailimg from '../../img/emailimg.png';
 import phoneimg from '../../img/phoneimg.png';
 import bankimg from '../../img/bankimg.png';
-
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from 'react-i18next';
@@ -19,7 +17,6 @@ const validationSchema = yup.object().shape({
   lessonType: yup.string().required('Lesson Type is required'),
   courseExpectation: yup.string().required('Message is required'),
 });
-
 
 const Contact = () => {
   const {t} = useTranslation();
@@ -110,64 +107,64 @@ const Contact = () => {
     
                   }}
                   onSubmit={(values, { setSubmitting, resetForm }) => {
-                    
-  
-                    const bodytodoyen = JSON.stringify({  
-                        "sender":{  
-                            "name":"KEELERÕÕMUD Website ",
-                            "email":"olagbemiifeolwa@gmail.com"
-                        },
-                        "to":[  
-                            {  
-                                "email":"tecfesc@gmail.com",
-                                
-                            }
-                        ],
-                        "subject":"KEELERÕÕMUD Service Requiry '{{params.services}}'",
-                        "htmlContent":`<html><head></head><body>
-                                        <h1>A new request on our services</h1>
-                                        <p>Student Name: {{params.name}}, requested a quote</p>
-                                        <p>Student Email: {{params.email}}</p>
-                                        <p>Student Course: {{params.phone}}</p>
-                                        <p>Student Language Level: {{params.services}}</p>
-                                        <p>Student Lesson Type: {{params.message}}</p>
-                                    </body></html>`,
-                        "params": {
-                            "name": values.name,
-                            "email": values.email,
-                            "course": values.course,
-                            "languageLevel": values.languageLevel,
-                            "lessonType": values.lessonType,
-                            "courseExpectation": values.courseExpectation
-                            }
-                        })
-                      console.log(values, "this is ");
-                      axios.post('https://us-central1-doyenifypanelapi.cloudfunctions.net/app/contact-Message',  values)
-                       
-                      .then(response => {
-                        axios.post("https://api.brevo.com/v3/smtp/email", bodytodoyen, {
-                      headers: {
-                          'accept': 'application/json',
-                          'api-key': process.env.REACT_APP_BREVO_API_KEY, 
-                          'content-type': 'application/json'
-                          
+                    const apiKey = process.env.REACT_APP_BREVO_API_KEY;
+            
+                    if (!apiKey) {
+                      console.error("Brevo API key is not defined.");
+                      return;
+                    }
+            
+                    const bodyToDoyen = {
+                      sender: {
+                        name: "KEELERÕÕMUD LANGUAGE WEBSITE",
+                        email: "tecfesco@gmail.com"
                       },
-                      
-                  }).then( response => console.log(response, "this body to doyen")).catch((brevoError) => console.log(brevoError))
-                        console.log('loggin in', response);
-                        setSubmitting(false);
-                        resetForm();
-                        resetForm();
-                        toast.success('We have received your Message, We will get back to you shortly');
-                      })
-  
-                      .catch(error => {
-                        console.error('error submitting form', error);
-                        setSubmitting(false);
-                        toast.error("Sorry we could not receive your Message. Please check your connection and try again")
-                      });
+                      to: [
+                        {
+                          email: "olagbemiifeoluwa@gmail.com"
+                        },
+                        {
+                          email: values.email
+                        }
+                      ],
+                      subject: `KEELERÕÕMUD Contact Page '${values.course}'`,
+                      htmlContent: `<html><head></head><body>
+                                      <h1>A New Student Request On Our Services</h1>
+                                      <p>Name: ${values.name}</p>
+                                      <p>Email: ${values.email}</p>
+                                      <p>Course: ${values.course}</p>
+                                      <p>Language Level: ${values.languageLevel}</p>
+                                      <p>Lesson Type: ${values.lessonType}</p>
+                                      <p>Course Expectation: ${values.courseExpectation}</p>
+                                  </body></html>`,
+                    };
+            
+                    fetch("https://api.brevo.com/v3/smtp/email", {
+                      method: "POST",
+                      headers: {
+                        accept: "application/json",
+                        "api-key": apiKey,
+                        "content-type": "application/json"
+                      },
+                      body: JSON.stringify(bodyToDoyen)
+                    })
+                    .then(response => {
+                      if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                      }
+            
+                      console.log('logging in', response);
+                      setSubmitting(false);
                       resetForm();
-                    }}
+                      resetForm();
+                      toast.success('We have received your Message, We will get back to you shortly');
+                    })
+                    .catch(error => {
+                      console.error('error submitting form', error);
+                      setSubmitting(false);
+                      toast.error("Sorry we could not receive your Message. Please check your connection and try again");
+                    });
+                  }}
                    
                  
                   validationSchema={validationSchema}
@@ -229,7 +226,7 @@ const Contact = () => {
                         </Form.Group>
                       </div>
                       <div className="col-12">
-
+{/* 
     <Form.Group className="mb-3" controlId="lessonType">
     <Form.Label className="input-label">{t('Course')}</Form.Label>
     <Form.Control
@@ -244,7 +241,31 @@ const Contact = () => {
     <Form.Control.Feedback type="invalid">
       {errors.course}
     </Form.Control.Feedback>
+  </Form.Group> */}
+
+  <Form.Group className="mb-3" controlId="languageLevel">
+    <Form.Label className="input-label">{t('Course')}</Form.Label>
+    <Form.Control
+      className="contact-input"
+      as="select"
+      name="course"
+      value={values.course}
+      onChange={handleChange}
+      onBlur={handleBlur}
+      isInvalid={!!errors.course}
+    >
+      <option value="" disabled> Select course</option>
+      <option value="English for adult">English for adult </option>
+      <option value="English for school">English for school</option>
+      <option value="Estonian for adult">Estonian for adult</option>
+      <option value="Estonian for school">Estonian for school</option>
+      <option value="Make enquiry<">Make enquiry</option>
+    </Form.Control>
+    <Form.Control.Feedback type="invalid">
+      {errors.languageLevel}
+    </Form.Control.Feedback>
   </Form.Group>
+
     <Form.Group className="mb-3" controlId="languageLevel">
     <Form.Label className="input-label">{t('Language Level')}</Form.Label>
     <Form.Control

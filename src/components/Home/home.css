@@ -29,9 +29,10 @@
    
     .hero-img{
         padding-top: 20px;
-        width: 70%;
-        margin-right: 20px;
-        margin-left: 40px;
+        width: 80%;
+        height: auto;
+        margin-right: 0px;
+        margin-left: 30px;
     }
 
     .aboutimg{
