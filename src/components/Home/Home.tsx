@@ -75,7 +75,7 @@ const Home = () => {
                         <a className='ms-5 swinging-link' href="#Whoiteach" style={{ textDecoration: 'none' }}> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                     </div>
                     <div className='mt-3'>
-                       {t('I am a professional teacher of Estonian and English language. I have over 20 years of')} 
+                        {t('I am a professional teacher of Estonian and English language. I have over 20 years of')} {"\n"}
                         {t('experience teaching in basic and high schools, and I have conducted language courses in')}   
                         {t('both Estonian and English for adult')} 
                         <br />
