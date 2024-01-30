@@ -1,5 +1,6 @@
 import {Facebook, Instagram, Linkedin, Twitter,Youtube} from 'react-bootstrap-icons';
 import kelelogo from '../../img/kelelogo.png';
+import doyen1 from '../../img/doyen1.png';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -13,9 +14,9 @@ const Footer = () => {
     <img className='mb-3' src={kelelogo} style={{height:"", width: ""}} alt="russian flag"/>
      
        <div className='footer-writeup' style={{color: "#050A27"}}>
-            <p> <b> {t('Embark on an exciting language learning journey with me as your Estonian language tutor')}. <br />
-                   {t("Together, we'll conquer challenges, explore the beauty of the language")}, 
-                   {t("and achieve your language goals")}. 
+            <p> <b> {t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')} <br />
+            {t('THE WAY FOR OTHERS Mustafa Kemal Ataturk')} 
+                   {/* {t("and achieve your language goals")}.  */}
             </b> </p>
         </div>
         <div>
@@ -25,6 +26,7 @@ const Footer = () => {
         <a href="https://www.instagram.com" className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer"><Instagram className="footer-link" /> </a>
         <a href={window.location.href} className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer" ><Youtube className="footer-link" /> </a>
         </div>
+        <div className='mt-5'>{t('developed by')} {'\n'} <img src={doyen1} width="80px" alt="auto" /> </div>
     </div>
   )
 }
