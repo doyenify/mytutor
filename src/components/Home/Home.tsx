@@ -40,11 +40,14 @@ const Home = () => {
                 <div className='ps-5 pt-5 p5-5'>
                     <div style={{fontSize: "24px"}}>{t('Lets get acquainted!')}</div>
                     <h1>{t('I am Natalia Komarova,')}
-                    {t('CEO and language')} <br />  
-                    {t('instructor at Keelerõõmud')}  
+                    {t('CEO and language')}{"\n" }
+                    {t('instructor at Keelerõõmud')} {"\n" }
                     {t('Keeltekool OÜ')}</h1>
-                    <div>{t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')}
-                    {t('THE WAY FOR OTHERS Mustafa Kemal Ataturk')}</div>
+                    <div>
+                     "{t('A good teacher is like a candle – it consumes itself to light')}{"\n"}
+                     {t('the way for others')}" {"\n"}
+                    <i>{t('Mustafa Kemal Ataturk')}</i>
+                    </div>
                     <div className='' style={{display: "flex", marginTop: "15px"}}>
                     <Button className='her0-contact-btn' href='#aboutme'
                     style={{backgroundColor: "transparent", color: "#000000" , borderRadius: "50px", width: "120px", fontWeight: "bold", marginTop:"10px", marginRight:"20px"}}>
@@ -74,15 +77,15 @@ const Home = () => {
                         <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('About me')}</Button> </div>
                         <a className='ms-5 swinging-link' href="#Whoiteach" style={{ textDecoration: 'none' }}> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                     </div>
-                    <div className='mt-3'>
+                    <div className='mt-3' style={{maxWidth:"500px"}}>
                         {t('I am a professional teacher of Estonian and English language. I have over 20 years of')} {"\n"}
-                        {t('experience teaching in basic and high schools, and I have conducted language courses in')}   
+                        {t('experience teaching in basic and high schools, and I have conducted language courses in')}  {"\n"} 
                         {t('both Estonian and English for adult')} 
                         <br />
                         <br />
-                        {t('I love promoting joyful language learning, I emphasize collaborative student-teacher')} 
-                        {t('partnerships. As a guiding light, I inspire language skills development through active')} 
-                        {t('methods, modern materials, and digital technologies. Continuous assessment ensures a')}
+                        {t('I love promoting joyful language learning, I emphasize collaborative student-teacher')} {"\n"}
+                        {t('partnerships. As a guiding light, I inspire language skills development through active')} {"\n"}
+                        {t('methods, modern materials, and digital technologies. Continuous assessment ensures a')}{"\n"}
                         {t('comprehensive grasp of knowledge')}
                     </div>
                     </div>
@@ -129,18 +132,20 @@ const Home = () => {
      <div id='howiwork'>
         <Row>
         <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <div className='work-content'>
+                <div className='work-content' style={{maxWidth:"500px"}}>
                     <div style={{display:"flex"}} > 
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('How I work')} </Button> </div>
                     <a className='ms-5 mb-3 swinging-link' href="#courses" style={{ textDecoration: 'none' }}> {t('Courses')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                      </div>
-                    <div className='mt-3'> {t('I work with groups of adults and school students, providing both')} <br />
-                    {t('group and individual lessons. Classes can be held either in')} <br />
-                    {t('person (at my home office in Narva or rented space) or online (via Zoom).')} <br />
-                    {t('I assist school students in preparing for Estonian and English language state')} <br />
+                    <div className='mt-3'> {t('I work with groups of adults and school students, providing both')} 
+                    {t('group and individual lessons. Classes can be held either in')} 
+                    {t('person (at my home office in Narva or rented space) or online (via Zoom).')} 
+                    <br />
+                    <br />
+                    {t('I assist school students in preparing for Estonian and English language state')} {"\n"}
                     {t('exams and organize training sessions based on clients preferences.')}
                     </div>
-                    </div>
+                 </div>
             </Col>
             <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: ''}}>
             <div><img className='workimg' src={workimg} style={{height:"478px", width: "auto"}} alt="work pict"/></div>
@@ -235,7 +240,7 @@ const Home = () => {
                             <div className='d-flex justify-content-end'>
                                     <img className='mb-3' src={estflag} style={{height:"40px", width: "40px"}} 
                                     alt="English flag"/>
-                                </div>
+                             </div>
                                 <div className="col-md-4">
                                     <img src={booktwo} alt="Tutor two"/>
                                 </div>
@@ -261,14 +266,20 @@ const Home = () => {
            alt="sun"/> 
           </div>
           <div  className='text-center mt-5'>
-           <p>
-           {t('If you are interested in learning, you can please book a consultation with me by clicking this. (A consultation link),')}
-             <br />
+                    <div className='flex '>
+             <div>
+           {t('If you are interested in learning, you can please book a consultation with me by clicking this.')}
+           </div>
+           <div className='swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
+                                  src={circlearrow} style={{height:"30px", width: "30px"}} 
+                                  alt="Tutor"/> 
+             </div>
+            </div>
+    
              {t('to be able to assess your skills and for proper mentorship.')}
-              </p>
-              {t('I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty,')}
-             
-            <br />
+             <br />
+             {t('I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty,')}
+             <br />
             {t('conquer challenges, and achieve their set goals.')} 
           </div> 
           </div>
