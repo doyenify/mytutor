@@ -135,7 +135,16 @@
     "developed by": "developed by",
     "You need more information?": "You need more information?",
     "Book a Free Consultation with Us Now!":"Book a Free Consultation with Us Now!",
-   "You can as well contact us": " You can as well contact us"
+   "You can as well contact us": " You can as well contact us",
+   "Name is required": "Name is required",
+   "Invalid email":"Invalid email",
+   "Email is required": "Email is required",
+   "Language Level is required": "Language Level is required",
+   "Course is required": "Course is required",
+   "Lesson Type is required":"Lesson Type is required",
+   "Message is required": "Message is required",
+   "Select course": "Select course",
+   "Select Language Level": "Select Language Level"
     
 
 

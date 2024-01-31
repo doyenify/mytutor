@@ -8,15 +8,15 @@ import * as yup from 'yup';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
-
-const validationSchema = yup.object().shape({
-  name: yup.string().required('Name is required'),
-  email: yup.string().email('Invalid email').required('Email is required'),
-  languageLevel: yup.string().required('Language Level is required'),
-  course: yup.string().required('Courses is required'),
-  lessonType: yup.string().required('Lesson Type is required'),
-  courseExpectation: yup.string().required('Message is required'),
+  const validationSchema = yup.object({
+    name: yup.string().required(i18n.t('Name is required')),
+    email: yup.string().email(i18n.t('Invalid email')).required(i18n.t('Email is required')),
+    languageLevel: yup.string().required(i18n.t('Language Level is required')),
+    course: yup.string().required(i18n.t('Course is required')),
+    lessonType: yup.string().required(i18n.t('Lesson Type is required')),
+    courseExpectation: yup.string().required(i18n.t('Message is required')),
 });
 
 const Contact = () => {
@@ -255,7 +255,7 @@ const Contact = () => {
       onBlur={handleBlur}
       isInvalid={!!errors.course}
     >
-      <option value="" disabled> Select course</option>
+      <option value="" disabled> {t('Select course')}</option>
       <option value="English for adult">English for adult </option>
       <option value="English for school">English for school</option>
       <option value="Estonian for adult">Estonian for adult</option>
@@ -278,7 +278,7 @@ const Contact = () => {
       onBlur={handleBlur}
       isInvalid={!!errors.languageLevel}
     >
-      <option value="" disabled>Select Language Level</option>
+      <option value="" disabled> {t('Select Language Level')}</option>
       <option value="A1">A1</option>
       <option value="A2">A2</option>
       <option value="B1">B1</option>

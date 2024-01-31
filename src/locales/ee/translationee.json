@@ -135,5 +135,14 @@
     "developed by": "välja töötatud",
     "You need more information?": "Sa vajad rohkem teavet?",
     "Book a Free Consultation with Us Now!":"Broneeri tasuta konsultatsioon meiega kohe!",
-    "You can as well contact us": "Võite meiega ühendust võtta"   
+    "You can as well contact us": "Võite meiega ühendust võtta",
+    "Name is required": "Nimi on nõutav",
+   "Invalid email": "Invaliidne e-kiri",
+   "Email is required": "Vajalik on e-posti aadress",
+   "Language Level is required": "Nõutav keeletase",
+   "Course is required": "Kursus on nõutav",
+   "Lesson Type is required":"Tundide tüüp on nõutav",
+   "Message is required": "Sõnum on nõutav" ,
+   "Select course": "Valige kursus",
+   "Select Language Level": "Vali keeletase"
 }

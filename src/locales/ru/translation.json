@@ -80,7 +80,17 @@
    "developed by": "разработанный",
    "You need more information?": "Вам нужна дополнительная информация?",
    "Book a Free Consultation with Us Now!":"Закажите бесплатную консультацию у нас прямо сейчас!",
-   "You can as well contact us": "Вы также можете связаться с нами"
+   "You can as well contact us": "Вы также можете связаться с нами",
+   "Name is required": "Имя обязательно",
+   "Invalid email":"Неверный адрес электронной почты",
+   "Email is required": "Электронная почта обязательна",
+   "Language Level is required": "Требуется уровень владения языком",
+   "Course is required": "Курс обязателен",
+   "Lesson Type is required":"Тип урока обязателен",
+   "Message is required": "Сообщение обязательно",
+   "Select course": "Выбрать курс",
+   "Select Language Level": "Выбрать уровень языка"
+  
    
    
 }
