@@ -35,7 +35,12 @@ const Footer = () => {
         </div>
         <div className='mt-3'> <img  className="me-1" src={copyright} width="14px" alt="auto" /> {t(' 2024 Keelerõõmud Keeltekool OÜ')} 
          </div>
-        <div className='mt-1'>{t('developed by')} {'\n'} <img src={doyen1} width="80px" alt="auto" /> </div>
+         <div className='mt-1'>
+       {t('developed by')} {'\n'}
+       <a href="https://www.doyenify.com" target="_blank" rel="noopener noreferrer">
+      <img src={doyen1} width="80px" alt="auto" />
+     </a>
+    </div>
     </div>
   )
 }
