@@ -29,11 +29,11 @@ const EffEduPro = () => {
     <Col className=" d-flex align-items-center justify-content-center p-4">
   <div className="text-center">
     <strong className="display-7 mb-3" style={{fontSize:"32px"}}>
-      {t('Page not Available Yet. But Natalia is;')}
+      {t('Lehekülg ei ole veel saadaval. Aga Natalia on;')}
     </strong>
     <br />
-    {t('Natalia is a Director who will be happy to meet you and discuss your learning needs.')} <br />
-    {t('You can email us through')} <br />
+    {t('Natalia on direktor, kes kohtub teiega hea meelega ja arutab teie õppimisvajadusi.')} <br />
+    {t('Saate saata meile e-kirja läbi')} <br />
      <span style={{ textDecoration: 'underline', color: 'blue' }}>
       {t('keeleroomud.keeltekool@gmail.com.')}
     </span>

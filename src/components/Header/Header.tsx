@@ -104,7 +104,7 @@ const Header = () => {
               fontWeight:"",
               fontSize:"16px"}}
               >
-              {t('Home')}
+              {t('Kodu')}
               </Nav.Link>
               {/* <Nav.Link onClick={toAbout}
                style={{
@@ -143,7 +143,7 @@ const Header = () => {
               >
               {t('Information')}
               </Nav.Link> */}
-              <NavDropdown title={t('Courses')} id="courses-dropdown"
+              <NavDropdown title={t('Kursused')} id="courses-dropdown"
                 style={{
                   marginLeft: "20px",
                   color: "#3F556B",
@@ -151,19 +151,19 @@ const Header = () => {
                   fontSize: "16px"
                 }}>
                 <NavDropdown.Item onClick={navigateToEngForAdult}>
-                {t('English For Adults')}
+                {t('Inglise keel täiskasvanutele')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToEngForSchStu}>
-                  {t('English For School Students')}
+                  {t('Inglise keel kooliõpilastele')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToEstForAdult}>
-                  {t('Estonian For Adults')}
+                  {t('Eesti keel täiskasvanutele')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToEstForSchStu}>
-                  {t('Estonian For School Students')}
+                  {t('Eesti keel kooliõpilastele')}
                 </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title={t('Information')} id="information-dropdown"
+              <NavDropdown title={t('Informatsioon')} id="information-dropdown"
                 style={{
                   marginLeft: "20px",
                   color: "#3F556B",
@@ -171,22 +171,22 @@ const Header = () => {
                   fontSize: "16px"
                 }}>
                 <NavDropdown.Item onClick={navigateToSchedule}>
-                  {t('Schedule')}
+                  {t('Ajakava')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToCurriculum}>
-                  {t('Curriculum')}
+                  {t('Õppekavad')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToEffEduPro}>
-                  {t('Efficient Educational Programs')}
+                  {t('Tõhusad haridusprogrammid')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToQuaTeachers}>
-                  {t('Qualified Teachers')}
+                  {t('Kvalifitseeritud õpetajad')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToLearningEnv}>
-                  {t('Learning Environment')}
+                  {t('Õppekeskkond')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToPayTerms}>
-                  {t('Payment Terms')}
+                  {t('Maksetingimused')}
                 </NavDropdown.Item>
               </NavDropdown>
               
@@ -209,7 +209,7 @@ const Header = () => {
             </Button> */}
             <Button onClick={toContact} className='bookaservice-btn mx-2'
              style={{backgroundColor: "#FBE081", color:"#3F556B", borderRadius: "50px", width: "150px"}} >
-             {t('Contact')}
+             {t('Kontakt')}
             </Button>
         </Navbar.Collapse>
       </Container>

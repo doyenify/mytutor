@@ -19,10 +19,10 @@ const Consultation = () => {
         <div className="row">
           <div className="col-md-4 text-center">
             <h3 style={{ paddingTop: "50px", fontWeight: "bold" }}>
-              {t('You need more information?')}
+              {t('Sa vajad rohkem teavet?')}
             </h3>
             <h5 style={{ paddingTop: "10px", marginBottom: "10px" }}>
-              {t('Book a Free Consultation with Us Now!')}
+              {t('Broneeri tasuta konsultatsioon meiega kohe!')}
             </h5>
             <img src={consult} alt="Emeeting" style={{ width: "100%" }} />
           </div>
@@ -31,7 +31,7 @@ const Consultation = () => {
               <InlineWidget url="https://calendly.com/olagbemiifeoluwa" />
             </div>
             <div style={{ marginTop: "-250px", textAlign: "center" }}>
-              {t('You can as well contact us')}
+              {t('Võite meiega ühendust võtta')}
             </div>
             <Button
               onClick={toContact}
@@ -44,7 +44,7 @@ const Consultation = () => {
                 marginTop: "10px",
               }}
             >
-              {t('Contact')}
+              {t('Kontakt')}
             </Button>
           </div>
         </div>

@@ -21,8 +21,8 @@ const Footer = () => {
         </div> */}
         <div>
         <b> 
-              "{t('A good teacher is like a candle – it consumes itself to light')}{"\n"} <br />
-               {t('the way for others')}" {"\n"} <br />
+              "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}{"\n"} <br />
+               {t('valgustada teed teistele.')}" {"\n"} <br />
                 <i>{t('Mustafa Kemal Ataturk')}</i>
         </b>
                 </div>
@@ -36,7 +36,7 @@ const Footer = () => {
         <div className='mt-3'> <img  className="me-1" src={copyright} width="14px" alt="auto" /> {t(' 2024 Keelerõõmud Keeltekool OÜ')} 
          </div>
          <div className='mt-1'>
-       {t('developed by')} {'\n'}
+       {t('välja töötatud')} {'\n'}
        <a href="https://www.doyenify.com" target="_blank" rel="noopener noreferrer">
       <img src={doyen1} width="80px" alt="auto" />
      </a>

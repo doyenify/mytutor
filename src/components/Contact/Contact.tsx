@@ -11,12 +11,12 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 
   const validationSchema = yup.object({
-    name: yup.string().required(i18n.t('Name is required')),
-    email: yup.string().email(i18n.t('Invalid email')).required(i18n.t('Email is required')),
-    languageLevel: yup.string().required(i18n.t('Language Level is required')),
-    course: yup.string().required(i18n.t('Course is required')),
-    lessonType: yup.string().required(i18n.t('Lesson Type is required')),
-    courseExpectation: yup.string().required(i18n.t('Message is required')),
+    name: yup.string().required(i18n.t('Nimi on nõutav')),
+    email: yup.string().email(i18n.t('Invaliidne e-kiri')).required(i18n.t('Vajalik on e-posti aadress')),
+    languageLevel: yup.string().required(i18n.t('Nõutav keeletase')),
+    course: yup.string().required(i18n.t('Kursus on nõutav')),
+    lessonType: yup.string().required(i18n.t('Tundide tüüp on nõutav')),
+    courseExpectation: yup.string().required(i18n.t('Sõnum on nõutav')),
 });
 
 const Contact = () => {
@@ -27,7 +27,7 @@ const Contact = () => {
        {/* banner  */}
        <div className='text-center mt-5 d-flex justify-content-center align-items-center'
         style={{backgroundColor: "#E2E5E9" , height: "200px" }}>
-        <h1 className="" >{t('Get in Touch With Us')}</h1>
+        <h1 className="" >{t('Võta meiega ühendust')}</h1>
        </div>
        {/* contact details */}
        <div>
@@ -40,7 +40,7 @@ const Contact = () => {
                 <img src={homeimg} style={{width:"35px", height: "35px"}} alt="home"/>
               </div>
               <div className="col-md-11">
-                <h5>{t('Address')}</h5> <p>Kangelaste 36,Narva linn, 
+                <h5>{t('Aadress')}</h5> <p>Kangelaste 36,Narva linn, 
                 Ida-Viru maakond, 20608
                 </p></div>
                <iframe title="address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.6397950427397!2d28.168379976437475!3d59.38903760624067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469437e349fb01e3%3A0x6ab52b0bc5a9168!2sKangelaste%20prospekt%2036%2C%2020608%20Narva%2C%20Estonia!5e0!3m2!1sen!2sng!4v1706014835873!5m2!1sen!2sng" 
@@ -59,7 +59,7 @@ const Contact = () => {
               <img src={emailimg}  style={{width:"35px", height: "35px"}} alt="email"/> 
               </div>
               <div className="col-md-11">
-                <h5>{t('Email Address')}</h5><p>keeleroomud.keeltekool@gmail.com
+                <h5>{t('E-posti aadress')}</h5><p>keeleroomud.keeltekool@gmail.com
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                 <img src={phoneimg}  style={{width:"35px", height: "35px"}}alt="phone"/> 
               </div>
               <div className="col-md-11">
-                <h5>{t('Phone Number')}</h5> <p>+37255687860</p>
+                <h5>{t('Telefoninumber')}</h5> <p>+37255687860</p>
               </div>
             </div>
             </div>
@@ -80,7 +80,7 @@ const Contact = () => {
                 <img src={bankimg}  style={{width:"35px", height: "35px"}}alt="phone"/> 
               </div>
               <div className="col-md-11">
-                <h5>{t('Bank')}</h5> <p>Swedbank  EE302200221083473734 </p>
+                <h5>{t('Pank')}</h5> <p>Swedbank  EE302200221083473734</p>
               </div>
             </div>
           </div>
@@ -189,7 +189,7 @@ const Contact = () => {
                           controlId="validationCustom01"
                         >
                           <Form.Label className="input-label">
-                            {t('Name')}
+                            {t('Nimi')}
                           </Form.Label>
                           <Form.Control
                             className="contact-input"
@@ -210,7 +210,7 @@ const Contact = () => {
                           controlId="validationCustom01"
                         >
                           <Form.Label className="input-label">
-                            {t('Email Address')}
+                            {t('E-posti aadress')}
                           </Form.Label>
                           <Form.Control
                             className="contact-input"
@@ -245,7 +245,7 @@ const Contact = () => {
   </Form.Group> */}
 
   <Form.Group className="mb-3" controlId="languageLevel">
-    <Form.Label className="input-label">{t('Course')}</Form.Label>
+    <Form.Label className="input-label">{t('Kursus')}</Form.Label>
     <Form.Control
       className="contact-input"
       as="select"
@@ -255,7 +255,7 @@ const Contact = () => {
       onBlur={handleBlur}
       isInvalid={!!errors.course}
     >
-      <option value="" disabled> {t('Select course')}</option>
+      <option value="" disabled> {t('Valige kursus')}</option>
       <option value="English for adult">English for adult </option>
       <option value="English for school">English for school</option>
       <option value="Estonian for adult">Estonian for adult</option>
@@ -268,7 +268,7 @@ const Contact = () => {
   </Form.Group>
 
     <Form.Group className="mb-3" controlId="languageLevel">
-    <Form.Label className="input-label">{t('Language Level')}</Form.Label>
+    <Form.Label className="input-label">{t('Keeletase')}</Form.Label>
     <Form.Control
       className="contact-input"
       as="select"
@@ -278,7 +278,7 @@ const Contact = () => {
       onBlur={handleBlur}
       isInvalid={!!errors.languageLevel}
     >
-      <option value="" disabled> {t('Select Language Level')}</option>
+      <option value="" disabled> {t('Vali keeletase')}</option>
       <option value="A1">A1</option>
       <option value="A2">A2</option>
       <option value="B1">B1</option>
@@ -291,7 +291,7 @@ const Contact = () => {
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="lessonType">
-    <Form.Label className="input-label">{t('Lesson Type')}</Form.Label>
+    <Form.Label className="input-label">{t('Tunni tüüp')}</Form.Label>
     <Form.Control
       className="contact-input"
       type="text"
@@ -306,7 +306,7 @@ const Contact = () => {
     </Form.Control.Feedback>
   </Form.Group>
   <Form.Group className="mb-3" controlId="validationCustom01">
-    <Form.Label className="input-label">{t('Course Expectation')}</Form.Label>
+    <Form.Label className="input-label">{t('Kursuse ootus')}</Form.Label>
     <Form.Control
       className="contact-input"
       as="textarea"  // Change this line

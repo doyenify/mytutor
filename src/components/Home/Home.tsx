@@ -38,24 +38,24 @@ const Home = () => {
             <Row>
                 <Col className='hero-col-1 col-12 col-sm-6 d-flex justify-content-center align-items-center'>
                 <div className='ps-5 pt-5 p5-5'>
-                    <div style={{fontSize: "24px"}}>{t('Lets get acquainted!')}</div>
-                    <h1>{t('I am Natalia Komarova,')}
-                    {t('CEO and language')}{"\n" }
-                    {t('instructor at Keelerõõmud')} {"\n" }
+                    <div style={{fontSize: "24px"}}>{t('Saame tuttavaks!')}</div>
+                    <h1>{t('Ma olen Natalia Komarova,')}
+                    {t('Tegevjuht ja keel')}{"\n" }
+                    {t('instruktor aadressil Keelerõõmud')} {"\n" }
                     {t('Keeltekool OÜ')}</h1>
                     <div>
-                     "{t('A good teacher is like a candle – it consumes itself to light')}{"\n"}
-                     {t('the way for others')}" {"\n"}
+                     "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}{"\n"}
+                     {t('valgustada teed teistele.')}" {"\n"}
                     <i>{t('Mustafa Kemal Ataturk')}</i>
                     </div>
                     <div className='' style={{display: "flex", marginTop: "15px"}}>
                     <Button className='her0-contact-btn' href='#aboutme'
                     style={{backgroundColor: "transparent", color: "#000000" , borderRadius: "50px", width: "120px", fontWeight: "bold", marginTop:"10px", marginRight:"20px"}}>
-                    {t('About me')}
+                    {t('Minust')}
                     </Button> 
                     <Button className='her0-contact-btn' onClick={toConsultation} 
                     style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
-                    {t('consultation')}
+                    {t('konsultatsioon')}
                     </Button> 
                     </div>    
                  </div>
@@ -74,19 +74,19 @@ const Home = () => {
             <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div className='about-content'>
                     <div style={{display:"flex"}} > 
-                        <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('About me')}</Button> </div>
-                        <a className='ms-5 swinging-link' href="#Whoiteach" style={{ textDecoration: 'none' }}> {t('Who I teach')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
+                        <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Minust')}</Button> </div>
+                        <a className='ms-5 swinging-link' href="#Whoiteach" style={{ textDecoration: 'none' }}> {t('Keda ma õpetan')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                     </div>
                     <div className='mt-3' style={{maxWidth:"500px"}}>
-                        {t('I am a professional teacher of Estonian and English language. I have over 20 years of')} {"\n"}
-                        {t('experience teaching in basic and high schools, and I have conducted language courses in')}  {"\n"} 
-                        {t('both Estonian and English for adult')} 
+                        {t('Olen professionaalne eesti ja inglise keele õpetaja. Oman rohkem kui 20-aastast')} {"\n"}
+                        {t('töökogemust põhikoolis ja gümnaasiumis, lisaks olen läbi viinud nii')}  {"\n"} 
+                        {t('eesti kui ka inglise keele täiendkoolitusi täiskasvanutele.')} 
                         <br />
                         <br />
-                        {t('I love promoting joyful language learning, I emphasize collaborative student-teacher')} {"\n"}
-                        {t('partnerships. As a guiding light, I inspire language skills development through active')} {"\n"}
-                        {t('methods, modern materials, and digital technologies. Continuous assessment ensures a')}{"\n"}
-                        {t('comprehensive grasp of knowledge')}
+                        {t('Ma usun, et keeli tuleks õppida ja õpetada rõõmuga. Oluline on õpilaste ja õpetaja')} {"\n"}
+                        {t('koostöö, kus õpetaja inspireerib, aitab arendada võõrkeeleoskusi ja suunab.')} {"\n"}
+                        {t('Ma püüan olla selline inspiratsiooniallikas, kasutades uuenduslikke õppemeetodeid,')}{"\n"}
+                        {t('materjale ja pidevalt kontrollin õppijate teadmisi testide kaudu.')}
                     </div>
                     </div>
             </Col>
@@ -96,8 +96,8 @@ const Home = () => {
        <div className= "who-content mb-5" id='Whoiteach'>
         <Row>
              <div style={{ display: 'flex', justifyContent: 'center'}} > 
-                    <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Who I teach')} </Button> </div>
-                    <a className='ms-5 swinging-link' href="#howiwork" style={{ textDecoration: 'none' }}> {t('How I work')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
+                    <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Keda ma õpetan')} </Button> </div>
+                    <a className='ms-5 swinging-link' href="#howiwork" style={{ textDecoration: 'none' }}> {t('Kuidas ma töötan')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
               </div>
                 
                 <div className='row justify-content-center'>
@@ -107,8 +107,8 @@ const Home = () => {
                                 <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
                                 <img className='ms-3' src={estflag} style={{height:"30px", width: "30px"}} alt="estonian flag"/>
                             </div>
-                            <p style={{height: "100px"}}> {t('I teach English to both')} <br /> {t('Russian and Estonian')}  <br /> {t('speakers')} </p>
-                            <p> {t('Levels')}:<br />{t('A1, A2, B1, B2, and C1.')} </p>
+                            <p style={{height: "100px"}}> {t('Inglise keele õpetamine toimub')} <br /> {t('vene ja eesti keele')}  <br /> {t('baasil')} </p>
+                            <p> {t('Tasemed')}:<br />{t('A1, A2, B1, B2, ja C1.')} </p>
 
                         </div >
                     </div>
@@ -118,10 +118,10 @@ const Home = () => {
                                 <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
                                 <img className='ms-3' src={engflag} style={{height:"30px", width: "30px"}} alt="english flag"/>
                             </div>
-                            <p style={{height: "100px"}}> {t('I teach Estonian as a')} <br /> {t('second language to both Russian')}  
-                            <br /> {t('and English')} <br />
-                            {t('speakers')} </p>
-                            <p>{t('Levels')}: <br />{t('A1, A2, B1, and B2.')} </p>
+                            <p style={{height: "100px"}}> {t('Eesti keele õpetamine toimub')} <br /> {t('oimub vene ja')}  
+                            <br /> {t('inglise keele')} <br />
+                            {t('baasil')} </p>
+                            <p>{t('Tasemed')}: <br />{t('"A1, A2, B1, ja B2.')} </p>
                         </div>
                     </div>
                 </div>
@@ -134,16 +134,16 @@ const Home = () => {
         <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div className='work-content' style={{maxWidth:"500px"}}>
                     <div style={{display:"flex"}} > 
-                    <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('How I work')} </Button> </div>
-                    <a className='ms-5 mb-3 swinging-link' href="#courses" style={{ textDecoration: 'none' }}> {t('Courses')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
+                    <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Kuidas ma töötan')} </Button> </div>
+                    <a className='ms-5 mb-3 swinging-link' href="#courses" style={{ textDecoration: 'none' }}> {t('Kursused')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                      </div>
-                    <div className='mt-3'> {t('I work with groups of adults and school students, providing both')} 
-                    {t('group and individual lessons. Classes can be held either in')} 
-                    {t('person (at my home office in Narva or rented space) or online (via Zoom).')} 
+                    <div className='mt-3'> {t('Töötan täiskasvanute ja kooliõpilaste gruppidega ja annan ka individuaaltunde.')} 
+                    {t('Tunnid võivad toimuda nii kontaktselt( Narva kodukontor või renditud ruum)')} 
+                    {t('kui ka online-keskkonnas (Zoom). Aitan kooliõpilastel valmistuda eesti ning')} 
                     <br />
                     <br />
-                    {t('I assist school students in preparing for Estonian and English language state')} {"\n"}
-                    {t('exams and organize training sessions based on clients preferences.')}
+                    {t('Aitan kooliõpilasi eesti ja inglise keele riigieksami ettevalmistamisel')} {"\n"}
+                    {t('inglise keele riigieksamiteks. Korraldan koolitusi vastavalt klientide soovile.')}
                     </div>
                  </div>
             </Col>
@@ -163,7 +163,7 @@ const Home = () => {
                 <Col className='col-12 col-sm-7 d-flex justify-content-center align-items-center'>
                 <Row className='home-card'>
                     <Row className='mb-5' ><div><h2>
-                    {t('Find Out Our Courses With KEELERÕÕMUD KEELTEKOOL.')}
+                    {t('Tutvu meie kursustega KEELERÕÕMUD KEELTEKOOL.')}
                         </h2></div></Row>
                     <Col className='mb-4'>
                         <Card style={{ width: '18rem' , backgroundColor:"#ECEEF0" }}>
@@ -178,9 +178,9 @@ const Home = () => {
                                     <img src={booktwo} alt="Tutor two"/> 
                                 </div>
                                 <div className="col-md-8">
-                                    <p>{t('ENGLISH FOR ADULTS')}</p>
+                                    <p>{t('INGLISE KEEL TÄISKASVANUTELE')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link'onClick={toConsultation} style={{cursor:'pointer'}}> {t('consultation')} <img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link'onClick={toConsultation} style={{cursor:'pointer'}}> {t('konsultatsioon')} <img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -201,9 +201,9 @@ const Home = () => {
                                     <img src={bookone} alt="Tutor two"/> 
                                 </div>
                                 <div className="col-md-8">
-                                    <p>{t('ENGLISH FOR SCHOOL STUDENTS')}</p>
+                                    <p>{t('INGLISE KEEL KOOLIÕPILASTELE')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -223,9 +223,9 @@ const Home = () => {
                                     <img src={bookone} alt="Tutor two"/>
                                 </div>
                                 <div className="col-md-8">
-                                    <p>{t('ESTONIAN FOR ADULTS')}</p> 
+                                    <p>{t('EESTI KEEL TÄISKASVANUTELE')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -245,9 +245,9 @@ const Home = () => {
                                     <img src={booktwo} alt="Tutor two"/>
                                 </div>
                                 <div className="col-md-8">
-                                    <p>{t('ESTONIAN FOR SCHOOL STUDENTS')}</p> 
+                                    <p>{t('EESTI KEEL KOOLIÕPILASTELE')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -268,26 +268,26 @@ const Home = () => {
           <div  className='text-center mt-5'>
                     <div className='flex '>
              <div>
-           {t('If you are interested in learning, you can please book a consultation with me by clicking this.')}
+           {t('Kui olete huvitatud õppimisest, palun broneerige konsultatsiooni minuga, klõpsates sellel')}
            </div>
-           <div className='swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('consultation')}<img className='ms-3'
+           <div className='swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
              </div>
             </div>
     
-             {t('to be able to assess your skills and for proper mentorship.')}
+             {t('et hinnata oma oskusi ja saada nõuetekohast juhendamist.')}
              <br />
-             {t('I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty,')}
+             {t('Ootan kõiki huvilisi sõltumata vanusest õppima võõrkeeli rõõmuga, avastama keelte ilu,')}
              <br />
-            {t('conquer challenges, and achieve their set goals.')} 
+            {t('vallutama väljakutseid ja saavutama enda poolt püstitatud eesmärke.')} 
           </div> 
           </div>
          <div className='d-flex justify-content-center align-item-center mt-5'>
         {/* <Link to="/Consultation"> */}
          <Button className='her0-consulation-btn ' onClick={toConsultation}
          style={{backgroundColor: "#FCE79C", color: "#3F556B" , borderRadius: "50px", width: "200px", marginTop:"10px"}}>
-         {t('consultation')}
+         {t('konsultatsioon')}
          </Button> 
          {/* </Link> */}
        </div>
