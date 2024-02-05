@@ -166,7 +166,7 @@ const Home = () => {
                 <Col className='col-12 col-sm-7 d-flex justify-content-center align-items-center'>
                 <Row className='home-card'>
                     <Row className='mb-5' ><div><h2>
-                    {t('Tutvu meie kursustega')}
+                    {t('Tutvu minu kursustega')}
                         </h2></div></Row>
                     <Col className='mb-4'>
                         <Card style={{ width: '18rem' , backgroundColor:"#ECEEF0" }}>
@@ -183,7 +183,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('INGLISE KEEL TÄISKASVANUTELE')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link'onClick={toConsultation} style={{cursor:'pointer'}}> {t('konsultatsioon')} <img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link'onClick={toConsultation} style={{cursor:'pointer'}}> {t('Konsultatsioon')} <img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -206,7 +206,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('INGLISE KEEL KOOLIÕPILASTELE')}</p>
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('Konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -228,7 +228,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('EESTI KEEL TÄISKASVANUTELE')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('Konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -250,7 +250,7 @@ const Home = () => {
                                 <div className="col-md-8">
                                     <p>{t('EESTI KEEL KOOLIÕPILASTELE')}</p> 
                                 </div>
-                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
+                                 <div className='d-flex justify-content-end mt-3 swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('Konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
                                  </div>
@@ -273,7 +273,7 @@ const Home = () => {
              <div>
            {t('Kui olete huvitatud õppimisest, palun broneerige konsultatsiooni minuga, klõpsates sellel')}
            </div>
-           <div className='swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('konsultatsioon')}<img className='ms-3'
+           <div className='swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('Konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
                                   alt="Tutor"/> 
              </div>
@@ -290,7 +290,7 @@ const Home = () => {
         {/* <Link to="/Consultation"> */}
          <Button className='her0-consulation-btn ' onClick={toConsultation}
          style={{backgroundColor: "#FCE79C", color: "#3F556B" , borderRadius: "50px", width: "200px", marginTop:"10px"}}>
-         {t('konsultatsioon')}
+         {t('Konsultatsioon')}
          </Button> 
          {/* </Link> */}
        </div>

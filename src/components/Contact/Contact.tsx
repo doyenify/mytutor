@@ -334,7 +334,7 @@ const Contact = () => {
                         disabled={isSubmitting}
                         type="submit"
                       >
-                        {t('Submit')}
+                        {t('Esita')}
                       </Button>
                       <ToastContainer /> 
                     </Form>
