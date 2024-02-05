@@ -39,10 +39,13 @@ const Home = () => {
                 <Col className='hero-col-1 col-12 col-sm-6 d-flex justify-content-center align-items-center'>
                 <div className='ps-5 pt-5 p5-5'>
                     <div style={{fontSize: "24px"}}>{t('Saame tuttavaks!')}</div>
-                    <h1>{t('Ma olen Natalia Komarova,')}
-                    {t('Tegevjuht ja keel')}{"\n" }
+                    <h1>{t('Ma olen Natalia Komarova,')}  {"\n" }
+                    {t('Keelerõõmud Keeltekooli asutaja ja koolitaja')}
+                    
+                    {/* {t('Tegevjuht ja keel')}{"\n" }
                     {t('instruktor aadressil Keelerõõmud')} {"\n" }
-                    {t('Keeltekool OÜ')}</h1>
+                    {t('Keeltekool OÜ')} */}
+                    </h1>
                     <div>
                      "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}{"\n"}
                      {t('valgustada teed teistele.')}" {"\n"}
@@ -55,7 +58,7 @@ const Home = () => {
                     </Button> 
                     <Button className='her0-contact-btn' onClick={toConsultation} 
                     style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
-                    {t('konsultatsioon')}
+                    {t('Konsultatsioon')}
                     </Button> 
                     </div>    
                  </div>
@@ -118,10 +121,10 @@ const Home = () => {
                                 <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
                                 <img className='ms-3' src={engflag} style={{height:"30px", width: "30px"}} alt="english flag"/>
                             </div>
-                            <p style={{height: "100px"}}> {t('Eesti keele õpetamine toimub')} <br /> {t('oimub vene ja')}  
-                            <br /> {t('inglise keele')} <br />
+                            <p style={{height: "100px"}}> {t('Eesti keele õpetamine toimub')} <br /> {t('vene ja inglise keele')}  
+                            <br /> 
                             {t('baasil')} </p>
-                            <p>{t('Tasemed')}: <br />{t('"A1, A2, B1, ja B2.')} </p>
+                            <p>{t('Tasemed')}: <br />{t('A1, A2, B1, ja B2.')} </p>
                         </div>
                     </div>
                 </div>
@@ -137,13 +140,13 @@ const Home = () => {
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Kuidas ma töötan')} </Button> </div>
                     <a className='ms-5 mb-3 swinging-link' href="#courses" style={{ textDecoration: 'none' }}> {t('Kursused')} <img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                      </div>
-                    <div className='mt-3'> {t('Töötan täiskasvanute ja kooliõpilaste gruppidega ja annan ka individuaaltunde.')} 
-                    {t('Tunnid võivad toimuda nii kontaktselt( Narva kodukontor või renditud ruum)')} 
-                    {t('kui ka online-keskkonnas (Zoom). Aitan kooliõpilastel valmistuda eesti ning')} 
+                    <div className='mt-3'> {t('Töötan täiskasvanute ja kooliõpilaste gruppidega ja annan ka individuaaltunde.')} {"\n"}
+                    {t('Tunnid võivad toimuda nii kontaktselt (Narva kodukontor või renditud ruum)')} {"\n"}
+                    {t('kui ka online-keskkonnas (Zoom).')} {"\n"}
                     <br />
                     <br />
-                    {t('Aitan kooliõpilasi eesti ja inglise keele riigieksami ettevalmistamisel')} {"\n"}
-                    {t('inglise keele riigieksamiteks. Korraldan koolitusi vastavalt klientide soovile.')}
+                    {t('Aitan kooliõpilastel valmistuda eesti ning inglise keele riigieksamiteks.')} {"\n"}
+                    {t('Korraldan koolitusi vastavalt klientide soovile.')}
                     </div>
                  </div>
             </Col>
@@ -163,7 +166,7 @@ const Home = () => {
                 <Col className='col-12 col-sm-7 d-flex justify-content-center align-items-center'>
                 <Row className='home-card'>
                     <Row className='mb-5' ><div><h2>
-                    {t('Tutvu meie kursustega KEELERÕÕMUD KEELTEKOOL.')}
+                    {t('Tutvu meie kursustega')}
                         </h2></div></Row>
                     <Col className='mb-4'>
                         <Card style={{ width: '18rem' , backgroundColor:"#ECEEF0" }}>

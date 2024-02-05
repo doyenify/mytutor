@@ -104,7 +104,7 @@ const Header = () => {
               fontWeight:"",
               fontSize:"16px"}}
               >
-              {t('Kodu')}
+              {t('Avaleht')}
               </Nav.Link>
               {/* <Nav.Link onClick={toAbout}
                style={{
@@ -177,10 +177,10 @@ const Header = () => {
                   {t('Õppekavad')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToEffEduPro}>
-                  {t('Tõhusad haridusprogrammid')}
+                  {t('Õppeprogrammide kvaliteedi tagamine')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToQuaTeachers}>
-                  {t('Kvalifitseeritud õpetajad')}
+                  {t('Õpetajate kvaliteedi tagamine')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToLearningEnv}>
                   {t('Õppekeskkond')}
@@ -201,7 +201,9 @@ const Header = () => {
        selected={selected}
        onSelect={(code) => onClickLanguageChange(code)}
        countries={["EE", "GB", "RU" ]}
-       />;
+       showSelectedLabel={false}
+       showOptionLabel={false}
+       />
             {/* <GoogleTranslate/> */}
             {/* <Button className='bookaservice-btn mx-2' 
              style={{backgroundColor: "#985421", borderRadius: "50px", width: "150px"}} >
@@ -209,7 +211,7 @@ const Header = () => {
             </Button> */}
             <Button onClick={toContact} className='bookaservice-btn mx-2'
              style={{backgroundColor: "#FBE081", color:"#3F556B", borderRadius: "50px", width: "150px"}} >
-             {t('Kontakt')}
+             {t('Kontaktid')}
             </Button>
         </Navbar.Collapse>
       </Container>
