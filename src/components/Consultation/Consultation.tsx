@@ -1,7 +1,7 @@
 import React from 'react';
 import consult from '../../img/consult.jpg';
 import { useTranslation } from 'react-i18next';
-import { InlineWidget } from "react-calendly";
+// import { InlineWidget } from "react-calendly";
 import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
@@ -16,23 +16,15 @@ const Consultation = () => {
   return (
     <>
       <div className="container" style={{ marginTop: "100px" }}>
-        <div className="row">
-          <div className="col-md-4 text-center">
+       
+          <div className="text-center">
             <h3 style={{ paddingTop: "50px", fontWeight: "bold" }}>
               {t('Sa vajad rohkem teavet?')}
             </h3>
             <h5 style={{ paddingTop: "10px", marginBottom: "10px" }}>
               {t('Broneeri tasuta konsultatsioon meiega kohe!')}
+            
             </h5>
-            <img src={consult} alt="Emeeting" style={{ width: "100%" }} />
-          </div>
-          <div className="col-md-8 d-flex flex-column align-items-center">
-            <div id="schedule_form" className="calendly-inline-widget">
-              <InlineWidget url="https://calendly.com/olagbemiifeoluwa" />
-            </div>
-            <div style={{ marginTop: "-250px", textAlign: "center" }}>
-              {t('Võite meiega ühendust võtta')}
-            </div>
             <Button
               onClick={toContact}
               className="bookaservice-btn mx-2"
@@ -44,10 +36,12 @@ const Consultation = () => {
                 marginTop: "10px",
               }}
             >
-              {t('Kontakt')}
+              {t('Kontaktid')}
             </Button>
+            <div>
+            <img src={consult} alt="Emeeting" style={{ width: "400px", height:"auto" }} />
+            </div>
           </div>
-        </div>
       </div>
     </>
   );

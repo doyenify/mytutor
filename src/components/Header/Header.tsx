@@ -106,43 +106,7 @@ const Header = () => {
               >
               {t('Avaleht')}
               </Nav.Link>
-              {/* <Nav.Link onClick={toAbout}
-               style={{
-                marginLeft: "20px",
-                color: "#3F556B", 
-                fontWeight:"",
-                fontSize:"16px"}}
-              >
-              {t('About')}</Nav.Link> */}
-              
-             {/* <Nav.Link onClick={toLesson}
-              style={{
-              marginLeft: "20px",
-              color: "#3F556B", 
-              fontWeight:"",
-              fontSize:"16px"}}
-              >
-              {t('Estonian Lesson')}
-              </Nav.Link> */}
-     
-              {/* <Nav.Link onClick={toCourses}
-              style={{
-              marginLeft: "20px",
-              color: "#3F556B", 
-              fontWeight:"",
-              fontSize:"16px"}}
-              >
-              {t('Courses')}
-              </Nav.Link> */}
-              {/* <Nav.Link onClick={toInformation}
-              style={{
-              marginLeft: "20px",
-              color: "#3F556B", 
-              fontWeight:"",
-              fontSize:"16px"}}
-              >
-              {t('Information')}
-              </Nav.Link> */}
+
               <NavDropdown title={t('Kursused')} id="courses-dropdown"
                 style={{
                   marginLeft: "20px",

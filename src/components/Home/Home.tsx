@@ -33,41 +33,37 @@ const Home = () => {
     //    Entire Home Section
     <div style={{width: "100%", overflowX: "hidden"}}>
        {/* hero section */}
-        
-        <div className='hero-container d-flex justify-content-center align-items-center' style={{backgroundColor: "#FBDC6E", }}> 
-            <Row>
-                <Col className='hero-col-1 col-12 col-sm-6 d-flex justify-content-center align-items-center'>
-                <div className='ps-5 pt-5 p5-5'>
-                    <div style={{fontSize: "24px"}}>{t('Saame tuttavaks!')}</div>
-                    <h1>{t('Ma olen Natalia Komarova,')}  {"\n" }
+       <div className='hero-container d-flex justify-content-center align-items-center' style={{backgroundColor: "#FBDC6E"}}>
+    <Row>
+        <Col className='hero-col-1 col-12 col-sm-6 d-flex justify-content-center align-items-center'>
+            <div className='ps-5 pt-5 p5-5'>
+                <div style={{fontSize: "24px"}}>{t('Saame tuttavaks!')}</div>
+                <h1>
+                    {t('Ma olen Natalia Komarova,')}<br />
                     {t('Keelerõõmud Keeltekooli asutaja ja koolitaja')}
-                    
-                    {/* {t('Tegevjuht ja keel')}{"\n" }
-                    {t('instruktor aadressil Keelerõõmud')} {"\n" }
-                    {t('Keeltekool OÜ')} */}
-                    </h1>
-                    <div>
-                     "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}{"\n"}
-                     {t('valgustada teed teistele.')}" {"\n"}
+                </h1>
+                <div>
+                    "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}<br />
+                    {t('valgustada teed teistele.')}"<br />
                     <i>{t('Mustafa Kemal Ataturk')}</i>
-                    </div>
-                    <div className='' style={{display: "flex", marginTop: "15px"}}>
-                    <Button className='her0-contact-btn' href='#aboutme'
-                    style={{backgroundColor: "transparent", color: "#000000" , borderRadius: "50px", width: "120px", fontWeight: "bold", marginTop:"10px", marginRight:"20px"}}>
-                    {t('Minust')}
+                </div>
+                <div className='' style={{display: "flex", marginTop: "15px"}}>
+                    <Button className='her0-contact-btn' href='#aboutme' style={{backgroundColor: "transparent", color: "#000000" , borderRadius: "50px", width: "120px", fontWeight: "bold", marginTop:"10px", marginRight:"20px"}}>
+                        {t('Minust')}
                     </Button> 
-                    <Button className='her0-contact-btn' onClick={toConsultation} 
-                    style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
-                    {t('Konsultatsioon')}
+                    <Button className='her0-contact-btn' onClick={toConsultation} style={{backgroundColor: "#3F556B", borderRadius: "50px", width: "130px", marginTop:"10px"}}>
+                        {t('Konsultatsioon')}
                     </Button> 
-                    </div>    
-                 </div>
-                 </Col>
-                 <Col className='hero-img hero-col-2 col-12 col-sm-6 mt-md-5 d-flex justify-content-end'>
-                 <div><img className='hero-img pt-md-5 me-md-5' src={tutorone} alt="Tutor"/></div>
-                 </Col>
-             </Row>
-        </div>
+                </div>    
+            </div>
+        </Col>
+        <Col className='hero-img hero-col-2 col-12 col-sm-6 mt-md-5 d-flex justify-content-center align-items-center'>
+            <div><img className='hero-img pt-md-5' src={tutorone} style={{maxWidth: "100%", height: "auto"}} alt="Tutor"/></div>
+        </Col>
+    </Row>
+</div>
+ 
+       
         {/* about me  section */}
         <div id='aboutme'>
         <Row>
@@ -102,32 +98,32 @@ const Home = () => {
                     <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Keda ma õpetan')} </Button> </div>
                     <a className='ms-5 swinging-link' href="#howiwork" style={{ textDecoration: 'none' }}> {t('Kuidas ma töötan')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
               </div>
-                
-                <div className='row justify-content-center'>
-                    <div className='col-sm-3 col'>
-                        <div className='mt-5 p-3 px-4' style={{backgroundColor:"#E2E5E9", width:"300px", marginLeft: "auto", marginRight: "auto"}}>
-                            <div className="d-flex justify-content-end mb-4">
-                                <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
-                                <img className='ms-3' src={estflag} style={{height:"30px", width: "30px"}} alt="estonian flag"/>
-                            </div>
-                            <p style={{height: "100px"}}> {t('Inglise keele õpetamine toimub')} <br /> {t('vene ja eesti keele')}  <br /> {t('baasil')} </p>
-                            <p> {t('Tasemed')}:<br />{t('A1, A2, B1, B2, ja C1.')} </p>
 
-                        </div >
-                    </div>
-                    <div className='col-sm-3 col'>
-                        <div className='mt-5 p-3 px-4' style={{backgroundColor:"#FEF8E1", width:"300px", marginLeft: "auto", marginRight: "auto"}}>
-                            <div className="d-flex justify-content-end mb-4">
-                                <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
-                                <img className='ms-3' src={engflag} style={{height:"30px", width: "30px"}} alt="english flag"/>
-                            </div>
-                            <p style={{height: "100px"}}> {t('Eesti keele õpetamine toimub')} <br /> {t('vene ja inglise keele')}  
-                            <br /> 
-                            {t('baasil')} </p>
-                            <p>{t('Tasemed')}: <br />{t('A1, A2, B1, ja B2.')} </p>
-                        </div>
-                    </div>
-                </div>
+
+<div className='row justify-content-center'>
+    <div className='col-10 col-md-3 mb-4'>
+        <div className='mt-5 p-3 px-4' style={{backgroundColor:"#E2E5E9"}}>
+            <div className="d-flex justify-content-end mb-4">
+                <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
+                <img className='ms-3' src={estflag} style={{height:"30px", width: "30px"}} alt="estonian flag"/>
+            </div>
+            <p> {t('Inglise keele õpetamine toimub')} <br /> {t('vene ja eesti keele')}  <br /> {t('baasil')} </p>
+            <p> {t('Tasemed')}:<br />{t('A1, A2, B1, B2, ja C1.')} </p>
+        </div>
+    </div>
+    <div className='col-10 col-md-3 mb-4'>
+        <div className='mt-5 p-3 px-4' style={{backgroundColor:"#FEF8E1"}}>
+            <div className="d-flex justify-content-end mb-4">
+                <img className='ms-3' src={rusflag} style={{height:"30px", width: "30px"}} alt="russian flag"/>
+                <img className='ms-3' src={engflag} style={{height:"30px", width: "30px"}} alt="english flag"/>
+            </div>
+            <p> {t('Eesti keele õpetamine toimub')} <br /> {t('vene ja inglise keele')}  <br /> {t('baasil')} </p>
+            <p>{t('Tasemed')}: <br />{t('A1, A2, B1, ja B2.')} </p>
+        </div>
+    </div>
+</div>
+
+
         </Row>
        </div>
 

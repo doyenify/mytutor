@@ -104,7 +104,9 @@ const Contact = () => {
                     course: "",
                     languageLevel: "",
                     lessonType: "",
-                    courseExpectation: ""
+                    courseExpectation: "",
+                    date: "",
+                    time: ""
     
                   }}
                   onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -114,11 +116,36 @@ const Contact = () => {
                       console.error("Brevo API key is not defined.");
                       return;
                     }
+
             
+                    // const bodyToDoyen = {
+                    //   sender: {
+                    //     name: "KEELERÕÕMUD LANGUAGE WEBSITE",
+                    //     email: "tecfesco@gmail.com"
+                    //   },
+                    //   to: [
+                    //     {
+                    //       email: "olagbemiifeoluwa@gmail.com"
+                    //     },
+                    //     {
+                    //       email: values.email
+                    //     }
+                    //   ],
+                    //   subject: `KEELERÕÕMUD Contact Page '${values.course}'`,
+                    //   htmlContent: `<html><head></head><body>
+                    //                   <h1>A New Student Request On Our Services</h1>
+                    //                   <p>Name: ${values.name}</p>
+                    //                   <p>Email: ${values.email}</p>
+                    //                   <p>Course: ${values.course}</p>
+                    //                   <p>Language Level: ${values.languageLevel}</p>
+                    //                   <p>Lesson Type: ${values.lessonType}</p>
+                    //                   <p>Course Expectation: ${values.courseExpectation}</p>
+                    //               </body></html>`,
+                    // };
                     const bodyToDoyen = {
                       sender: {
                         name: "KEELERÕÕMUD LANGUAGE WEBSITE",
-                        email: "tecfesco@gmail.com"
+                        email: values.email
                       },
                       to: [
                         {
@@ -139,6 +166,7 @@ const Contact = () => {
                                       <p>Course Expectation: ${values.courseExpectation}</p>
                                   </body></html>`,
                     };
+                    
             
                     fetch("https://api.brevo.com/v3/smtp/email", {
                       method: "POST",

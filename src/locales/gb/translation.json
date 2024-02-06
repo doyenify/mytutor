@@ -1,23 +1,16 @@
 {
     
-    "Get in Touch With Us": "",
-    "Address": "",
-    "Email Address": "",
-    "Phone Number": "",
-    "Name": "Name",
-    "Language Level": "",
-    "Lesson Type": "Lesson Type",
-    "Course Expectation": "Course Expectation",
-    "Home": "Home",
+   
+  
 
     "Võta meiega ühendust": "Get in Touch With Us",
     "Aadress": "Address",
     "E-posti aadress": "Email Address",
     "Telefoninumber": "Phone Number",
     "Nimi": "Name",
-    "Keeletase": "Keeletase",
-    "Tunni tüüp": "Language Level",
-    "Kursuse ootus": "",
+    "Keeletase": "Language Level",
+    "Tunni tüüp": "Type of lesson",
+    "Kursuse ootus": "Course Expectation",
     "Taotlus": "Taotlus",
     "Avaleht": "Home",
     
