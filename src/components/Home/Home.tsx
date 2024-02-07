@@ -158,8 +158,8 @@ const Home = () => {
         <div id='courses'>
            <div className='hero-service-section' style={{marginTop: ""}}>
             <Row>
-                <Col className='col-12 col-sm-5 d-flex justify-content-center align-items-center'><img src={courseImg} alt="Tutor two" style={{width:"400px",height:""}}/> </Col>
-                <Col className='col-12 col-sm-7 d-flex justify-content-center align-items-center'>
+                <Col className='col-12 col-md-6 d-flex justify-content-center align-items-center'><img src={courseImg} alt="Tutor two" style={{ width: "100%", maxWidth: "400px", height: "auto" }}/> </Col>
+                <Col className='col-12 col-md-6'>
                 <Row className='home-card'>
                     <Row className='mb-5' ><div><h2>
                     {t('Tutvu minu kursustega')}
