@@ -183,6 +183,21 @@ const Contact = () => {
                       
                       }
                     });
+
+                    
+                    fetch("https://api.brevo.com/v3/smtp/email", {
+                      method: "POST",
+                      headers: {
+                        accept: "application/json",
+                        "api-key": apiKey,
+                        "content-type": "application/json"
+                      },
+                      body: JSON.stringify(bodytouser)
+                    })
+                    .then(response => {
+                      if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                      }
                     
 
                     const bodyToDoyen = {
