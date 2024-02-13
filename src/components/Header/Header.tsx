@@ -63,10 +63,10 @@ const Header = () => {
    
     navigate("/LearningEnv");
   }
-  const navigateToPayTerms = () => {
+  // const navigateToPayTerms = () => {
    
-    navigate("/PayTerms");
-  }
+  //   navigate("/PayTerms");
+  // }
 
   const navigateToEngForAdult = () => {
    
@@ -141,17 +141,15 @@ const Header = () => {
                   {t('Õppekavad')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToEffEduPro}>
-                  {t('Õppeprogrammide kvaliteedi tagamine')}
+                  {t('Õppekorralduse ja kvaliteedi tagamine alused')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToQuaTeachers}>
                   {t('Õpetajate kvaliteedi tagamine')}
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={navigateToLearningEnv}>
-                  {t('Õppekeskkond')}
+                  {t('Vastuvõtt, õppetasu, lõpetamise tingimused')}
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={navigateToPayTerms}>
-                  {t('Maksetingimused')}
-                </NavDropdown.Item>
+               
               </NavDropdown>
               
             </Nav>
@@ -164,7 +162,7 @@ const Header = () => {
        <ReactFlagsSelect
        selected={selected}
        onSelect={(code) => onClickLanguageChange(code)}
-       countries={["EE", "GB", "RU" ]}
+       countries= {["EE", "RU", "GB"]}
        showSelectedLabel={false}
        showOptionLabel={false}
        />

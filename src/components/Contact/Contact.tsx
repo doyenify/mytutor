@@ -105,8 +105,7 @@ const Contact = () => {
                     languageLevel: "",
                     lessonType: "",
                     courseExpectation: "",
-                    date: "",
-                    time: ""
+                   
     
                   }}
                   onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -117,87 +116,74 @@ const Contact = () => {
                       return;
                     }
 
-                    const bodytouser = JSON.stringify({  
-                      "sender":{  
-                        "name":"Language Website",
-                        "email":"olagbemiifeoluwa@gmail.com"
-                      },
-                      "to":[  
-                        {  
-                          "email": values.email,
-                        }
-                      ],
-                      "subject":"Confirmation: Registration for {{params.webinartopic}} on {{params.webinarDate}}",
-                      "htmlContent":`<html><head>
-                        <style>
-                            body {
-                                background-color:#696969;
-                            }
-                            .imgtag{
-                                justify-content: center;
-                                align-items: center;
-                                margin-left: 45%;
-                            }
-                            .welcome {
-                                text-align: center;
-                                color: #696969;
-                            }
-                            .content {
-                                background-color: #ffffff;
-                                margin: 15px;
-                                padding: 20px;
-                            }
-                        </style> 
-                    </head>
-                    <body>
-                        <div class="imgtag">
-                            <img src="https://academy.doyenify.com/images/doyenifyAcademy.png" alt="img" /> 
-                        </div>
-                        <div class="content">
-                            <p>Dear ${values.name},</p> 
-                            <p style="margin-bottom: 10px">Thank you for consulting for our language, "${values.course}," 
-                            </p>
+                    // const bodytouser = JSON.stringify({  
+                    //   "sender":{  
+                    //     "name":"Language Website",
+                    //     "email":"olagbemiifeoluwa@gmail.com"
+                    //   },
+                    //   "to":[  
+                    //     {  
+                    //       "email": values.email,
+                    //     }
+                    //   ],
+                    //   "subject":"Confirmation: Registration for {{params.webinartopic}} on {{params.webinarDate}}",
+                    //   "htmlContent":`<html><head>
+                    //     <style>
+                    //         body {
+                    //             background-color:#696969;
+                    //         }
+                    //         .imgtag{
+                    //             justify-content: center;
+                    //             align-items: center;
+                    //             margin-left: 45%;
+                    //         }
+                    //         .welcome {
+                    //             text-align: center;
+                    //             color: #696969;
+                    //         }
+                    //         .content {
+                    //             background-color: #ffffff;
+                    //             margin: 15px;
+                    //             padding: 20px;
+                    //         }
+                    //     </style> 
+                    // </head>
+                    // <body>
+                    //     <div class="imgtag">
+                    //         <img src="https://academy.doyenify.com/images/doyenifyAcademy.png" alt="img" /> 
+                    //     </div>
+                    //     <div class="content">
+                    //         <p>Dear ${values.name},</p> 
+                    //         <p style="margin-bottom: 10px">Thank you for consulting for our language, "${values.course}," 
+                    //         </p>
                     
-                            <p style="margin-bottom: 5px">Here are the details of what you filled:</p>
+                    //         <p style="margin-bottom: 5px">Here are the details of what you filled:</p>
                     
-                            <h5 style="margin-bottom: 5px"><strong>Event Details:</strong></h5>
-                            <h5><strong>Name:</strong> <span style="margin-left: 7px;">${values.name}</span></h5>
-                            <h5><strong>Email: </strong> <span style="margin-left: 7px;">${values.email}</span></h5>
-                            <h5><strong>Course: </strong> <span style="margin-left: 7px;">${values.course}</span></h5>
-                            <h5><strong>Language Level: </strong> <span style="margin-left: 7px;">${values.languageLevel}</span></h5>
-                            <h5><strong>Course Expectation: </strong> <span style="margin-left: 7px;">${values.courseExpectation}</span></h5>
+                    //         <h5 style="margin-bottom: 5px"><strong>Event Details:</strong></h5>
+                    //         <h5><strong>Name:</strong> <span style="margin-left: 7px;">${values.name}</span></h5>
+                    //         <h5><strong>Email: </strong> <span style="margin-left: 7px;">${values.email}</span></h5>
+                    //         <h5><strong>Course: </strong> <span style="margin-left: 7px;">${values.course}</span></h5>
+                    //         <h5><strong>Language Level: </strong> <span style="margin-left: 7px;">${values.languageLevel}</span></h5>
+                    //         <h5><strong>Course Expectation: </strong> <span style="margin-left: 7px;">${values.courseExpectation}</span></h5>
                             
-                            <p>To ensure a seamless experience, please take note of the following recommendations:</p>
+                    //         <p>To ensure a seamless experience, please take note of the following recommendations:</p>
                     
           
-                            <p>Langauage website</p>
-                        </div> 
-                    </body>
-                    </html>`,
-                      "params": {
-                        "name": values.name,
-                        "email": values.email,
-                        "course": values.course,
-                        "languageLevel": values.languageLevel,
-                        "courseExpectation": values.courseExpectation
+                    //         <p>Langauage website</p>
+                    //     </div> 
+                    // </body>
+                    // </html>`,
+                    //   "params": {
+                    //     "name": values.name,
+                    //     "email": values.email,
+                    //     "course": values.course,
+                    //     "languageLevel": values.languageLevel,
+                    //     "courseExpectation": values.courseExpectation
                       
-                      }
-                    });
+                    //   }
+                    // });
 
                     
-                    fetch("https://api.brevo.com/v3/smtp/email", {
-                      method: "POST",
-                      headers: {
-                        accept: "application/json",
-                        "api-key": apiKey,
-                        "content-type": "application/json"
-                      },
-                      body: JSON.stringify(bodytouser)
-                    })
-                    .then(response => {
-                      if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
-                      }
                     
 
                     const bodyToDoyen = {

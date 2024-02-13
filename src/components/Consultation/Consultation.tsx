@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
+
 const Consultation = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
