@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Container, Button } from 'react-bootstrap';
 import "./curriculum.css"
 
 const Curriculum = () => {
@@ -7,7 +8,10 @@ const Curriculum = () => {
   const [Tab2, setTab2] =  useState(false);
   const [Tab3, setTab3] =  useState(false);
   const [Tab4, setTab4] =  useState(false);
-
+  const [Tab5, setTab5] =  useState(false);
+  const [Tab6, setTab6] =  useState(false);
+  const [Tab7, setTab7] =  useState(false);
+  const [Tab8, setTab8] =  useState(false);
   const {t} = useTranslation();
 
   const showTab1 = () => {
@@ -15,6 +19,10 @@ const Curriculum = () => {
     setTab2(false)
     setTab3(false)
     setTab4(false)
+    setTab5(false)
+    setTab6(false)
+    setTab7(false)
+    setTab8(false)
   }
 
   const showTab2 = () => {
@@ -22,6 +30,10 @@ const Curriculum = () => {
     setTab2(true)
     setTab3(false)
     setTab4(false)
+    setTab5(false)
+    setTab6(false)
+    setTab7(false)
+    setTab8(false)
   }
 
   const showTab3 = () => {
@@ -29,6 +41,10 @@ const Curriculum = () => {
     setTab2(false)
     setTab3(true)
     setTab4(false)
+    setTab5(false)
+    setTab6(false)
+    setTab7(false)
+    setTab8(false)
   }
 
   const showTab4 = () => {
@@ -36,23 +52,86 @@ const Curriculum = () => {
     setTab2(false)
     setTab3(false)
     setTab4(true)
+    setTab5(false)
+    setTab6(false)
+    setTab7(false)
+    setTab8(false)
   }
   
+  
+  const showTab5 = () => {
+    setTab1(false)
+    setTab2(false)
+    setTab3(false)
+    setTab4(false)
+    setTab5(true)
+    setTab6(false)
+    setTab7(false)
+    setTab8(false)
+  }
+  const showTab6 = () => {
+    setTab1(false)
+    setTab2(false)
+    setTab3(false)
+    setTab4(false)
+    setTab5(false)
+    setTab6(true)
+    setTab7(false)
+    setTab8(false)
+  }
+
+  const showTab7 = () => {
+    setTab1(false)
+    setTab2(false)
+    setTab3(false)
+    setTab4(false)
+    setTab5(false)
+    setTab6(false)
+    setTab7(true)
+    setTab8(false)
+  }
+
+  const showTab8 = () => {
+    setTab1(false)
+    setTab2(false)
+    setTab3(false)
+    setTab4(false)
+    setTab5(false)
+    setTab6(false)
+    setTab7(false)
+    setTab8(true)
+  }
 
   return (
-    <div>
-      <div className="tab container" style={{ marginTop: "150px" }}>
-      <div className="tabtext d-flex justify-content-around">
-                   <div className={Tab1 ? "activeTab": "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
-                   <div className={Tab2 ? "activeTab": "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
-                   <div className={Tab3 ? "activeTab": "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
-                   <div className={Tab4 ? "activeTab": "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
-                 </div>
-    </div>
-    {Tab1 ? (<>
+    <Container fluid>
+    <div className='d-flex'>
+      <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "150px" }}>
+        <h5>Eesti Keele Oppekva</h5>
+        <div className="tabtext d-flex flex-column">
+          <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
+          <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
+          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
+          <div className={Tab4 ? "activeTab" : "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
+        </div>
 
-      <div className="container mt-5">
-      <h4>Eesti keele õppekava A1-tasemele</h4>
+        <h5>Inglise Keele Oppekva</h5>
+        <div className="tabtext d-flex flex-column">
+          <div className={Tab5 ? "activeTab" : "inactiveTab"} onClick={showTab5}>{t('Inglise keele A1-taseme õppekava')}</div>
+          <div className={Tab6 ? "activeTab" : "inactiveTab"} onClick={showTab6}>{t('Inglise keele A2-taseme õppekava')}</div>
+          <div className={Tab7 ? "activeTab" : "inactiveTab"} onClick={showTab7}>{t('Inglise keele B1-taseme õppekava')}</div>
+          <div className={Tab8 ? "activeTab" : "inactiveTab"} onClick={showTab8}>{t('Inglise keele B2-taseme õppekava')}</div>
+        </div>
+      </div>
+
+    <div className="content" style={{marginTop:"80px"}}>
+    {Tab1 ? (<>
+      <div className="container mt-5" style={{marginTop:""}}>
+        <div className='d-flex position-relative'>
+      <div className="mb-3"><h2>Eesti keele õppekava A1-tasemele</h2></div>
+       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava A1.docx" download="Eesti keele oppekava A1.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
       <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
       <p><strong>Õppekava nimetus:</strong> Eesti keele A1-taseme täiendkoolitus</p>
       <p><strong>Õppekavarühm:</strong> Keeleõpe, eesti keel võõrkeelena</p>
@@ -64,6 +143,7 @@ const Curriculum = () => {
       <h3>Õppe eesmärk:</h3>
       <p>Omandada eesti keele oskus A1 tasemel, mis võimaldab toime tulla igapäevastes suhtlusolukordades, mis nõuavad otsest ja lihtsat infovahetust tuttavatel teemadel.</p>
       <h3>Õpiväljundid:</h3>
+     <h5>Koolituse lõpuks iga õppija: </h5> 
       <ul>
         <li>saab aru tuttavatest sõnadest ja fraasidest, mis puudutavad teda ennast, tema perekonda ja vahetut ümbrust.</li>
         <li>saab aru tuttavatest nimedest, sõnadest ja väga lihtsatest lausetest, näiteks siltidel, plakatitel või kataloogides.</li>
@@ -166,9 +246,14 @@ const Curriculum = () => {
  </>):(<></>)}
 
  {Tab2 ? (<>
-   <div className="container mt-5" style={{marginTop:""}}>
+   <div className="container absoulte mt-5" style={{marginTop:""}}>
    
-      <h4>Eesti keele õppekava A2-tasemele</h4>
+   <div className='d-flex position-relative'>
+      <div className='mb-3'><h2>Eesti keele õppekava A2-tasemele</h2> </div>
+       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava A2.docx" download="Eesti keele oppekava A2.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
       <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
       <p><strong>Õppekava nimetus:</strong> Eesti keele A2-taseme eksamiks ettevalmistamisele suunatud täiendkoolitus</p>
       <p><strong>Õppekavarühm:</strong> Keeleõpe, eesti keel võõrkeelena</p>
@@ -304,12 +389,20 @@ const Curriculum = () => {
  </>):(<></>)}
 
   {Tab3 ? (<>
-   <div className="container mt-5">
+   <div className="container absolute mt-5">
 
-      <h4>Õppeasutuse nimi:</h4><p> Keelerõõmud Keeltekool OÜ</p>
-      <h4>Õppekava nimetus:</h4> <p> Eesti keele B1-taseme eksamiks ettevalmistamisele suunatud täiendkoolitus</p>
-      <h4>Õppekavarühm:</h4><p> Keeleõpe, eesti keel võõrkeelena</p>
-      <h4>Õppekava koostamise alus:</h4> <p><a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
+     
+   <div className='d-flex position-relative'>
+      <div className='mb-3'><h2>Eesti keele õppekava B1-tasemele</h2> </div>
+       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava B1.docx" download="Eesti keele oppekava B1.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
+
+    <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
+    <p> <strong>Õppekava nimetus:</strong>  Eesti keele B1-taseme eksamiks ettevalmistamisele suunatud täiendkoolitus</p>
+    <p> <strong>Õppekavarühm:</strong>Keeleõpe, eesti keel võõrkeelena</p>
+    <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
   
       <h4>Õppe maht:</h4>
       <p>250 akadeemilist tundi, millest 180 tundi on auditoorset õpet ja vastavalt 70 tundi on iseseisvat tööd.</p>
@@ -436,12 +529,19 @@ const Curriculum = () => {
 
 
    {Tab4 ? (<>
-   <div className="container mt-5">
-    
-      <h4>Keelerõõmud Keeltekool OÜ</h4>
-      <h4>Eesti keele B2-taseme eksamiks ettevalmistamisele suunatud täiendkoolitus</h4>
-      <h3>Õppekavarühm: Keeleõpe, eesti keel võõrkeelena</h3>
-      <p>Õppekava koostamise alus: <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
+   <div className="container absolute mt-5">
+
+   <div className='d-flex position-relative'>
+      <div className='mb-3'><h2>Eesti keele õppekava B2-tasemele</h2> </div>
+       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava B2.docx" download="Eesti keele oppekava B2.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
+
+    <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
+    <p><strong>Õppekava nimetus: </strong> Eesti keele B2-tseme eksamiks ettevalmistamisele suunatud täiendkoolitus</p>
+    <p><strong>Õppekavarühm: </strong>  Keeleõpe, eesti keel võõrkeelena</p>
+    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
 
       <h3>Õppe maht:</h3>
       <p>450 akadeemilist tundi, millest 250 tundi on auditoorset õpet ja vastavalt 150 tundi on iseseisvat tööd.</p>
@@ -454,6 +554,7 @@ const Curriculum = () => {
       <p>Omandada eesti keele oskus B2 tasemel, mis võimaldab eesti keeles spontaalselt, ladusalt ja iseseisvalt suhelda nii suuliselt kui ka kirjalikult.</p>
       
       <h3>Õpiväljundid:</h3>
+      <h5>Koolituse lõpuks iga õppija:</h5>
       <ul>
         <li>Saab aru aktuaalsetel teemadel kirjutatud ajaleheartiklitest, loeb ja mõistab eestikeelset proosakirjandust.</li>
         <li>Oskab eesti keeles spontaanselt ja ladusalt vestelda. Suudab tuttaval teemal aktiivselt arutelus osaleda, oskab selgelt ja argumenteeritult oma seisukohti esitada.</li>
@@ -742,9 +843,10 @@ const Curriculum = () => {
       <p>Tunnistusele kantakse lõpetatud kursuse nimetus ja kestus, kursuse toimumise aeg ning osaleja nimi ja isikukood. Tunnistusele kirjutavad alla kursuse õpetaja ja keeltekooli juhataja. Kui osaleja ei läbinud edukalt kursuse lõpueksamit ja/või ei osalenud vajalikul arvul tundides, antakse talle kursuse lõpus tõend, kus on märgitud osaletud tundide arv. Tõendi allkirjastab Keelerõõmud Keeltekooli juhataja.</p>
     
   </div>
-  </>):(<></>)}
-     
+  </>):(<></>)}    
 </div>
+</div>
+</Container>
   );
 }
 
