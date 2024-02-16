@@ -40,7 +40,7 @@ const Home = () => {
                 <div style={{fontSize: "24px"}}>{t('Saame tuttavaks!')}</div>
                 <h1>
                 {t('Meie interaktiivne ja kaasav')}<br />
-                {t('õppetunnid muudavad õppimise lõbusaks ja nauditavaks')}
+                    {t('õppetunnid muudavad õppimise lõbusaks ja nauditavaks')}
                 </h1>
                 <div>
                     "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}<br />
@@ -57,9 +57,12 @@ const Home = () => {
                 </div>    
             </div>
         </Col>
-        <Col className='hero-img hero-col-2 col-12 col-sm-6 mt-md-5 d-flex justify-content-center align-items-center'>
-            <div><img className='hero-img pt-md-5' src={tutorone} style={{maxWidth: "100%", height: "auto"}} alt="Tutor"/></div>
-        </Col>
+        <Col className='hero-img hero-col-2 col-12 col-sm-6 mt-md-5 d-flex justify-content-center align-items-center position-relative'>
+    <div>
+        <img className='hero-img pt-md-5' src={tutorone} style={{maxWidth: "100%", height: "auto"}} alt="Tutor"/>
+        <div className="rectangle-overlay"> {t('Ma olen Natalia Komarova,')} <span> {t('Keelerõõmud Keeltekooli asutaja ja koolitaja')} </span></div>
+    </div>
+</Col>
     </Row>
 </div>
  
