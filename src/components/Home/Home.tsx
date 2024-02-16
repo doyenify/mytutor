@@ -39,8 +39,8 @@ const Home = () => {
             <div className='ps-5 pt-5 p5-5'>
                 <div style={{fontSize: "24px"}}>{t('Saame tuttavaks!')}</div>
                 <h1>
-                    {t('Ma olen Natalia Komarova,')}<br />
-                    {t('Keelerõõmud Keeltekooli asutaja ja koolitaja')}
+                {t('Meie interaktiivne ja kaasav')}<br />
+                {t('õppetunnid muudavad õppimise lõbusaks ja nauditavaks')}
                 </h1>
                 <div>
                     "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}<br />

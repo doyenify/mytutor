@@ -42,15 +42,16 @@ const Curriculum = () => {
   return (
     <Container fluid>
       <div className='d-flex'>
-        <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "150px" }}>
-          <h5>Eesti Keele Oppekva</h5>
-          <div className="tabtext d-flex flex-column">
-            <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
-            <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
-            <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
-            <div className={Tab4 ? "activeTab" : "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
-          </div>
+      <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "135px" }}>
+      <strong> <h6 className='mb-3' style={{backgroundColor:"#ECEEF0", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekva</h6> </strong>
+        <div className="tabtext d-flex flex-column">
+          <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
+          <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
+          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
+          <div className={Tab4 ? "activeTab" : "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
         </div>
+    </div>
+   
 
         <div className="content">
           {Tab1 ? (<>

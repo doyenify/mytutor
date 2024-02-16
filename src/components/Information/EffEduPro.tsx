@@ -37,7 +37,7 @@ const EffEduPro = () => {
     <Container fluid>
     <div className='d-flex'>
       <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "150px" }}>
-        <h5>Õppekorralduse ja kvaliteedi tagamise alused</h5>
+        <h6 className='mb-3' style={{backgroundColor:"#ffffff", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Õppekorralduse ja kvaliteedi tagamise alused</h6>
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Õppekorralduse alused')}</div>

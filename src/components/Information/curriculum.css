@@ -9,3 +9,21 @@
     margin-bottom: 15px;
     cursor: pointer;
 }
+
+.tab {
+    position: fixed;
+    top: 10px;
+    bottom: 0;
+    left: 10px;
+    z-index: 1000; /* Ensure sidebar is above other content */
+    width: 200px;
+    background-color:#ECEEF0;
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding-top: 20px; /* Adjust padding to prevent content from being hidden under the fixed sidebar */
+  }
+  
+  .content {
+    margin-left: 200px; /* Adjust margin to account for the width of the fixed sidebar */
+    padding: 20px;
+  }
+  
