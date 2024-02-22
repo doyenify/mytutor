@@ -132,7 +132,7 @@ const Curriculum = () => {
     <div className={showcatalogbox ? "showcatalogbox": "hidecatalogbox"}>                                
       <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "135px" }}>
       <div className="text-center" onClick={showCatalog} style={{marginBottom: "10px", cursor: "pointer"}}>
-           <FontAwesomeIcon className="socialmed2"  icon={faClose} style={{marginTop: "20px", marginRight: "10px", textDecoration: "none"}} /><span style={{fontWeight: "bold"}}>Close Curriculum tab</span> 
+           <FontAwesomeIcon className="socialmed2"  icon={faClose} style={{marginTop: "20px", marginRight: "10px", textDecoration: "none"}} /><span style={{fontWeight: "bold"}}>Sulge vahekaart Õppekava</span> 
         </div>
         <hr/>
       <strong> <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekava</h6> </strong>
