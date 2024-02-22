@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { Container, Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+// import { Container, Button } from 'react-bootstrap';
+import "./curriculum.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClose, faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import "./EffEduPro.css"
 
 const EffEduPro = () => {
+  const [showcatalogbox, setShowcatalogbox] = useState(false)
   const [Tab1, setTab1] =  useState(true);
   const [Tab2, setTab2] =  useState(false);
   const [Tab3, setTab3] =  useState(false);
@@ -14,12 +20,14 @@ const EffEduPro = () => {
     setTab1(true)
     setTab2(false)
     setTab3(false)
+    setShowcatalogbox(false)
   
   }
   const showTab2 = () => {
     setTab1(false)
     setTab2(true)
     setTab3(false)
+    setShowcatalogbox(false)
    
   }
 
@@ -27,17 +35,34 @@ const EffEduPro = () => {
     setTab1(false)
     setTab2(false)
     setTab3(true)
+    setShowcatalogbox(false)
    
   }
+  const showCatalog = () => {
+    setShowcatalogbox(!showcatalogbox)
+}
 
-
-  
 
   return (
     <Container fluid>
+       <div className={showcatalogbox ? "showcatalogbox": "hidecatalogbox"}>   
+  <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "150px" }}>
+  <div className="text-center" onClick={showCatalog} style={{marginBottom: "10px", cursor: "pointer"}}>
+           <FontAwesomeIcon className="socialmed2"  icon={faClose} style={{marginTop: "20px", marginRight: "10px", textDecoration: "none"}} /><span style={{fontWeight: "bold"}}>Close Curriculum tab</span> 
+        </div>
+        <hr/>
+        <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Õppekorralduse ja kvaliteedi tagamise alused</h6>
+        <div className="tabtext d-flex flex-column">
+          <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</div>
+          <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Õppekorralduse alused')}</div>
+          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Kvaliteedi tagamise aluse')}</div>
+      </div>
+      </div>
+      </div>
     <div className='d-flex'>
-      <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "150px" }}>
-        <h6 className='mb-3' style={{backgroundColor:"#ffffff", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Õppekorralduse ja kvaliteedi tagamise alused</h6>
+      {/* for desktop view */}
+      <div className="tab-desktop d-flex flex-column" style={{ width: '200px', marginTop: "135px" }}>
+        <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Õppekorralduse ja kvaliteedi tagamise alused</h6>
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Õppekorralduse alused')}</div>
@@ -45,14 +70,17 @@ const EffEduPro = () => {
       </div>
       </div>
 
-        
-
     <div className="content" style={{marginTop:"80px"}}>
+    <div className="CategoriesTab">
+           <div className="text-center" onClick={showCatalog} style={{border: "1px solid #000000", cursor: "pointer", width: "15rem"}}>
+                <h4 style={{padding: "7px"}}>Curriculum Menu <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "7px", textDecoration: "none", marginTop: "7px"}} /></h4>
+             </div>
+   </div>
     {Tab1 ? (<>
       <div className="container mt-5" style={{marginTop:""}}>
-        <div className='d-flex position-relative'>
-      <div className="mb-2"><h3>Õppekorralduse ja kvaliteedi tagamise alused</h3></div>
-       <div className='position-absolute' style={{right:"50px"}}><a href="oppekorralduse-ja-kvaliteedi-tagamise-alused.docx" download="Eesti keele oppekava A1.docx">
+        <div className='curri-header'>
+      <div className="header-title mb-3"><h3>Õppekorralduse ja kvaliteedi tagamise alused</h3></div>
+       <div className='download-btn' style={{right:"50px"}}><a href="oppekorralduse-ja-kvaliteedi-tagamise-alused.docx" download="Eesti keele oppekava A1.docx">
       <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
     </a></div>
     </div> 

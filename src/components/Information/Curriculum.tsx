@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container, Button } from 'react-bootstrap';
 import "./curriculum.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClose, faArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 const Curriculum = () => {
+  const [showcatalogbox, setShowcatalogbox] = useState(false)
   const [Tab1, setTab1] =  useState(true);
   const [Tab2, setTab2] =  useState(false);
   const [Tab3, setTab3] =  useState(false);
@@ -12,6 +15,7 @@ const Curriculum = () => {
   const [Tab6, setTab6] =  useState(false);
   const [Tab7, setTab7] =  useState(false);
   const [Tab8, setTab8] =  useState(false);
+ 
   const {t} = useTranslation();
 
   const showTab1 = () => {
@@ -23,6 +27,8 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setShowcatalogbox(false)
+    // showCatalog();
   }
 
   const showTab2 = () => {
@@ -34,6 +40,8 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setShowcatalogbox(false)
+    // showCatalog();
   }
 
   const showTab3 = () => {
@@ -45,6 +53,8 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setShowcatalogbox(false)
+    // showCatalog();
   }
 
   const showTab4 = () => {
@@ -56,6 +66,8 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setShowcatalogbox(false)
+    // showCatalog();
   }
   
   
@@ -68,6 +80,8 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setShowcatalogbox(false)
+    // showCatalog();
   }
   const showTab6 = () => {
     setTab1(false)
@@ -78,6 +92,8 @@ const Curriculum = () => {
     setTab6(true)
     setTab7(false)
     setTab8(false)
+    setShowcatalogbox(false)
+    // showCatalog();
   }
 
   const showTab7 = () => {
@@ -89,6 +105,9 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(true)
     setTab8(false)
+    setShowcatalogbox(false)
+
+    // showCatalog();
   }
 
   const showTab8 = () => {
@@ -100,21 +119,58 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(true)
+    setShowcatalogbox(false)
+    // showCatalog();
   }
+  const showCatalog = () => {
+    setShowcatalogbox(!showcatalogbox)
+}
 
+  
   return (
     <Container fluid>
-    <div className='d-flex'>
+    <div className={showcatalogbox ? "showcatalogbox": "hidecatalogbox"}>                                
       <div className="tab d-flex flex-column" style={{ width: '200px', marginTop: "135px" }}>
-      <strong> <h6 className='mb-3' style={{backgroundColor:"#ffffff", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekva</h6> </strong>
+      <div className="text-center" onClick={showCatalog} style={{marginBottom: "10px", cursor: "pointer"}}>
+           <FontAwesomeIcon className="socialmed2"  icon={faClose} style={{marginTop: "20px", marginRight: "10px", textDecoration: "none"}} /><span style={{fontWeight: "bold"}}>Close Curriculum tab</span> 
+        </div>
+        <hr/>
+      <strong> <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekva</h6> </strong>
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
           <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
           <div className={Tab4 ? "activeTab" : "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
         </div>
+       <strong> <h6  className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Inglise Keele Oppekva</h6> </strong>
+        <div className="tabtext d-flex flex-column">
+          <div className={Tab5 ? "activeTab" : "inactiveTab"} onClick={showTab5}>{t('Inglise keele A1-taseme õppekava')}</div>
+          <div className={Tab6 ? "activeTab" : "inactiveTab"} onClick={showTab6}>{t('Inglise keele A2-taseme õppekava')}</div>
+          <div className={Tab7 ? "activeTab" : "inactiveTab"} onClick={showTab7}>{t('Inglise keele B1-taseme õppekava')}</div>
+          <div className={Tab8 ? "activeTab" : "inactiveTab"} onClick={showTab8}>{t('Inglise keele B2-taseme õppekava')}</div>
+        </div>
+    
+      </div>
+  
+   </div>
 
-       <strong> <h6  className='mb-3' style={{backgroundColor:"#ffffff", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Inglise Keele Oppekva</h6> </strong>
+
+
+    <div className='d-flex'>
+   
+
+     
+     {/* for desktop view */}
+                                
+      <div className="tab-desktop d-flex flex-column" style={{ width: '200px', marginTop: "135px" }}>
+      <strong> <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekva</h6> </strong>
+        <div className="tabtext d-flex flex-column">
+          <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
+          <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
+          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
+          <div className={Tab4 ? "activeTab" : "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
+        </div>
+       <strong> <h6  className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Inglise Keele Oppekva</h6> </strong>
         <div className="tabtext d-flex flex-column">
           <div className={Tab5 ? "activeTab" : "inactiveTab"} onClick={showTab5}>{t('Inglise keele A1-taseme õppekava')}</div>
           <div className={Tab6 ? "activeTab" : "inactiveTab"} onClick={showTab6}>{t('Inglise keele A2-taseme õppekava')}</div>
@@ -123,14 +179,21 @@ const Curriculum = () => {
         </div>
       </div>
 
+   
     <div className="content" style={{marginTop:"80px"}}>
+    <div className="CategoriesTab">
+           <div className="text-center" onClick={showCatalog} style={{border: "1px solid #000000", cursor: "pointer", width: "15rem"}}>
+                <h4 style={{padding: "7px"}}>Curriculum Menu <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "7px", textDecoration: "none", marginTop: "7px"}} /></h4>
+             </div>
+   </div>
     {Tab1 ? (<>
       <div className="container mt-5" style={{marginTop:""}}>
-        <div className='d-flex position-relative'>
-      <div className="mb-3"><h2>Eesti keele õppekava A1-tasemele</h2></div>
-       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava A1.docx" download="Eesti keele oppekava A1.docx">
+        <div className='curri-header'>
+      <div className="header-title mb-3"><h2>Eesti keele õppekava A1-tasemele</h2></div>
+       <div className='download-btn'><a href="Eesti keele oppekava A1.docx" download="Eesti keele oppekava A1.docx">
       <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
-    </a></div>
+    </a>
+    </div>
     </div> 
       <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
       <p><strong>Õppekava nimetus:</strong> Eesti keele A1-taseme täiendkoolitus</p>
@@ -248,9 +311,9 @@ const Curriculum = () => {
  {Tab2 ? (<>
    <div className="container absoulte mt-5" style={{marginTop:""}}>
    
-   <div className='d-flex position-relative'>
-      <div className='mb-3'><h2>Eesti keele õppekava A2-tasemele</h2> </div>
-       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava A2.docx" download="Eesti keele oppekava A2.docx">
+   <div className='curri-header'>
+      <div className='header-title mb-3'><h2>Eesti keele õppekava A2-tasemele</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Eesti keele oppekava A2.docx" download="Eesti keele oppekava A2.docx">
       <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
     </a></div>
     </div> 
@@ -392,9 +455,9 @@ const Curriculum = () => {
    <div className="container absolute mt-5">
 
      
-   <div className='d-flex position-relative'>
-      <div className='mb-3'><h2>Eesti keele õppekava B1-tasemele</h2> </div>
-       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava B1.docx" download="Eesti keele oppekava B1.docx">
+   <div className='curri-header'>
+      <div className='header-title mb-3'><h2>Eesti keele õppekava B1-tasemele</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Eesti keele oppekava B1.docx" download="Eesti keele oppekava B1.docx">
       <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
     </a></div>
     </div> 
@@ -531,9 +594,9 @@ const Curriculum = () => {
    {Tab4 ? (<>
    <div className="container absolute mt-5">
 
-   <div className='d-flex position-relative'>
-      <div className='mb-3'><h2>Eesti keele õppekava B2-tasemele</h2> </div>
-       <div className='position-absolute' style={{right:"50px"}}><a href="Eesti keele oppekava B2.docx" download="Eesti keele oppekava B2.docx">
+   <div className='curri-header'>
+      <div className='header-title'><h2>Eesti keele õppekava B2-tasemele</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Eesti keele oppekava B2.docx" download="Eesti keele oppekava B2.docx">
       <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
     </a></div>
     </div> 
