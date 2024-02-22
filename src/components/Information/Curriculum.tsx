@@ -135,14 +135,14 @@ const Curriculum = () => {
            <FontAwesomeIcon className="socialmed2"  icon={faClose} style={{marginTop: "20px", marginRight: "10px", textDecoration: "none"}} /><span style={{fontWeight: "bold"}}>Close Curriculum tab</span> 
         </div>
         <hr/>
-      <strong> <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekva</h6> </strong>
+      <strong> <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekava</h6> </strong>
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
           <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
           <div className={Tab4 ? "activeTab" : "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
         </div>
-       <strong> <h6  className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Inglise Keele Oppekva</h6> </strong>
+       <strong> <h6  className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Inglise Keele Oppekava</h6> </strong>
         <div className="tabtext d-flex flex-column">
           <div className={Tab5 ? "activeTab" : "inactiveTab"} onClick={showTab5}>{t('Inglise keele A1-taseme õppekava')}</div>
           <div className={Tab6 ? "activeTab" : "inactiveTab"} onClick={showTab6}>{t('Inglise keele A2-taseme õppekava')}</div>
@@ -163,14 +163,14 @@ const Curriculum = () => {
      {/* for desktop view */}
                                 
       <div className="tab-desktop d-flex flex-column" style={{ width: '200px', marginTop: "135px" }}>
-      <strong> <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekva</h6> </strong>
+      <strong> <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Eesti Keele Oppekava</h6> </strong>
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Eesti keele A1-taseme õppekava')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Eesti keele A2-taseme õppekava')}</div>
           <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Eesti keele B1-taseme õppekava')}</div>
           <div className={Tab4 ? "activeTab" : "inactiveTab"} onClick={showTab4}>{t('Eesti keele B2-taseme õppekava')}</div>
         </div>
-       <strong> <h6  className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Inglise Keele Oppekva</h6> </strong>
+       <strong> <h6  className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Inglise Keele Oppekava</h6> </strong>
         <div className="tabtext d-flex flex-column">
           <div className={Tab5 ? "activeTab" : "inactiveTab"} onClick={showTab5}>{t('Inglise keele A1-taseme õppekava')}</div>
           <div className={Tab6 ? "activeTab" : "inactiveTab"} onClick={showTab6}>{t('Inglise keele A2-taseme õppekava')}</div>
@@ -183,7 +183,7 @@ const Curriculum = () => {
     <div className="content" style={{marginTop:"80px"}}>
     <div className="CategoriesTab">
            <div className="text-center" onClick={showCatalog} style={{border: "1px solid #000000", cursor: "pointer", width: "15rem"}}>
-                <h4 style={{padding: "7px"}}>Curriculum Menu <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "7px", textDecoration: "none", marginTop: "7px"}} /></h4>
+                <h4 style={{padding: "7px"}}>Õppekava navigatsioon<FontAwesomeIcon icon={faArrowRight} style={{marginLeft: "7px", textDecoration: "none", marginTop: "7px"}} /></h4>
              </div>
    </div>
     {Tab1 ? (<>
