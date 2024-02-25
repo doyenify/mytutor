@@ -41,7 +41,7 @@ const Home = () => {
                 <Button className="mb-2"style={{backgroundColor: "transparent", color: "#000000", borderRadius: "50px", border: "2px solid #3F556B"}}>{t('Keelerõõmud Keeltekool OÜ')}</Button>
                 <h1>
                 {t('Meie interaktiivsed ja kaasavad')}<br />
-                    {t('õppetunnid muudavad õppimist lõbusaks ja nauditavaks')}
+                    {t('õppetunnid muudavad õppimise lõbusaks ja nauditavaks')}
                 </h1>
                 <div>
                     "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}<br />
