@@ -109,9 +109,6 @@ const About = () => {
                             
                         </div>
                       </div>
-
-
-                      
                       <h5 style={{fontWeight: "bold", marginTop: "20px"}}><div style={{backgroundColor: "#CBB9B2", height: "20px", width: "20px", borderRadius: "20px", display: "inline-block", marginRight: "15px"}}></div><span style={{position: "relative", top: "-2px"}}>{t('My Goal')}:</span></h5>
                       <div className="row">
                         <div className="col-md-9">

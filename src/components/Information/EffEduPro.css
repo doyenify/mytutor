@@ -1,0 +1,11 @@
+.activeTab {
+    color: #0a539c;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.inactiveTab {
+    color: #000000;
+    margin-bottom: 15px;
+    cursor: pointer;
+}

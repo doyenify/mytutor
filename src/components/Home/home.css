@@ -1,42 +1,120 @@
 .hero-img{
     margin-top: 20px;
-    height: 90vh;
+    
 }
 
-.coursessection {
-    margin-top: 125px;
+
+.swinging-link {
+    animation: swing 1s infinite;
+  }
+  .rectangle-overlay {
+    position: absolute;
+    /* top: 250px; Adjust this value to change the vertical position */
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity and color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    width: 230px;
+    height: 50px;
 }
+
+  @keyframes swing {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 @media screen and (max-width: 640px) {
-    .coursessection {
-        margin-top: 125px;
+
+    .hero-container{
+        height: 100vh;
     }
-
-   /* .hero-container{
-
-     height: 100vh;
-    } */
-
-    .hero-col-1{
-     padding-top: 100px;
-     margin-right: 20px;
-     margin-left: 20px;
-    }
-
+  .hero-col-1{
+    padding-top: 50px;
+  }
+   
     .hero-img{
-        margin-top: 20px;
-        width: 400px;
+        padding-top: 20px;
+        width: 90%;
         height: auto;
-        margin-right: 20px;
-        margin-left: 20px;
+        margin-right: 0px;
+        margin-left: 30px;
     }
 
-    /* .home-video{
-        padding-top: 800px;
-    } */
+    .aboutimg{
+        width: auto;
+        height:200px;
+    }
+
+    .about-content{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .work-content{
+        margin-left: 20px;
+        margin-right: 20px;
+      
+    }
+
+    .workimg{
+        width: auto;
+        height:200px;
+      
+    }
+    .who-content{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px; 
+    }
+   
     .home-card{
         justify-content: center;
         align-items: center;
         padding-left: 50px;
+    }
+}
+
+/* Media query for iPhone SE (375 by 667) */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+    /* Add your CSS rules specific to iPhone SE here */
+    .hero-container {
+        padding: 10px;
+        padding-top: 20px;
+    }
+    .hero-col-1 {
+       
+        max-height: 50px;
+        max-width: 100vh;
+    }
+    .hero-img {
+        display: none;
+    }
+}
+
+/* Media query for Galaxy Fold (280 by 653) */
+@media only screen and (max-width: 280px) and (max-height: 653px) {
+    /* Add your CSS rules specific to Galaxy Fold here */
+    .hero-container {
+        padding: 5px;
+    }
+    .hero-col-1,
+    .hero-col-2 {
+        max-height: 50px;
+        max-width: 100vh;
+    }
+    .hero-img {
+        display: none;
     }
 }

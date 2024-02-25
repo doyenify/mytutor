@@ -1,5 +1,7 @@
 import {Facebook, Instagram, Linkedin, Twitter,Youtube} from 'react-bootstrap-icons';
 import kelelogo from '../../img/kelelogo.png';
+import doyen1 from '../../img/doyen1.png';
+import copyright from '../../img/copyright.png';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -12,19 +14,33 @@ const Footer = () => {
     
     <img className='mb-3' src={kelelogo} style={{height:"", width: ""}} alt="russian flag"/>
      
-       <div className='footer-writeup' style={{color: "#050A27"}}>
-            <p> <b> {t('Embark on an exciting language learning journey with me as your Estonian language tutor')}. <br />
-                   {t("Together, we'll conquer challenges, explore the beauty of the language")}, 
-                   {t("and achieve your language goals")}. 
+       {/* <div className='footer-writeup' style={{color: "#050A27"}}>
+            <p> <b> {t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')} <br />
+            {t('THE WAY FOR OTHERS Mustafa Kemal Ataturk')} 
             </b> </p>
-        </div>
+        </div> */}
         <div>
+        <b> 
+              "{t('Hea õpetaja on nagu küünal – ta põletab ennast, et')}{"\n"} <br />
+               {t('valgustada teed teistele.')}" {"\n"} <br />
+                <i>{t('Mustafa Kemal Ataturk')}</i>
+        </b>
+                </div>
+        <div className='mt-2'>
         <a href='https://www.facebook.com' className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer" ><Facebook className="footer-link" /> </a>
         <a  href="https://www.linkedin.com" className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer" ><Linkedin className="footer-link" /> </a>
         <a  href="https://twitter.com"className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer" ><Twitter className="footer-link" /> </a>
         <a href="https://www.instagram.com" className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer"><Instagram className="footer-link" /> </a>
         <a href={window.location.href} className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer" ><Youtube className="footer-link" /> </a>
         </div>
+        <div className='mt-3'> <img  className="me-1" src={copyright} width="14px" alt="auto" /> {t(' 2024 Keelerõõmud Keeltekool OÜ')} 
+         </div>
+         <div className='mt-1'>
+       {t('välja töötatud')} {'\n'}
+       <a href="https://www.doyenify.com" target="_blank" rel="noopener noreferrer">
+      <img src={doyen1} width="80px" alt="auto" />
+     </a>
+    </div>
     </div>
   )
 }

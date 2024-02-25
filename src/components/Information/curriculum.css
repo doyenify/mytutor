@@ -1,0 +1,146 @@
+.curri-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activeTab {
+  color: #0a539c;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.inactiveTab {
+  color: #000000;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.tab {
+  position: fixed;
+  top: 10px;
+  bottom: 0;
+  left: 10px;
+  z-index: 1000; 
+  width: 200px;
+  background-color: #ECEEF0;
+  overflow-y: auto; 
+  padding-top: 20px; /* Adjust padding to prevent content from being hidden under the fixed sidebar */
+}
+
+.showcatalogbox {
+  display: block
+}
+
+.hidecatalogbox {
+  display: none
+}
+
+.catalogshell {
+  z-index: 91;
+  position: fixed; 
+  left: 0px; 
+  top: 0px; 
+  height: 700px; 
+  width: 400px; 
+  background-color: #ecf8ef;
+}
+.CategoriesTab{
+  display: none;
+}
+/* .hideonfullscreen {
+  display: none;
+} */
+
+@media (min-width: 297px) and (max-width: 322px){
+ 
+  /* dropdown menu is "catalogshell and cataloginnerheight"*/
+  
+  
+ 
+  .hideonfullscreen {
+      display: block;
+  }
+  .CategoriesTab {
+      display: block;
+  }
+  
+}
+
+@media (min-width: 323px) and (max-width: 385px){
+
+  .hideonfullscreen {
+      display: block;
+  }
+  .CategoriesTab {
+      display: block;
+  }
+
+}
+
+
+@media (min-width: 380px) and (max-width: 570px){
+  /* html, body {margin: 0; height: 100%; overflow: hidden} */
+  
+ 
+  .hideonfullscreen {
+      display: block;
+  }
+
+  
+  .CategoriesTab {
+      display: block;
+  }  
+}
+
+@media (min-width: 532px) and (max-width: 567px){
+ 
+  .hideonfullscreen {
+      display: block;
+  }
+  .CategoriesTab {
+      display: block;
+  }
+  
+}
+
+@media  (min-width: 597px) and (max-width: 870px) {
+ 
+  .hideonfullscreen {
+      display: block;
+  }
+  .CategoriesTab {
+      display: block;
+  }
+
+}
+
+@media (max-width: 768px)  {
+  .tab-desktop{
+    display: none;
+    background-color: black;
+    visibility: hidden;
+    display: none !important;
+  }
+
+  .download-btn {
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .curri-header{
+    display: flex;
+   flex-direction: column-reverse;
+  }
+
+  .header-title{
+    margin-top: 1rem;
+  }
+
+  .CategoriesTab {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+}
