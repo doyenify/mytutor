@@ -15,6 +15,7 @@ const Curriculum = () => {
   const [Tab6, setTab6] =  useState(false);
   const [Tab7, setTab7] =  useState(false);
   const [Tab8, setTab8] =  useState(false);
+  const [Tab9, setTab9] =  useState(false);
  
   const {t} = useTranslation();
 
@@ -27,6 +28,7 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setTab9(false)
     setShowcatalogbox(false)
     // showCatalog();
   }
@@ -40,6 +42,7 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setTab9(false)
     setShowcatalogbox(false)
     // showCatalog();
   }
@@ -53,6 +56,7 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setTab9(false)
     setShowcatalogbox(false)
     // showCatalog();
   }
@@ -66,6 +70,7 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setTab9(false)
     setShowcatalogbox(false)
     // showCatalog();
   }
@@ -80,6 +85,7 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(false)
+    setTab9(false)
     setShowcatalogbox(false)
     // showCatalog();
   }
@@ -92,6 +98,7 @@ const Curriculum = () => {
     setTab6(true)
     setTab7(false)
     setTab8(false)
+    setTab9(false)
     setShowcatalogbox(false)
     // showCatalog();
   }
@@ -105,6 +112,7 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(true)
     setTab8(false)
+    setTab9(false)
     setShowcatalogbox(false)
 
     // showCatalog();
@@ -119,6 +127,21 @@ const Curriculum = () => {
     setTab6(false)
     setTab7(false)
     setTab8(true)
+    setTab9(false)
+    setShowcatalogbox(false)
+    // showCatalog();
+  }
+
+  const showTab9 = () => {
+    setTab1(false)
+    setTab2(false)
+    setTab3(false)
+    setTab4(false)
+    setTab5(false)
+    setTab6(false)
+    setTab7(false)
+    setTab8(false)
+    setTab9(true)
     setShowcatalogbox(false)
     // showCatalog();
   }
@@ -148,6 +171,7 @@ const Curriculum = () => {
           <div className={Tab6 ? "activeTab" : "inactiveTab"} onClick={showTab6}>{t('Inglise keele A2-taseme õppekava')}</div>
           <div className={Tab7 ? "activeTab" : "inactiveTab"} onClick={showTab7}>{t('Inglise keele B1-taseme õppekava')}</div>
           <div className={Tab8 ? "activeTab" : "inactiveTab"} onClick={showTab8}>{t('Inglise keele B2-taseme õppekava')}</div>
+          <div className={Tab9 ? "activeTab" : "inactiveTab"} onClick={showTab9}>{t('Inglise keele C1-taseme õppekava')}</div>
         </div>
     
       </div>
@@ -176,6 +200,7 @@ const Curriculum = () => {
           <div className={Tab6 ? "activeTab" : "inactiveTab"} onClick={showTab6}>{t('Inglise keele A2-taseme õppekava')}</div>
           <div className={Tab7 ? "activeTab" : "inactiveTab"} onClick={showTab7}>{t('Inglise keele B1-taseme õppekava')}</div>
           <div className={Tab8 ? "activeTab" : "inactiveTab"} onClick={showTab8}>{t('Inglise keele B2-taseme õppekava')}</div>
+          <div className={Tab9 ? "activeTab" : "inactiveTab"} onClick={showTab9}>{t('Inglise keele C1-taseme õppekava')}</div>
         </div>
       </div>
 
@@ -906,7 +931,675 @@ const Curriculum = () => {
       <p>Tunnistusele kantakse lõpetatud kursuse nimetus ja kestus, kursuse toimumise aeg ning osaleja nimi ja isikukood. Tunnistusele kirjutavad alla kursuse õpetaja ja keeltekooli juhataja. Kui osaleja ei läbinud edukalt kursuse lõpueksamit ja/või ei osalenud vajalikul arvul tundides, antakse talle kursuse lõpus tõend, kus on märgitud osaletud tundide arv. Tõendi allkirjastab Keelerõõmud Keeltekooli juhataja.</p>
     
   </div>
-  </>):(<></>)}    
+  </>):(<></>)}   
+
+    {Tab5 ? (<>
+   <div className="container absolute mt-5">
+
+   <div className='curri-header'>
+      <div className='header-title'><h2>Inglise keele õppekava - algtase (A1)</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Inglise keele oppekava A1.docx" download="Inglise keele oppekava A1.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
+
+    <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
+    <p><strong>Õppekava nimetus: </strong> Inglise keele A1-taseme täiendkoolitus (moodulid A1.1 ja A1.2)</p>
+    <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
+    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+
+      <h3>Õppe maht ja ülesehitus:</h3>
+      <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas, kaks akadeemilist tundi korraga. 
+        Õppe kestus on 35 nädalat ehk 9 kuud.</p>
+      <p>Vastavalt tellija soovile võib korraldada erineva kestusega lühikursust, intensiiv- ja poolintensiivkursust.</p>
+      <p>Auditoorses õppes keskendutakse peamiselt kõne arendamisele ja mõistmisele ning grammatika seaduspärasuste selgitamisele. Iseseisvalt tuleb kodus õppida sõnavara, teha grammatikaharjutusi ja kirjalikke loovtöid ning võimalusel praktiseerida keelt keelekeskkonnas.</p>
+
+      <h3>Sihtgrupp ja õppe alustamise tingimused:</h3>
+      <p>Õppijad, kes soovivad omandada inglise keelt A1-tasemel (täiskasvanud ja kooliõpilased). 
+         Õppijate vastuvõtt toimub sooviavalduse alusel ja osalus 
+        kinnitatakse koolituslepingus ja registreerimislehel.</p>
+      <h3>Õppe eesmärk:</h3>
+      <p>Omandada inglise keele oskus A1-tasemel, mis võimaldab hakkama saada igapäevastes suhtlusolukordades, kus on vajalik otsekohene ja 
+        lihtne infovahetus tuttavatel teemadel.</p>
+      
+      <h3>Õpiväljundid:</h3>
+      <p>kursuse lõpuks oskab õppija ennast tutvustada, rääkida oma tööst, perekonnast, sõpradest ja hobidest; lihtsate sõnadega kirjeldada oma ümbrust, sündmusi ja inimesi; teed küsida ja juhatada; väljendada oma soove ja eelistusi; vastata kaasvestleja küsimustele igapäevastel
+         teemadel ning ise samasuguseid küsimusi esitada.</p>
+         <p>Kursuse edukalt läbinu saab aru aeglasest kõnest, mis kasutab lihtsat sõnavara ja algtasemel grammatikat; ta oskab kirjutada postkaarti 
+          ja täita ankeeti ning pidada lühikest telefonivestlust.</p>
+   
+      <h3>Õppe sisu:</h3>
+      <h4>Kõnearenduse teemad:</h4>
+      <ul>
+        
+            <li>Tervitamine. Enda ja kaaslaste esitlemine. Hüvastijätmine.</li>
+            <li>Isikuandmed ja ankeedid. Telefoninumbrid, posti- ja meiliaadressid.</li>
+            <li>Tee küsimine, tee juhatamine. Kella küsimine ja ütlemine.</li>
+            <li>Inimeste kirjeldamine (välimus ja iseloom), nende kohta küsimuste esitamine.</li>
+
+            <li>Kuupäevad ja aastaajad. Ümbruse kirjeldamine.</li>
+            <li>Ilm ja loodus. </li>
+            <li>Telefonivestlused.</li>
+            <li>Igapäevased situatsioonid poes, restoranis, lennujaamas, hotellis, pangas, juuksuris jne.</li>
+ 
+            <li>Hobid, vaba aeg ja meelelahutus. Kino, teater, kontsert, sport, raamatud ja muusika.</li>
+            <li>Päritolu, rahvused, keeled.</li>
+            <li>Kodu ja perekond.</li>
+            <li>Pühad ja tähtpäevad Inglismaal ja mujal.</li>
+
+            <li>Töö ja õppimine, haridus ja ametid.</li>
+            <li>Reisimine ja puhkus.</li>
+            <li>Minu päev.</li>
+            <li>Enda eelistuste ja soovide väljendamine ning ka vestluspartneri eelistuste ja soovide kohta küsimine.</li>
+          
+
+      </ul>
+
+      <h4>Sõnavara:</h4>
+     <p>tähestik; igapäevased nimi-, omadus- ja tegusõnad; põhi- ja järgarvud; ametid; maad, rahvad, keeled; ametid; perekond ja sõbrad; ilm; hobid; värvid; linn, kodu, maa; riided; transport;
+       igapäevased viisakusväljendid ja käibefraasid.</p>
+
+      <h4>Kirjutamine: </h4>
+     <p>Ankeetide, taotluste, registreerimisvormide täitmine. Postkaardi kirjutamine (õnnitlus- või tänukaart). Minu päev. Küsimuste ja vastuste koostamine.
+       Lühikeste kirjelduste koostamine.</p>
+
+      <h4>Grammatika</h4>
+      <p>Jaatus ja eitus. Ainsus ja mitmus. Asesõnad. Lihtolevik, kestev olevik, lihtminevik, tuleviku väljendamine olevikuga. Küsimuste moodustamine,
+         küsimustele vastamine. Eessõnad. Määrsõnad. Modaaltegusõnad.</p>
+     
+      <h4>Õppekeskkond</h4>
+      <p>Kursused viiakse läbi tunni alusel keeleõppeks renditavates ruumides Narvas või tellija 
+        soovil Zoomi veebiplatvormil. Õppeklassid vastavad tervisekaitse- ja ohutusnõuetele. Õppeklassides on internetiühendus ning nad on varustatud tahvli, 
+        arvuti ja audio-visuaalse esitlustehnikaga. </p>
+
+      <h4>Õppemeetodid</h4>
+      <p>Peamiselt rakendatakse kommunikatiivseid õppemeetodeid, nagu dialoogid, rollimängud, rühma-
+         ja paaristööd, kasutatakse grammatikaharjutusi baasteadmiste omandamiseks. Samuti tehakse lugemis- ja
+          kuulamisharjutusi õige häälduse harjutamiseks ning kõne ja kirjaliku teksti mõistmise arendamiseks.</p>
+
+      <h4>Hindamismeetod. Hindamiskriteeriumid</h4>
+      <p>Õppijatele antakse õpiväljundite omandamise kohta tagasisidet jooksvalt õppeprotsessi käigus. 
+        Hindamine toimub lõpueksamil, mis koosneb suulisest ja kirjalikust osast. Suuline osa on vestlus
+         õppija ja õpetaja vahel. Kirjalik osa koosneb kuulamisharjutusest, grammatikaharjutusest, lugemisharjutusest 
+         ja kirjalikust loovtööst.</p>
+   
+      <h3>Kuulamine</h3>
+      <p>saab aru lihtsatest küsimustest ja kuuldud info põhissisust, kui vestluspartner 
+        räägib aeglaselt ja selgelt ning öeldut kordab. (Hinnatakse suulises ja kirjalikus osas)
+      </p>
+      
+
+      <h3>Lugemine</h3>
+      <p>saab aru lühikestest lihtsatest tekstidest; oskab leida informatsiooni lihtsatest 
+        igapäevatekstidest (näiteks reklaamid, tööpakkumised, brošüürid, menüüd, sõiduplaanid).
+         (Hinnatakse eksami kirjaliku osa grammatika- ja lugemisharjutustes.)</p>
+
+      <h3>Rääkimine</h3>
+      <p>oskab lühidalt rääkida oma tööst, perekonnast, sõpradest ja hobidest,
+         lihtsate sõnadega kirjeldada oma ümbrust, sündmusi ja inimesi. Oskab teed küsida ja 
+         juhatada. Oskab esitada küsimusi igapäevateemadel ning sellistele küsimustele vastata.
+          Oskab pidada lühikest telefonivestlust. 
+         (Hinnatakse eksami suulise osa vestluses.)</p>
+
+      <h3>Kirjutamine</h3>
+      <p>oskab täita ankeeti ja kirjutada postkaarti. (Hinnatakse eksami kirjaliku osa loovtöös.)</p>
+
+      <h4>Õppematerjalid</h4>
+
+
+      <ol>
+        <li> John and Liz Soars “New Headway Beginner” 5thedition. Oxford University Press, 2019.</li>
+        <li> Raymond Murphy “Essential Grammar in Use”, Cambridge University Press, 2011.</li>
+        <li>Õpetaja koostatud materjalid</li>
+        <li>Veebipõhised ressursid: www.quizlet.com, www.wordwall.com, www.kahoot.com, www.padlet.com. </li>
+      </ol>
+
+      
+
+      <h4>Täiendkoolituse lõpetamise tingimused ja väljastatavad dokumendid</h4>
+
+      <p>Keelerõõmud Keeltekool OÜ väljastab kursuse lõpetanule tunnistuse tingimusel, 
+        et õppija on osalenud vähemalt 80% auditoorsetest tundidest ja läbinud edukalt kursuse lõpueksami.
+         Lõpueksam hõlmab kirjutamist, kuulamist, lugemist ja kõnelemist ning selle abil kontrollitakse eespool
+          mainitud õpiväljundite omandamist. Eksam loetakse sooritatuks, kui õppija saavutab vähemalt 60% 
+          maksimaalsest punktisummast.</p>
+
+      <p>Tunnistusele kantakse lõpetatud kursuse nimetus ja kestus, 
+        kursuse toimumise aeg ning osaleja nimi ja isikukood. Tunnistusele kirjutavad 
+        alla kursuse õpetaja ja keeltekooli juhataja. Kui osaleja ei läbinud edukalt kursuse
+         lõpueksamit ja/või ei osalenud vajalikul arvul tundides, antakse talle kursuse lõpus tõend,
+          kus on märgitud osaletud tundide arv. Tõendi allkirjastab Keelerõõmud Keeltekooli juhataja.</p>
+    
+  </div>
+  </>):(<></>)}  
+
+    {Tab6 ? (<>
+   <div className="container absolute mt-5">
+
+   <div className='curri-header'>
+      <div className='header-title'><h2>Inglise keele õppekava - esmane keeleoskus (A2)</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Inglise keele oppekava A2.docx" download="Inglise keele oppekava A2.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
+
+    <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
+    <p><strong>Õppekava nimetus: </strong> Inglise keele A2-taseme täiendkoolitus (moodulid A2.1 ja A2.2) </p>
+    <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
+    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+
+      <h3>Õppe maht ja ülesehitus:</h3>
+      <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. 
+        Tunnid toimuvad kaks korda nädalas, kaks akadeemilist tundi korraga. Õppe kestus on 35 nädalat ehk 9 kuud.</p>
+      <p>Vastavalt tellija soovile võib korraldada erineva kestusega lühikursust,
+         intensiiv- ja poolintensiivkursust.</p>
+      <p>Auditoorses õppes keskendutakse peamiselt kõne arendamisele ja mõistmisele ning 
+        grammatika seaduspärasuste selgitamisele. Iseseisvalt tuleb kodus õppida sõnavara, teha grammatikaharjutusi ja kirjalikke loovtöid ning
+         võimalusel praktiseerida keelt keelekeskkonnas</p>
+
+      <h3>Sihtgrupp ja õppe alustamise tingimused:</h3>
+      <p>Õppijad, kes soovivad omandada inglise keelt A2-tasemel (täiskasvanud ja kooliõpilased). 
+         Õppijate vastuvõtt toimub sooviavalduse alusel ja osalus kinnitatakse koolituslepingus ja registreerimislehel. Õpingute alustamise tingimuseks on inglise keele A1-taseme kursuse lõpetamine viimase aasta jooksul või Keelerõõmud
+         Keeltekooli tasemetesti sooritamine.</p>
+      <h3>Õppe eesmärk:</h3>
+      <p>Omandada inglise keele oskus A2 tasemel, mis võimaldab hakkama saada igapäevastes 
+        suhtlusolukordades, kus on vajalik
+         otsekohene ja lihtne infovahetus tuttavatel teemadel.</p>
+      
+      <h3>Õpiväljundid: <span>Kursuse lõpuks iga õppija:</span> </h3>
+      <ul>
+        <li>mõistab väljendeid ja sageli kasutatavaid sõnu, mis on otseselt seotud tema oluliste valdkondadega (nt isiklik info, perekond, poeskäik, elukoht, töö); 
+          mõistab lühikeste, lihtsate ja selgelt välja hääldatud ütluste põhisisu;</li>
+        <li>saab aru lühikestest lihtsatest tekstidest; oskab leida informatsiooni lihtsatest igapäevatekstidest (näiteks reklaamid, tööpakkumised, brošüürid, menüüd, sõiduplaanid), 
+          samuti saab aru lühikestest lihtsatest isiklikest kirjadest;</li>
+        <li>suudab toime tulla igapäevastes suhtlusolukordades, kus on vaja otsekohast ja lihtsat infovahetust tuttavatel teemadel; 
+          võimeline osalema vestluses, kuigi ei pruugi veel ise vestlust juhtida;</li>
+        <li>on võimeline kasutama mitmeid fraase ja lauseid, et kirjeldada oma perekonda ja teisi inimesi, 
+          elutingimusi, hariduslikku tausta ning praegust või varasemat tööd;</li>
+        <li>oskab teha märkmeid ja koostada väga lihtsat isiklikku kirja, näiteks tänukirja kirjutamiseks.</li>
+      </ul>
+     
+   
+      <h3>Õppe sisu:</h3>
+      <h4>Kõnearenduse teemad:</h4>
+      <ul>
+        
+            <li>Tutvumine, teiste ja enda tutvustamine. Isikuandmed, ankeedid ja avaldused. </li>
+            <li>Kodu ja perekond. Sugulased. Naabrid. Külalised. Kombed ja traditsioonid. 
+              Kodused kohustused, tööjaotus peres: meeste- ja naistetööd</li>
+            <li>Kinnisvara. Korteri üürimine ja ostmine. Maja osad, mööbel, kodutehnika. Ehitus ja remont.</li>
+            <li>Kodumaa, päritolu, riigid, rahvad, keeled. Eesti ja Inglismaa võrdlemine. Rahvused ja keeled. 
+              Inglismaa loodus, suuremad linnad, saared jne</li>
+
+            <li>Haridus ja töö. Tööpäeva kirjeldus, oma töö tutvustamine. Elukutse valik. CV ja tööintervjuu, avaldus tööle kandideerimiseks.
+               Tulevikuplaanid, elukutse valik ja valitud eriala sobivus.</li>
+            <li>Teenindusasutused ja poed. Postkontoris, pangas, juuksuris, kaubanduskeskuses, 
+              restoranis. Reklaamid ja juhised.</li>
+            <li>Toiduained, söögid ja joogid. Restoranis, kohvikus, baaris</li>
+            <li>Tervis. Kehaosad. Oma tervise eest hoolitsemine. Arsti juures ja apteegis.</li>
+ 
+            <li>Mood ja riided.</li>
+            <li>Loodus. Loomad, linnud, taimed. Ilm ja ilmateade. Aastaajad.</li>
+            <li>Puhkus ja reisimine. Aktiivne ja passiivne puhkus. Transport. Teeküsimine- ja juhatamine. Reisi planeerimine, 
+              piletid, majutus, vaatamisväärsused. Reisimuljed.</li>
+            <li>Viisakusvestlus seltskonnas. Telefonivestlused.</li>
+
+            <li>Oma soovide ja eelistuste väljendamine, vestluspartneri soovide ja eelistuste kohta küsimine.</li>
+            
+      </ul>
+
+      <h4>Kirjutamine: </h4>
+     <p>Ankeetide, taotluste, registreerimisvormide täitmine. Ümbruse kirjeldus, minevikusündmuste kirjeldus.
+       Postkaardi kirjutamine (õnnitlus- või tänukaart, reisipostkaart). Kutse koostamine. Minu päev. CV. Ametlik ja mitteametlik e-mail, märkmete tegemine,
+       lühikirjand, arvamuste-argumentide avaldamine. 
+        </p>
+
+      <h4>Sõnavara:</h4>
+     <p>Ülaltoodud kõnearendusteemade sõnavara.</p>
+
+     
+      <h4>Grammatika</h4>
+      <p>A1-taseme grammatika kordamine. Lihtolevik ja kestev olevik, lihtminevik ja kestev minevik,
+         tulevik, täisminevik, tegusõnade rektsioonid; modaaltegusõnad; passiiv; sisejuhatus tingimuslausetesse; artiklid; 
+        omadussõnade võrdlus; asesõnad; kaassõnad</p>
+     
+      <h4>Õppekeskkond</h4>
+      <p>Kursused viiakse läbi tunni alusel keeleõppeks renditavates ruumides Narvas või tellija 
+        soovil Zoomi veebiplatvormil. Õppeklassid vastavad tervisekaitse- ja ohutusnõuetele. Õppeklassides on internetiühendus ning nad on varustatud tahvli, 
+        arvuti ja audio-visuaalse esitlustehnikaga. </p>
+
+      <h4>Õppemeetodid</h4>
+      <p>Peamiselt rakendatakse kommunikatiivseid õppemeetodeid, nagu dialoogid, rollimängud, rühma-
+         ja paaristööd, kasutatakse grammatikaharjutusi baasteadmiste omandamiseks. Samuti tehakse lugemis- ja
+          kuulamisharjutusi õige häälduse harjutamiseks ning kõne ja kirjaliku teksti mõistmise arendamiseks.</p>
+
+      <h4>Hindamismeetod. Hindamiskriteeriumid</h4>
+      <p>Õppijatele antakse õpiväljundite omandamise kohta tagasisidet jooksvalt õppeprotsessi käigus. 
+        Hindamine toimub lõpueksamil, mis koosneb suulisest ja kirjalikust osast. Suuline osa on vestlus
+         õppija ja õpetaja vahel. Kirjalik osa koosneb kuulamisharjutusest, grammatikaharjutusest, lugemisharjutusest 
+         ja kirjalikust loovtööst.</p>
+   
+      <h3>Kuulamine</h3>
+      <p>saab aru lihtsatest küsimustest ja kuuldud info põhissisust, kui vestluspartner 
+        räägib aeglaselt ja selgelt ning öeldut kordab. (Hinnatakse suulises ja kirjalikus osas)
+      </p>
+      
+
+      <h3>Lugemine</h3>
+      <p>saab aru lühikestest lihtsatest tekstidest; oskab leida informatsiooni lihtsatest 
+        igapäevatekstidest (näiteks reklaamid, tööpakkumised, brošüürid, menüüd, sõiduplaanid).
+         (Hinnatakse eksami kirjaliku osa grammatika- ja lugemisharjutustes.)</p>
+
+      <h3>Rääkimine</h3>
+      <p>oskab lühidalt rääkida oma tööst, perekonnast, sõpradest ja hobidest,
+         lihtsate sõnadega kirjeldada oma ümbrust, sündmusi ja inimesi. Oskab teed küsida ja 
+         juhatada. Oskab esitada küsimusi igapäevateemadel ning sellistele küsimustele vastata.
+          Oskab pidada lühikest telefonivestlust. 
+         (Hinnatakse eksami suulise osa vestluses.)</p>
+
+      <h3>Kirjutamine</h3>
+      <p>oskab täita ankeeti ja kirjutada postkaarti. (Hinnatakse eksami kirjaliku osa loovtöös.)</p>
+
+      <h4>Õppematerjalid</h4>
+
+
+      <ol>
+        <li> John and Liz Soars “New Headway Beginner” 5thedition. Oxford University Press, 2019.</li>
+        <li> Raymond Murphy “Essential Grammar in Use”, Cambridge University Press, 2011.</li>
+        <li>Õpetaja koostatud materjalid</li>
+        <li>Veebipõhised ressursid: www.quizlet.com, www.wordwall.com, www.kahoot.com, www.padlet.com. </li>
+      </ol>
+
+      
+
+      <h4>Täiendkoolituse lõpetamise tingimused ja väljastatavad dokumendid</h4>
+
+      <p>Keelerõõmud Keeltekool OÜ väljastab kursuse lõpetanule tunnistuse tingimusel, 
+        et õppija on osalenud vähemalt 80% auditoorsetest tundidest ja läbinud edukalt kursuse lõpueksami.
+         Lõpueksam hõlmab kirjutamist, kuulamist, lugemist ja kõnelemist ning selle abil kontrollitakse eespool
+          mainitud õpiväljundite omandamist. Eksam loetakse sooritatuks, kui õppija saavutab vähemalt 60% 
+          maksimaalsest punktisummast.</p>
+
+      <p>Tunnistusele kantakse lõpetatud kursuse nimetus ja kestus, 
+        kursuse toimumise aeg ning osaleja nimi ja isikukood. Tunnistusele kirjutavad 
+        alla kursuse õpetaja ja keeltekooli juhataja. Kui osaleja ei läbinud edukalt kursuse
+         lõpueksamit ja/või ei osalenud vajalikul arvul tundides, antakse talle kursuse lõpus tõend,
+          kus on märgitud osaletud tundide arv. Tõendi allkirjastab Keelerõõmud Keeltekooli juhataja.</p>
+    
+  </div>
+  </>):(<></>)}  
+
+  {Tab7 ? (<>
+   <div className="container absolute mt-5">
+
+   <div className='curri-header'>
+      <div className='header-title'><h2>Inglise keele B1-taseme täiendkoolitus (moodulid B1.1 ja B1.2)</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Inglise oppekava B1.docx" download="Inglise keele oppekava B1.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
+
+    <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
+    <p><strong>Õppekava nimetus: </strong> Inglise keele A2-taseme täiendkoolitus (moodulid A2.1 ja A2.2) </p>
+    <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
+    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+
+      <h3>Õppe maht ja ülesehitus:</h3>
+      <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas, kaks akadeemilist tundi korraga. 
+        Õppe kestus on 35 nädalat ehk 9 kuud.</p>
+      <p>Vastavalt tellija soovile võib korraldada erineva kestusega lühikursust,
+         intensiiv- ja poolintensiivkursust.</p>
+      <p>Auditoorses õppes keskendutakse peamiselt kõne arendamisele ja mõistmisele ning 
+        grammatika seaduspärasuste selgitamisele. Iseseisvalt tuleb kodus õppida sõnavara, teha grammatikaharjutusi ja kirjalikke loovtöid ning
+         võimalusel praktiseerida keelt keelekeskkonnas</p>
+
+      <h3>Sihtgrupp ja õppe alustamise tingimused:</h3>
+      <p>Õppijad, kes soovivad omandada inglise keelt B1-tasemel (täiskasvanud ja kooliõpilased).  Õppijate vastuvõtt toimub sooviavalduse alusel ja osalus kinnitatakse koolituslepingus ja registreerimislehel. Õpingute alustamise tingimuseks on inglise keele A2-taseme kursuse lõpetamine viimase aasta jooksul või 
+        Keelerõõmud Keeltekooli kirjaliku ja suulise tasemetesti sooritamine.</p>
+      <h3>Õppe eesmärk:</h3>
+      <p>Omandada inglise keele oskus B1-tasemel, mis võimaldab enamasti ingliskeelses keskkonnas hakkama saada.</p>
+      
+      <h3>Õpiväljundid: <span>Iga õppija koolituse lõpuks:</span> </h3>
+      <ul>
+        <li>saab aru põhilisest infost selges tavakõnes tuttaval teemal: töö, kool, vaba aeg jne; mõistab aeglaselt ja selgelt edastatud raadio- või telesaadete põhisisu.</li>
+        <li>saab aru tekstidest, mis koosnevad sagedamini esinevatest või oma töö või huvialadega seotud sõnadest.</li>
+        <li>oskab spontaanselt vestelda tuttaval või temaga seotud teemal: pere, hobid, töö, reisimine ja päevasündmused.</li>
+        <li>oskab lihtsate lausetega kirjeldada kogemusi, sündmusi, unistusi ja kavatsusi. </li>
+        <li>oskab väljendada oma vaateid, lühidalt põhjendada ning selgitada oma seisukohti ja plaane, kuid argumenteeritud väitluses võib veel esineda raskusi. Oskab edasi anda jutu, raamatu ja filmi sisu.</li>
+        <li>oskab koostada lihtsat teksti tuttaval või talle huvi pakkuval teemal. Oskab kirjutada isiklikku või lihtsat ametlikku kirja.</li>
+    </ul>
+      <h3>Õppe sisu:</h3>
+      <h4>Kõnearenduse teemad:</h4>
+      <ul>
+        
+            <li>Enda ja oma pere põhjalik tutvustamine. Info päritolu kohta, oma kodumaa tutvustamine.
+               Kombed ja traditsioonid eri maades, kultuuritaustade võrdlus. Suhted kodus ja sugulaste vahel. 
+               Ametlikud dokumendid. </li>
+            <li>Töö, ametid. Oma töö kirjeldamine, tööülesanded. Töö- ja õppimisvõimalused. Töövestlus. 
+              Elulookirjeldus: töökogemus, hariduskäik. Tulevikuplaanid.</li>
+            <li>Vaba aja veetmise viisid. Enda eelistuste väljendamine ja põhjendamine. Kultuurielamuse kirjeldamine. </li>
+            <li>Puhkuse veetmise viisid, aktiivne ja passiivne puhkus. Reisimine, reisi planeerimine. Tee leidmine, info küsimine võõras linnas. Reisimuljete jutustamine. Vaatamisväärsused.</li>
+
+            <li>Asjaajamine ametiasutustes. Suhtlemine teenindusasutustes ja kaubandusvõrgus. Kaubanduskeskuses, toidupoes, pangas, postkontoris jne. Info küsimine, kaebuste esitamine. Telefonivestlus. </li>
+            <li>Ühiskondlik elu. Uudised ja päevakajalised sündmused. Reklaam. Oma arvamuse avaldamine. </li>
+            <li>Kohvikus ja restoranis. Menüüd ja retseptid. Täpsustavate küsimuste esitamine. Kiitva hinnangu andmine, rahulolematuse väljendamine. Toiduained, söögid ja joogid. Tervislik toitumine. Eri maade söömistavad. </li>
+            <li>Ilm ja loodus. Ilmateate koostamine. Ümbruse kirjeldamine. Loomad, linnud taimed. Aastaaegade, looduse kirjeldamine eri maades. </li>
+ 
+            <li>Arsti juures ja apteegis. Haiglas. Kiirabi kutsumine. Kehaosad, haigused ja kaebused. Kinnisvara. Korteri üürimine ja ostmine. Maja osad, mööbel, kodutehnika. Ehitus ja remont.</li>
+            <li>Seltskonnaüritused. Sõpradel külas. Ametlikul vastuvõtul. Seltskondlik vestlus.  </li>
+            <li>Välimus ja iseloom. Inimeste iseloomustamine ja kirjeldamine. Inimsuhted. Konfliktide lahendamine. Oma soovide ja eelistuste väljendamine, vestluspartneri soovide ja eelistuste kohta küsimine. Ettepanekud ja kokkulepped. Oma seisukohtade väljendamine ja põhjendamine.</li>   
+      </ul>
+
+        
+      <h4>Grammatika</h4>
+      <p>Oleviku, mineviku ja tuleviku ajavormid. Määrava ja umbmäärase artikli kasutamine. Passiiv. Tingimuslaused. Kaudne kõneviis. Eessõnad. Modaalverbid. Asesõnad. Küsisõnad. Omadussõnade võrdlus.</p>
+     
+
+    <h4>Õppekeskkond</h4>
+      <p>Õppijatele antakse õpiväljundite omandamise kohta tagasisidet jooksvalt õppeprotsessi käigus. 
+        Hindamine toimub lõpueksamil, mis koosneb suulisest ja kirjalikust osast. Suuline osa on vestlus õppija ja õpetaja vahel. Kirjalik osa koosneb kuulamisharjutusest, 
+        grammatikaharjutusest, lugemisharjutusest ja kirjalikust loovtööst. </p>
+
+      <h4>Õppemeetodid</h4>
+      <p>Peamiselt rakendatakse kommunikatiivseid õppemeetodeid, nagu dialoogid, rollimängud, rühma-
+         ja paaristööd, kasutatakse grammatikaharjutusi baasteadmiste omandamiseks. Samuti tehakse lugemis- ja
+          kuulamisharjutusi õige häälduse harjutamiseks ning kõne ja kirjaliku teksti mõistmise arendamiseks.</p>
+
+      <h4>Hindamismeetod. Hindamiskriteeriumid</h4>
+      <p>Õppijatele antakse õpiväljundite omandamise kohta tagasisidet jooksvalt õppeprotsessi käigus. 
+        Hindamine toimub lõpueksamil, mis koosneb suulisest ja kirjalikust osast. Suuline osa on vestlus
+         õppija ja õpetaja vahel. Kirjalik osa koosneb kuulamisharjutusest, grammatikaharjutusest, lugemisharjutusest 
+         ja kirjalikust loovtööst.</p>
+   
+
+      <h3>Kuulamine</h3>
+      <p>saab aru küsimustest ja kuuldud info, raadio- ning telesaadete põhissisust. (Hinnatakse eksami kirjaliku osa kuulamisharjutuses
+         ja suulise osa vestlusel.)
+      </p>
+      
+      <h3>Lugemine</h3>
+      <p>mõistab tekstide sisu, saab aru sündmuste, mõtete ja soovide kirjeldustest, saab aru tööga seotud sõnavarast ja tekstidest, lünkharjutuste tegemisel tunneb ära korrektse grammatilise vormi, arvab ära tundmatuid sõnu konteksti baasil. 
+        (Hinnatakse eksami kirjaliku osa grammatika- ja lugemisharjutuses.)</p>
+
+      <h3>Rääkimine</h3>
+      <p>räägib spontaanselt endast, oma perest, igapäevaelust ja tööst, huvialadest, plaanidest ja kavatsustest.
+         (Hinnatakse eksami suulise osa vestlusel.)</p>
+
+      <h3>Kirjutamine</h3>
+      <p>oskab koostada korrektse ülesehitusega teksti, kirjeldada oma kogemusi ja muljeid, oskab moodustada grammatiliselt korrektseid lauseid. (Hinnatakse eksami kirjaliku osa grammatikaharjutuses, lugemisharjutuses ja loovtöös.)</p>
+
+      <h4>Õppematerjalid</h4>
+
+
+      <ol>
+        <li>John and Liz Soars “New Headway Pre-Intermediate” 5thedition. Oxford University Press, 2019.</li>
+        <li> Raymond Murphy “Essential Grammar in Use”, Cambridge University Press, 2011.</li>
+        <li>Õpetaja koostatud materjalid</li>
+        <li>Veebipõhised ressursid: www.quizlet.com, www.wordwall.com, www.kahoot.com, www.padlet.com. </li>
+      </ol>
+
+      
+
+      <h4>Täiendkoolituse lõpetamise tingimused ja väljastatavad dokumendid</h4>
+
+      <p>Keelerõõmud Keeltekool OÜ väljastab kursuse lõpetanule tunnistuse tingimusel, 
+        et õppija on osalenud vähemalt 80% auditoorsetest tundidest ja läbinud edukalt kursuse lõpueksami.
+         Lõpueksam hõlmab kirjutamist, kuulamist, lugemist ja kõnelemist ning selle abil kontrollitakse eespool
+          mainitud õpiväljundite omandamist. Eksam loetakse sooritatuks, kui õppija saavutab vähemalt 60% 
+          maksimaalsest punktisummast.</p>
+
+      <p>Tunnistusele kantakse lõpetatud kursuse nimetus ja kestus, 
+        kursuse toimumise aeg ning osaleja nimi ja isikukood. Tunnistusele kirjutavad 
+        alla kursuse õpetaja ja keeltekooli juhataja. Kui osaleja ei läbinud edukalt kursuse
+         lõpueksamit ja/või ei osalenud vajalikul arvul tundides, antakse talle kursuse lõpus tõend,
+          kus on märgitud osaletud tundide arv. Tõendi allkirjastab Keelerõõmud Keeltekooli juhataja.</p>
+    
+  </div>
+  </>):(<></>)}  
+
+  {Tab8 ? (<>
+   <div className="container absolute mt-5">
+
+   <div className='curri-header'>
+      <div className='header-title'><h2>Inglise keele õppekava – edasijõudnutele (B2)</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Inglise keele oppekava B2.docx" download="Inglise keele oppekava B2.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
+
+    <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
+    <p><strong>Õppekava nimetus: </strong> Inglise keele A2-taseme täiendkoolitus (moodulid A2.1 ja A2.2) </p>
+    <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
+    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+
+      <h3>Õppe maht ja ülesehitus:</h3>
+      <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas,
+         kaks akadeemilist tundi korraga. Õppe kestus on 35 nädalat ehk 9 kuud.</p>
+      <p>Vastavalt tellija soovile võib korraldada erineva kestusega lühikursust, intensiiv- ja poolintensiivkursust.</p>
+      <p>Auditoorses õppes keskendutakse peamiselt kõne arendamisele ja mõistmisele ning grammatika seaduspärasuste selgitamisele. Iseseisvalt tuleb kodus õppida sõnavara, teha grammatikaharjutusi ja kirjalikke loovtöid ,lisaks on soovituslik jälgida ingliskeelseid tele- ja raadiosaateid, 
+        lugeda keerukamaid ajakirjanduslikke tekste, tänapäeva inglise proosakirjandust ning 
+        võimalusel praktiseerida keelt keelekeskkonnas.</p>
+
+      <h3>Sihtgrupp ja õppe alustamise tingimused:</h3>
+      <p>Õppijad, kes soovivad omandada inglise keelt B2-tasemel.
+         Õppijate vastuvõtt toimub sooviavalduse alusel ja osalus kinnitatakse koolituslepingus 
+         ja registreerimislehel. Õpingute alustamise tingimuseks on inglise keele B1-taseme kursuse lõpetamine
+          viimase kahe aasta jooksul või Keelerõõmud Keeltekooli kirjaliku ja suulise tasemetesti sooritamine.</p>
+      <h3>Õppe eesmärk:</h3>
+      <p>Omandada inglise keele oskus B2 tasemel, mis võimaldab inglise keeles nii suuliselt kui ka kirjalikult 
+        spontaalselt ja ladusalt suhelda.</p>
+      
+      <h3>Õpiväljundid: <span>Iga õppija koolituse lõpuks:</span> </h3>
+      <ul>
+        <li>saab aru kiirest ingliskeelsest kõnest, ka abstraktsetel teemadel, suudab jälgida ja mõista pikemaid kõnesid ja ettekandeid. Saab aru teleuudiste, ühiskonna- ja poliitikasaadete ning filmide sisust.</li>
+        <li>saab aru aktuaalsetel teemadel kirjutatud ajaleheartiklitest, loeb ja mõistab ingliskeelset proosakirjandust.</li>
+        <li>oskab inglise keeles spontaanselt ja ladusalt vestelda. Suudab tuttaval teemal aktiivselt arutelus osaleda, oskab selgelt ja argumenteeritult oma seisukohti esitada. Suudab üksikasjalikult kirjeldada sündmusi ja olukordi, suudab pidada varem ettevalmistatud loengut.</li>
+        <li>oskab kirjutada selgeid ja detailseid tekste tuttavatel teemadel. Oskab kirjutada esseed, lühiartiklit. Suudab koostada aruannet või ettekannet. Oskab kirjutada ameti- ja isiklikke kirju.</li>
+       </ul>
+      <h3>Õppe sisu:</h3>
+      <h4>Kõnearenduse teemad:</h4>
+      <ul>
+        
+            <li>Mina ja minu pere. Peresuhted. Põlvkondadevahelised erinevused. Abielu ja lahutus. Info päritolu kohta, oma kodumaa tutvustamine, teiste maade ja kultuuride tutvustamine. Rahvad ja kombed, stereotüübid </li>
+            <li>Inimestevahelised suhted. Inimese välimus ja iseloom. Sõbrad ja tuttavad. Suhted töökollektiivis, koolis. Konfliktide lahendamine. Oma soovide ja eelistuste väljendamine, vestluspartneri soovide ja eelistuste kohta küsimine. Ettepanekud ja kokkulepped. Oma seisukohtade väljendamine ja põhjendamine. </li>
+            <li>Töö, ametid. Oma töö kirjeldamine, tööülesanded. Töö- ja õppimisvõimalused. Elukutse sobivus. Töövestlus. Elulookirjeldus: töökogemus, hariduskäik. Keeleõpe. Motivatsioonikiri. Elus tehtud kärjääri- ja õppimisvalikute põhjendamine. Tulevikuplaanid. Töökoosolek: oma arvamuse selgelt ja struktureeritult väljendamine, koosoleku päevakorra koostamine, koosoleku juhtimine. </li>
+            <li>Kaubandus ja teenindus. Sisseostud ja hinnad. Poed, kaubamärgid, tootjad.  Mood ja riided. Kodumasinad ja tehnika. Reklaamid ja juhised. Tarbijakaitse. Info küsimine, kaebuste esitamine.  </li>
+            <li>Suhtlemine ametiasutustes. Toimingud veebis. Dokumendid ja ankeedid. Avaldused. </li>
+            <li>Vaba aja veetmise viisid. Enda eelistuste väljendamine ja põhjendamine. Huvialad. Oma huvialade propageerimine. </li>
+            <li>Puhkuse veetmise viisid, aktiivne ja passiivne puhkus. Reisimine, reisi planeerimine. Info küsimine võõras linnas. Reisimuljete jutustamine. Vaatamisväärsused. Juhtunu, sündmuse kirjeldamine. Anekdootide rääkimine. </li>
+            <li>Kirjandus ja kunst. Muusika. Kultuurielamuse kirjeldamine. Proosateos. Tegelaskujude kirjeldamine ja võrdlemine, lühiarvustus.  </li>
+            <li>	Meedia. Peavoolumeedia ja sotsiaalmeedia. Sotsiaalmeedia head ja vead, ohud. Artiklite kriitiline lugemine, tõesuse kontroll. </li>
+            </ul>
+
+        
+      <h4>Grammatika</h4>
+      <p>Oleviku, mineviku ja tuleviku ajavormid. Määrava ja umbmäärase artikli kasutamine. Passiiv. 
+        Tingimuslaused. Kaudne kõneviis. Eessõnad. Modaalverbid. Asesõnad. Küsisõnad. Omadussõnade võrdlus. Kirjavahemärkide kasutamine.
+
+    </p>
+     
+
+    <h4>Õppekeskkond</h4>
+      <p>Kursused viiakse läbi tunni alusel keeleõppeks renditavates ruumides Narvas või tellija soovil Zoomi veebiplatvormil. Õppeklassid vastavad tervisekaitse- ja ohutusnõuetele. Õppeklassides on internetiühendus ning nad on varustatud tahvli,
+         arvuti ja audio-visuaalse esitlustehnikaga. </p>
+
+      <h4>Õppemeetodid</h4>
+      <p>Peamiselt rakendatakse kommunikatiivseid õppemeetodeid, nagu dialoogid, rollimängud, rühma- ja paaristööd, kasutatakse grammatikaharjutusi baasteadmiste omandamiseks. Samuti tehakse lugemis- ja kuulamisharjutusi õige häälduse harjutamiseks ning kõne
+         ja kirjaliku teksti mõistmise arendamiseks.</p>
+
+      <h4>Hindamismeetod. Hindamiskriteeriumid</h4>
+      <p>Õppijatele antakse õpiväljundite omandamise kohta tagasisidet jooksvalt õppeprotsessi käigus. Hindamine toimub lõpueksamil, mis koosneb suulisest ja kirjalikust osast. Suuline osa on vestlus õppija ja õpetaja vahel. Kirjalik osa koosneb kuulamisharjutusest, grammatikaharjutusest, 
+        lugemisharjutusest ja kirjalikust loovtööst. </p>
+   
+
+      <h3>Kuulamine</h3>
+      <p>saab aru küsimustest ja kuuldud info, raadio- ning telesaadete põhissisust. 
+        (Hinnatakse eksami kirjaliku osa kuulamisharjutuses ja suulise osa vestlusel.)
+      </p>
+      
+      <h3>Lugemine</h3>
+      <p>mõistab tekstide sisu, saab aru sündmuste, mõtete ja soovide kirjeldustest, saab aru tööga seotud sõnavarast ja tekstidest, lünkharjutuste tegemisel tunneb ära korrektse grammatilise vormi, arvab ära tundmatuid sõnu konteksti baasil. (Hinnatakse eksami kirjaliku 
+        osa grammatika- ja lugemisharjutuses.)</p>
+
+      <h3>Rääkimine</h3>
+      <p>räägib spontaanselt endast, oma perest, igapäevaelust ja tööst, huvialadest, plaanidest ja kavatsustest. 
+        (Hinnatakse eksami suulise osa vestlusel.)</p>
+
+      <h3>Kirjutamine</h3>
+      <p>oskab koostada korrektse ülesehitusega teksti, kirjeldada oma kogemusi ja muljeid, oskab moodustada grammatiliselt korrektseid lauseid. (Hinnatakse eksami kirjaliku 
+        osa grammatikaharjutuses, lugemisharjutuses ja loovtöös.)</p>
+
+      <h4>Õppematerjalid</h4>
+
+
+      <ol>
+        <li>John and Liz Soars “New Headway Pre-Intermediate” 5thedition. Oxford University Press, 2019.</li>
+        <li> Raymond Murphy “Essential Grammar in Use”, Cambridge University Press, 2011.</li>
+        <li>Õpetaja koostatud materjalid</li>
+        <li>Veebipõhised ressursid: www.quizlet.com, www.wordwall.com, www.kahoot.com, www.padlet.com. </li>
+      </ol>
+
+      
+
+      <h4>Täiendkoolituse lõpetamise tingimused ja väljastatavad dokumendid</h4>
+
+      <p>Keelerõõmud Keeltekool OÜ väljastab kursuse lõpetanule tunnistuse tingimusel, 
+        et õppija on osalenud vähemalt 80% auditoorsetest tundidest ja läbinud edukalt kursuse lõpueksami.
+         Lõpueksam hõlmab kirjutamist, kuulamist, lugemist ja kõnelemist ning selle abil kontrollitakse eespool
+          mainitud õpiväljundite omandamist. Eksam loetakse sooritatuks, kui õppija saavutab vähemalt 60% 
+          maksimaalsest punktisummast.</p>
+
+      <p>Tunnistusele kantakse lõpetatud kursuse nimetus ja kestus, 
+        kursuse toimumise aeg ning osaleja nimi ja isikukood. Tunnistusele kirjutavad 
+        alla kursuse õpetaja ja keeltekooli juhataja. Kui osaleja ei läbinud edukalt kursuse
+         lõpueksamit ja/või ei osalenud vajalikul arvul tundides, antakse talle kursuse lõpus tõend,
+          kus on märgitud osaletud tundide arv. Tõendi allkirjastab Keelerõõmud Keeltekooli juhataja.</p>
+    
+  </div>
+  </>):(<></>)}  
+
+  {Tab9 ? (<>
+   <div className="container absolute mt-5">
+
+   <div className='curri-header'>
+      <div className='header-title'><h2>Inglise keele õppekava – Vilunud keelekasutaja (C1)</h2> </div>
+       <div className='download-btn' style={{right:"50px"}}><a href="Inglise keele oppekava C1.docx" download="Inglise keele oppekava C1.docx">
+      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+    </a></div>
+    </div> 
+
+    <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
+    <p><strong>Õppekava nimetus: </strong> Inglise keele C1-taseme täiendkoolitus (moodulid C1.1 ja C1.2)</p>
+    <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
+    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+
+      <h3>Õppe maht ja ülesehitus:</h3>
+      <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas, kaks akadeemilist tundi korraga.
+         Õppe kestus on 35 nädalat ehk 9 kuud.</p>
+      <p>Vastavalt tellija soovile võib korraldada erineva kestusega lühikursust, intensiiv- ja poolintensiivkursust.</p>
+      <p>Auditoorses õppes keskendutakse peamiselt kõne arendamisele ja mõistmisele ning grammatika seaduspärasuste selgitamisele. Iseseisvalt tuleb kodus õppida sõnavara, teha grammatikaharjutusi ja kirjalikke loovtöid ,lisaks on soovituslik jälgida ingliskeelseid tele- ja raadiosaateid, lugeda keerukamaid ajakirjanduslikke tekste, tänapäeva inglise proosakirjandust ning
+         võimalusel praktiseerida keelt keelekeskkonnas</p>
+
+      <h3>Sihtgrupp ja õppe alustamise tingimused:</h3>
+      <p>Õppijad, kes soovivad omandada inglise keelt C1-tasemel. Õppijate vastuvõtt toimub sooviavalduse alusel ja osalus kinnitatakse koolituslepingus ja registreerimislehel. Õpingute alustamise tingimuseks on inglise keele B2-taseme kursuse lõpetamine viimase kahe aasta jooksul või Keelerõõmud Keeltekooli kirjaliku
+         ja suulise tasemetesti sooritamine.</p>
+      <h3>Õppe eesmärk:</h3>
+      <p>Omandada inglise keele oskus C1 tasemel, mis võimaldab inglise keeles nii 
+        suuliselt kui ka kirjalikult spontaalselt ja ladusalt suhelda.</p>
+      
+      <h3>Õpiväljundid: <span>Iga õppija koolituse lõpuks:</span> </h3>
+      <ul>
+        <li>saab aru pikemast tekstist isegi siis, kui see pole selgelt liigendatud ja seosed on esitatud kas kaudselt või vihjamisi. Saab aru suurema vaevata teleprogrammidest ja filmidest.</li>
+        <li>saab aru pikkadest ja keerulistest kirjanduslikest tekstidest, erialastest artiklitest ja tehnilistest juhenditest isegi siis, kui need ei puuduta vahetult tema eriala. </li>
+        <li>oskab keerulisi teemasid täpselt ja üksikasjalikult kirjeldada, välja tuua allteemad ja olulisemad punktid ning teha kokkuvõtet.</li>
+       <li>oskab kirjutada kirja, esseed või aruannet keerukal teemal ja esile tõsta olulisemat. Oskab lugejast lähtuvalt kohandada oma stiili.</li>
+      <li>oskab kasutada keelt tulemuslikult ja paindlikult nii ühiskondlikel kui ka tööalastel eesmärkidel. 
+</li>
+       </ul>
+      <h3>Õppe sisu:</h3>
+      <h4>Kõnearenduse teemad:</h4>
+      <ul>
+        
+            <li>Mina ja digitaalne ühiskond. Sotsiaalmeedia. Massimeedia. Digiturvalisus. Arutlus.</li>
+            <li>Ühiskondlik elu ja poliitika. Ameerika ja Inglismaa riigivalitsemise võrdlus. Uudised ja päevakajalised sündmused. Riikidevahelised suhted. Ühiskonna valupunktid. Oma arvamuse avaldamine ja põhjendamine.</li>
+            <li>Inimestevahelised suhted. Isiksuse väljakujunemine, iseseisvumine. Erinevad peretüübid. Peretraditsioonid. Suhted, kombed peres, tööl, eri kultuurides. Keelestiili valik.</li>
+            <li>Töökeskkond ja karjäär. Karjääri planeerimine. Töötingimused. Tööülesannete kirjeldamine. Tööintervjuu. Koosolekud. Ettevõtlikkus. Tööstress. Erinevate dokumentide vormistamine. CV. Motivatsioonikiri. Taotluskiri. Äriplaan. </li>
+            <li>Teenindus ja kaubandus. Turundus ja reklaam. Inimeste mõjutamine. Internetikaubandus. Tagasiside andmine. Pretensioon. Tarbijakaitse.</li>
+            <li>Keskkond ja loodus. Keskkonnakaitse. Loodushoid. “ Teeme ära“ jt keskkonnaprojektid. Prügi. Taaskasutus. Jätkusuutlik areng.</li>
+            <li>Tervis ja eluviis. Tervishoid. Tervisekontroll. E-tervis. Alternatiivmeditsiin. Allergiad. Elukvaliteet. Tööstress. Läbipõlemine. Harrastussport. Rekreatsioon. </li>
+            <li>Majandus ja õigussuhted. Majandussüsteem ja õiguskord. Kodaniku õigused ja kohustused. Turvalisus ja kuritegevus. Rahaasjad. </li>
+            <li>Haridus. Haridus ja õpingud. Eesti, Inglismaa ja USA haridussüsteemid. Elukestev õpe. Kutseõpe. Õppimine välismaal. Veebiõpe. CV. Essee.</li>
+            </ul>
+
+        
+      <h4>Grammatika</h4>
+      <p> Oleviku, mineviku ja tuleviku ajavormid. Määrava ja umbmäärase artikli kasutamine. 
+        Passiiv. Tingimuslaused. Kaudne kõneviis. Eessõnad. Modaalverbid. Asesõnad. Küsisõnad. Omadussõnade 
+        võrdlus. Kirjavahemärkide kasutamine.
+
+
+
+    </p>
+     
+
+    <h4>Õppekeskkond</h4>
+      <p>Kursused viiakse läbi tunni alusel keeleõppeks renditavates ruumides Narvas või tellija soovil Zoomi veebiplatvormil. Õppeklassid vastavad tervisekaitse- ja ohutusnõuetele. Õppeklassides on internetiühendus ning nad on varustatud tahvli,
+         arvuti ja audio-visuaalse esitlustehnikaga.  </p>
+
+      <h4>Õppemeetodid</h4>
+      <p>Peamiselt rakendatakse kommunikatiivseid õppemeetodeid, nagu dialoogid, rollimängud, rühma- ja paaristööd, kasutatakse grammatikaharjutusi baasteadmiste omandamiseks. Samuti tehakse lugemis- ja kuulamisharjutusi õige häälduse harjutamiseks ning kõne
+         ja kirjaliku teksti mõistmise arendamiseks.</p>
+
+      <h4>Hindamismeetod. Hindamiskriteeriumid</h4>
+      <p>Õppijatele antakse õpiväljundite omandamise kohta tagasisidet jooksvalt õppeprotsessi käigus. Hindamine toimub lõpueksamil, mis koosneb suulisest ja kirjalikust osast. Suuline osa on vestlus õppija ja õpetaja vahel. Kirjalik osa koosneb kuulamisharjutusest,
+         grammatikaharjutusest, lugemisharjutusest ja kirjalikust loovtööst. </p>
+   
+
+      <h3>Kuulamine</h3>
+      <p>saab aru ringhäälingus vahendatud dialoogi või suulist monoloogi, nt teadaandeid, telesaateid, filme, reklaame, loenguid ja ettekandeid. 
+        (Hinnatakse eksami kirjaliku osa kuulamisharjutuses ja suulise osa vestlusel.)
+      </p>
+      
+      <h3>Lugemine</h3>
+      <p>mõistab üksikasjalikult pikki ja keerukaid tekste olenemata sellest, kas need kuuluvad tema asjatundmise valdkonda või 
+         mitte.(Hinnatakse eksami kirjaliku osa grammatika- ja lugemisharjutuses.)</p>
+
+      <h3>Rääkimine</h3>
+      <p>oskab keerukal teemal esitada selgeid ja üksikasjalikke kirjeldusi ja ettekandeid, siduda allteemasid, arendada seisukohti ja 
+        lõpetada sobiva kokkuvõttega.(Hinnatakse eksami suulise osa vestlusel.)</p>
+
+      <h3>Kirjutamine</h3>
+      <p>oskab keerukal teemal kirjutada selgeid, hea ülesehitusega tekste, rohutada seejuures olulist, toetada oma seisukohti selgituste, põhjenduste ja asjakohaste näidistega ning lõpetada sobiva kokkuvõttega 
+        (Hinnatakse eksami kirjaliku osa loovtöös.)</p>
+
+      <h4>Õppematerjalid</h4>
+
+
+      <ol>
+        <li>John and Liz Soars “New Headway Pre-Intermediate” 5thedition. Oxford University Press, 2019.</li>
+        <li> Raymond Murphy “Essential Grammar in Use”, Cambridge University Press, 2011.</li>
+        <li>Õpetaja koostatud materjalid</li>
+        <li>Veebipõhised ressursid: www.quizlet.com, www.wordwall.com, www.kahoot.com, www.padlet.com. </li>
+      </ol>
+
+      
+
+      <h4>Täiendkoolituse lõpetamise tingimused ja väljastatavad dokumendid</h4>
+
+      <p>Keelerõõmud Keeltekool OÜ väljastab kursuse lõpetanule tunnistuse tingimusel, 
+        et õppija on osalenud vähemalt 80% auditoorsetest tundidest ja läbinud edukalt kursuse lõpueksami.
+         Lõpueksam hõlmab kirjutamist, kuulamist, lugemist ja kõnelemist ning selle abil kontrollitakse eespool
+          mainitud õpiväljundite omandamist. Eksam loetakse sooritatuks, kui õppija saavutab vähemalt 60% 
+          maksimaalsest punktisummast.</p>
+
+      <p>Tunnistusele kantakse lõpetatud kursuse nimetus ja kestus, 
+        kursuse toimumise aeg ning osaleja nimi ja isikukood. Tunnistusele kirjutavad 
+        alla kursuse õpetaja ja keeltekooli juhataja. Kui osaleja ei läbinud edukalt kursuse
+         lõpueksamit ja/või ei osalenud vajalikul arvul tundides, antakse talle kursuse lõpus tõend,
+          kus on märgitud osaletud tundide arv. Tõendi allkirjastab Keelerõõmud Keeltekooli juhataja.</p>
+    
+  </div>
+  </>):(<></>)} 
 </div>
 </div>
 </Container>

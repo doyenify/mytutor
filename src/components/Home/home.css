@@ -101,6 +101,9 @@
     .hero-img {
         display: none;
     }
+    .rectangle-overlay{
+        display: none;
+    }
 }
 
 /* Media query for Galaxy Fold (280 by 653) */
@@ -115,6 +118,9 @@
         max-width: 100vh;
     }
     .hero-img {
+        display: none;
+    }
+     .rectangle-overlay{
         display: none;
     }
 }
