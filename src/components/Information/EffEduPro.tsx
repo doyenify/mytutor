@@ -51,7 +51,7 @@ const EffEduPro = () => {
            <FontAwesomeIcon className="socialmed2"  icon={faClose} style={{marginTop: "20px", marginRight: "10px", textDecoration: "none"}} /><span style={{fontWeight: "bold"}}>Close Curriculum tab</span> 
         </div>
         <hr/>
-        <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Õppekorralduse ja kvaliteedi tagamise alused</h6>
+        <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</h6>
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Õppekorralduse alused')}</div>
@@ -62,7 +62,7 @@ const EffEduPro = () => {
     <div className='d-flex'>
       {/* for desktop view */}
       <div className="tab-desktop d-flex flex-column" style={{ width: '200px', marginTop: "135px" }}>
-        <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>Õppekorralduse ja kvaliteedi tagamise alused</h6>
+        <h6 className='mb-3' style={{backgroundColor:"#FBDC6E", color: "#3F556B", padding: "6px", borderRadius: "6px"}}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</h6>
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Õppekorralduse alused')}</div>
@@ -80,7 +80,7 @@ const EffEduPro = () => {
       <div className="container mt-5" style={{marginTop:""}}>
         <div className='curri-header'>
       <div className="header-title mb-3"><h3>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</h3></div>
-       <div className='download-btn' style={{right:"50px"}}><a href="oppekorralduse-ja-kvaliteedi-tagamise-alused.docx" download="Eesti keele oppekava A1.docx">
+       <div className='download-btn' style={{right:"50px"}}><a href="oppekorralduse-ja-kvaliteedi-tagamise-alused.docx" download="oppekorralduse-ja-kvaliteedi-tagamise-alused.docx">
       <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
     </a></div>
     </div> 
@@ -132,11 +132,11 @@ const EffEduPro = () => {
         </li>
         <h5>{t('2. Täienduskoolituste vormid')} </h5>
        <li>
-       {t(' 2.1 Grupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 6 kuni 12 sarnasel keeletasemel õppijat.')}
+       {t('2.1 Grupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 6 kuni 12 sarnasel keeletasemel õppijat.')}
         
         </li>
         <li>
-        {t(' 2.2  Minigrupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 3 kuni 5 sarnasel keeletasemel õppijat.')}
+        {t('2.2  Minigrupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 3 kuni 5 sarnasel keeletasemel õppijat.')}
         
         </li>
         <li>
@@ -246,7 +246,7 @@ const EffEduPro = () => {
           
         </li>
         <li>
-        {t('3.3. Õppekvaliteedi tagamiseks osaleb õpetaja regulaarselt täienduskoolitustel: digipädevused, aktiivõppe meetodid, õppematerjalide koostamine.')}
+        {t('3.3. Õppekvaliteedi tagamiseks osaleb õpetaja regulaarselt täienduskoolitustel; digipädevused, aktiivõppe meetodid, õppematerjalide koostamine.')}
           
         </li>
         <li>
@@ -256,7 +256,7 @@ const EffEduPro = () => {
       
         <h5 className='mt-2'>{t('4. Õppekeskkonna kvaliteedi tagamise tingimused ja kord')}</h5>
       
-        <li>{t('4.1 Kõik registreerunud saavad teabe koolituse täpse korraldusliku poole kohta: ajakava, koolitusruumide või veebikeskkonna ja õppematerjalide kohta hiljemalt kursuse algusele eelneval nädalal.')}</li>
+        <li>{t('4.1 Kõik registreerunud saavad teabe koolituse täpse korraldusliku poole kohta; ajakava, koolitusruumide või veebikeskkonna ja õppematerjalide kohta hiljemalt kursuse algusele eelneval nädalal.')}</li>
         <li>{t('4.2 Keelekoolituse läbiviimiseks on loodud õppimist toetav keskkond.')}</li>
         <li>{t('4.3 Õppeklassid asuvad Narvas, renditud klassiruumides või kursuse tellija ruumides. Kõik õppeklassid vastavad tervisekaitse nõuetele. Klassides on iga õppija jaoks piisavalt ruumi ja valgust. Klassid on varustatud tänapäevase esitlustehnika ja internetiühendusega.')}</li>
         <li>{t('4.4 Õppijatele on kättesaadav joogivesi.')}</li>
@@ -265,7 +265,7 @@ const EffEduPro = () => {
       <h5 className='mt-2'>{t('5. Täienduskoolituse kohta tagasiside kogumise kord')}</h5>
       
         <li>{t('5.1 Iga kursuse lõpul täidavad osalejad internetipõhise või paberkandjal tagasisideküsitluse, kus annavad hinnangu kursuse sisule, enda keelealasele arengule, õppematerjalidele, õppemetoodikale, tundide ülesehitusele (tempo, õhkkond, selgituste arusaadavus, õpitava keele praktiseerimise võimalused jm), õpetaja tööle ja kursuse korralduslikule poolele ning teevad ettepanekuid õppetöö sisu ja vormi täiustamiseks.')}</li>
-        <li>{t('5.2 Õpetaja analüüsib tagasisideküsitlust parendamaks kõiki nimetatud aspekte')}.</li>
+        <li>{t('5.2 Õpetaja analüüsib tagasisideküsitlust parendamaks kõiki nimetatud aspekte.')}</li>
       
   </div>
  </>):(<></>)}
@@ -319,11 +319,11 @@ const EffEduPro = () => {
         </li>
         <h5>{t('2. Täienduskoolituste vormid')} </h5>
        <li>
-       {t(' 2.1 Grupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 6 kuni 12 sarnasel keeletasemel õppijat.')}
+       {t('2.1 Grupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 6 kuni 12 sarnasel keeletasemel õppijat.')}
         
         </li>
         <li>
-        {t(' 2.2  Minigrupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 3 kuni 5 sarnasel keeletasemel õppijat.')}
+        {t('2.2  Minigrupiõpe s.o  Õppevorm, kus keeleõppes osaleb korraga 3 kuni 5 sarnasel keeletasemel õppijat.')}
         
         </li>
         <li>
@@ -438,7 +438,7 @@ const EffEduPro = () => {
           
         </li>
         <li>
-        {t('3.3. Õppekvaliteedi tagamiseks osaleb õpetaja regulaarselt täienduskoolitustel: digipädevused, aktiivõppe meetodid, õppematerjalide koostamine.')}
+        {t('3.3. Õppekvaliteedi tagamiseks osaleb õpetaja regulaarselt täienduskoolitustel; digipädevused, aktiivõppe meetodid, õppematerjalide koostamine.')}
           
         </li>
         <li>
@@ -448,7 +448,7 @@ const EffEduPro = () => {
       
         <h5 className='mt-2'>{t('4. Õppekeskkonna kvaliteedi tagamise tingimused ja kord')}</h5>
       
-        <li>{t('4.1 Kõik registreerunud saavad teabe koolituse täpse korraldusliku poole kohta: ajakava, koolitusruumide või veebikeskkonna ja õppematerjalide kohta hiljemalt kursuse algusele eelneval nädalal.')}</li>
+        <li>{t('4.1 Kõik registreerunud saavad teabe koolituse täpse korraldusliku poole kohta; ajakava, koolitusruumide või veebikeskkonna ja õppematerjalide kohta hiljemalt kursuse algusele eelneval nädalal.')}</li>
         <li>{t('4.2 Keelekoolituse läbiviimiseks on loodud õppimist toetav keskkond.')}</li>
         <li>{t('4.3 Õppeklassid asuvad Narvas, renditud klassiruumides või kursuse tellija ruumides. Kõik õppeklassid vastavad tervisekaitse nõuetele. Klassides on iga õppija jaoks piisavalt ruumi ja valgust. Klassid on varustatud tänapäevase esitlustehnika ja internetiühendusega.')}</li>
         <li>{t('4.4 Õppijatele on kättesaadav joogivesi.')}</li>
@@ -457,7 +457,7 @@ const EffEduPro = () => {
       <h5 className='mt-2'>{t('5. Täienduskoolituse kohta tagasiside kogumise kord')}</h5>
       
         <li>{t('5.1 Iga kursuse lõpul täidavad osalejad internetipõhise või paberkandjal tagasisideküsitluse, kus annavad hinnangu kursuse sisule, enda keelealasele arengule, õppematerjalidele, õppemetoodikale, tundide ülesehitusele (tempo, õhkkond, selgituste arusaadavus, õpitava keele praktiseerimise võimalused jm), õpetaja tööle ja kursuse korralduslikule poolele ning teevad ettepanekuid õppetöö sisu ja vormi täiustamiseks.')}</li>
-        <li>{t('5.2 Õpetaja analüüsib tagasisideküsitlust parendamaks kõiki nimetatud aspekte')}.</li>
+        <li>{t('5.2 Õpetaja analüüsib tagasisideküsitlust parendamaks kõiki nimetatud aspekte.')}</li>
 
       </div>
      </>):(<></>)}
