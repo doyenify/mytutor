@@ -55,7 +55,7 @@ const EffEduPro = () => {
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Õppekorralduse alused')}</div>
-          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Kvaliteedi tagamise aluse')}</div>
+          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Kvaliteedi tagamise alused')}</div>
       </div>
       </div>
       </div>
@@ -66,7 +66,7 @@ const EffEduPro = () => {
         <div className="tabtext d-flex flex-column">
           <div className={Tab1 ? "activeTab" : "inactiveTab"} onClick={showTab1}>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</div>
           <div className={Tab2 ? "activeTab" : "inactiveTab"} onClick={showTab2}>{t('Õppekorralduse alused')}</div>
-          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Kvaliteedi tagamise aluse')}</div>
+          <div className={Tab3 ? "activeTab" : "inactiveTab"} onClick={showTab3}>{t('Kvaliteedi tagamise alused')}</div>
       </div>
       </div>
 
@@ -87,10 +87,9 @@ const EffEduPro = () => {
  
       <h4>{t('Õppekorralduse alused')}</h4>
       <h5> {t('1. Üldsätted')}</h5>
-    
-        <li>
-        {t('1.1 Keelerõõmud Keeltekool OÜ (registrikood 16806917) lähtub täienduskoolituse korraldamisel kehtivatest täiskasvanuhariduse valdkonna õigusaktidest ning teistest seonduvatest õigusaktidest ja dokumentidest.')}
         
+        <li className="listing-items">
+        {t('1.1 Keelerõõmud Keeltekool OÜ (registrikood 16806917) lähtub täienduskoolituse korraldamisel kehtivatest täiskasvanuhariduse valdkonna õigusaktidest ning teistest seonduvatest õigusaktidest ja dokumentidest.')}
         </li>
         <li>
         {t('1.2  Keelerõõmud Keeltekool OÜ on täiskasvanute ja kooliõpilaste koolitusasutus (õppekavarühm; keeleõpe), mis korraldab eesti ja inglise keele õpet.')}

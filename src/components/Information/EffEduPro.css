@@ -8,4 +8,11 @@
     color: #000000;
     margin-bottom: 15px;
     cursor: pointer;
+
+   
+}
+
+li {
+    list-style-type: none;
+   
 }
