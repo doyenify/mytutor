@@ -216,7 +216,7 @@ const Curriculum = () => {
         <div className='curri-header'>
       <div className="header-title mb-3"><h2>Eesti keele õppekava A1-tasemele</h2></div>
        <div className='download-btn'><a href="Eesti keele oppekava A1.docx" download="Eesti keele oppekava A1.docx">
-      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+      <Button style={{backgroundColor:"#3F556B"}}>{t('Selle dokumendi allalaadimine')}</Button>
     </a>
     </div>
     </div> 
