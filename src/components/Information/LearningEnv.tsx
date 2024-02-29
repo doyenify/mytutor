@@ -70,7 +70,7 @@ const LearningEnv = () => {
   </li>
 
   <h4 className='mt-3'>{t('4. Keeltekool kohustub')}</h4>
-  <li>
+  <li className="listing-items">
   {t('4.1. Õpetaja haiguse tõttu või mõnel muul õpetajast tuleneval põhjusel ära jäänud tunnid viiakse läbi tagantjärgi õppijatega eelnevalt kokkulepitult ja nendele sobival ajal.')} 
     
   </li>
@@ -92,7 +92,7 @@ const LearningEnv = () => {
   {t('5.1. Osalema kursustel, millele ta on registreerunud või oma osalust kinnitanud kirjalikult taasesitatavas vormis.')}
    
   </li>
-  <li>
+  <li className="listing-items">
   {t('5.2. Õigeaegselt tasuma õppetasu koolitusfirma poolt väljastatud arve alusel.')}
    
   </li>

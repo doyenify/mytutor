@@ -81,7 +81,7 @@ const EffEduPro = () => {
         <div className='curri-header'>
       <div className="header-title mb-3"><h3>{t('Õppekorralduse ja kvaliteedi tagamise alused')}</h3></div>
        <div className='download-btn' style={{right:"50px"}}><a href="oppekorralduse-ja-kvaliteedi-tagamise-alused.docx" download="oppekorralduse-ja-kvaliteedi-tagamise-alused.docx">
-      <Button style={{backgroundColor:"#3F556B"}}>Selle dokumendi allalaadimine</Button>
+      <Button style={{backgroundColor:"#3F556B"}}>{t('Selle dokumendi allalaadimine')}</Button>
     </a></div>
     </div> 
  
