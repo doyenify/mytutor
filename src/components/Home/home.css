@@ -123,4 +123,7 @@
      .rectangle-overlay{
         display: none;
     }
+    .homepage-left{
+        margin-right: 35px;
+    }
 }
