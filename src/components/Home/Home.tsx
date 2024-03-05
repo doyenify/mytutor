@@ -166,7 +166,7 @@ const Home = () => {
                 <Col className='col-12 col-md-6'>
                 <Row className='home-card'>
                     <Row className='mb-5' ><div><h2>
-                    {t('Tutvu minu kursustega')}
+                    {t('Tutvuge meie kursustega')}
                         </h2></div></Row>
                     <Col className='mb-4'>
                         <Card style={{ width: '18rem' , backgroundColor:"#ECEEF0" }}>
