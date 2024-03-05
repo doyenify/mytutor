@@ -9,6 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from "react";
 import ReactFlagsSelect from "react-flags-select";
+import "./header.css"
 // import Estonianlesson from '../Estonianlesson/Estonianlesson';
 
 const Header = () => {
@@ -91,8 +92,8 @@ const Header = () => {
     <div>
         <Navbar    expand="lg" fixed="top" style={{backgroundColor: "#ffffff"}}>
         <Container fluid>
-        <Navbar.Brand style={{marginLeft: "90px", color: "#985421", fontWeight:"bold", fontSize:"30px", cursor: "pointer"}} 
-         onClick={toHome}> <img className='' src={kelelogo} style={{height:"", width: ""}} alt="russian flag"/></Navbar.Brand>
+        <Navbar.Brand style={{marginLeft: "", color: "#985421", fontWeight:"bold", fontSize:"30px", cursor: "pointer"}} 
+         onClick={toHome}> <img className='kelelogo' src={kelelogo} style={{height:"70px", width: "auto"}} alt="russian flag"/></Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse >
           <Nav

@@ -36,8 +36,8 @@ const Home = () => {
        <div className='hero-container d-flex justify-content-center align-items-center' style={{backgroundColor: "#FBDC6E"}}>
     <Row>
         <Col className='hero-col-1 col-12 col-sm-6 d-flex justify-content-center align-items-center'>
-            <div className='ps-5 pt-5 p5-5'>
-                {/* <div style={{fontSize: "24px"}}>{t('Saame tuttavaks!')}</div> */}
+            <div className='homepage-left ps-5 pt-5 p5-5'>
+               
                 <Button className="mb-2"style={{backgroundColor: "transparent", color: "#000000", borderRadius: "50px", border: "2px solid #3F556B"}}>{t('Keelerõõmud Keeltekool OÜ')}</Button>
                 <h1>
                 {t('Meie interaktiivsed ja kaasavad')}<br />

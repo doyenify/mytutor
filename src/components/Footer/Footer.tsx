@@ -12,7 +12,7 @@ const Footer = () => {
           style={{backgroundColor: "#FEF8E1" , height: "300px" }}
     >
     
-    <img className='mb-3' src={kelelogo} style={{height:"", width: ""}} alt="russian flag"/>
+    <img className='mb-3' src={kelelogo} style={{height:"80px", width: "auto"}} alt="russian flag"/>
      
        {/* <div className='footer-writeup' style={{color: "#050A27"}}>
             <p> <b> {t('A GOOD TEACHER IS LIKE A CANDLE – IT CONSUMES ITSELF TO LIGHT')} <br />
