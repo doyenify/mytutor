@@ -271,7 +271,7 @@ const Home = () => {
           <div  className='text-center mt-5'>
                     <div className='flex '>
              <div>
-           {t('Kui olete huvitatud õppimisest, palun broneerige konsultatsiooni minuga, klõpsates sellel')}
+           {t('Kui olete huvitatud õppimisest, palun broneerige konsultatsioon minuga, klõpsates sellel')}
            </div>
            <div className='swinging-link' onClick={toConsultation} style={{ cursor: 'pointer' }}>{t('Konsultatsioon')}<img className='ms-3'
                                   src={circlearrow} style={{height:"30px", width: "30px"}} 
