@@ -345,7 +345,7 @@ const Curriculum = () => {
       <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
       <p><strong>Õppekava nimetus:</strong> Eesti keele A2-taseme eksamiks ettevalmistamisele suunatud täiendkoolitus</p>
       <p><strong>Õppekavarühm:</strong> Keeleõpe, eesti keel võõrkeelena</p>
-      <p><strong>Õppekava koostamise alus:</strong> Euroopa keeleõppe raamdokument (<a href="https://bit.ly/3SQjqsZ">https://bit.ly/3SQjqsZ</a>)</p>
+      <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
   
       <h4>Õppe maht</h4>
         <p>200 akadeemilist tundi, millest kas 140 või 160 tundi on auditoorset õpet ja vastavalt kas 60 või 80 tundi on iseseisvat tööd.</p>
@@ -629,7 +629,7 @@ const Curriculum = () => {
     <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
     <p><strong>Õppekava nimetus: </strong> Eesti keele B2-tseme eksamiks ettevalmistamisele suunatud täiendkoolitus</p>
     <p><strong>Õppekavarühm: </strong>  Keeleõpe, eesti keel võõrkeelena</p>
-    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
+    <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
 
       <h3>Õppe maht:</h3>
       <p>450 akadeemilist tundi, millest 250 tundi on auditoorset õpet ja vastavalt 150 tundi on iseseisvat tööd.</p>
@@ -946,7 +946,7 @@ const Curriculum = () => {
     <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
     <p><strong>Õppekava nimetus: </strong> Inglise keele A1-taseme täiendkoolitus (moodulid A1.1 ja A1.2)</p>
     <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
-    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+    <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
 
       <h3>Õppe maht ja ülesehitus:</h3>
       <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas, kaks akadeemilist tundi korraga. 
@@ -1086,7 +1086,7 @@ const Curriculum = () => {
     <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
     <p><strong>Õppekava nimetus: </strong> Inglise keele A2-taseme täiendkoolitus (moodulid A2.1 ja A2.2) </p>
     <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
-    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+    <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
 
       <h3>Õppe maht ja ülesehitus:</h3>
       <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. 
@@ -1242,7 +1242,7 @@ const Curriculum = () => {
     <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
     <p><strong>Õppekava nimetus: </strong> Inglise keele A2-taseme täiendkoolitus (moodulid A2.1 ja A2.2) </p>
     <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
-    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+    <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
 
       <h3>Õppe maht ja ülesehitus:</h3>
       <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas, kaks akadeemilist tundi korraga. 
@@ -1370,7 +1370,7 @@ const Curriculum = () => {
     <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
     <p><strong>Õppekava nimetus: </strong> Inglise keele A2-taseme täiendkoolitus (moodulid A2.1 ja A2.2) </p>
     <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
-    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+    <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
 
       <h3>Õppe maht ja ülesehitus:</h3>
       <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas,
@@ -1491,7 +1491,7 @@ const Curriculum = () => {
     <p><strong>Õppeasutuse nimi:</strong> Keelerõõmud Keeltekool OÜ</p>
     <p><strong>Õppekava nimetus: </strong> Inglise keele C1-taseme täiendkoolitus (moodulid C1.1 ja C1.2)</p>
     <p><strong>Õppekavarühm: </strong>  Keeleõpe, inglise keel võõrkeelena </p>
-    <p> <strong> Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument https://bit.ly/3SQjqsZ</a></p>
+    <p><strong>Õppekava koostamise alus:</strong> <a href="https://bit.ly/3SQjqsZ">Euroopa keeleõppe raamdokument</a></p>
 
       <h3>Õppe maht ja ülesehitus:</h3>
       <p>200 akadeemilist tundi, millest 140 tundi on auditoorset õpet ja 60 tundi iseseisvat tööd. Tunnid toimuvad kaks korda nädalas, kaks akadeemilist tundi korraga.

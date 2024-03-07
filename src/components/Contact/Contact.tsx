@@ -59,7 +59,7 @@ const Contact = () => {
               <img src={emailimg}  style={{width:"35px", height: "35px"}} alt="email"/> 
               </div>
               <div className="col-md-11">
-                <h5>{t('E-posti aadress')}</h5><p>keeleroomud.keeltekool@gmail.com
+                <h5>{t('E-posti aadress')}</h5><p>info@keeleroomud.ee
                 </p>
               </div>
             </div>

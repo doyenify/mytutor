@@ -95,15 +95,15 @@ const Header = () => {
         <Navbar.Brand style={{marginLeft: "", color: "#985421", fontWeight:"bold", fontSize:"30px", cursor: "pointer"}} 
          onClick={toHome}> <img className='kelelogo' src={kelelogo} style={{height:"70px", width: "auto"}} alt="russian flag"/></Navbar.Brand>
         <Navbar.Toggle />
-        <Navbar.Collapse >
+        <Navbar.Collapse>
           <Nav
             className="me-auto  my-lg-0 ms-5">
             <Nav.Link  onClick={toHome}
              style={{
               marginLeft: "20px",
               color: "#3F556B", 
-              fontWeight:"",
-              fontSize:"16px"}}
+              fontWeight:"bold",
+              fontSize:"18px"}}
               >
               {t('Avaleht')}
               </Nav.Link>
@@ -112,8 +112,8 @@ const Header = () => {
                 style={{
                   marginLeft: "20px",
                   color: "#3F556B",
-                  fontWeight: "",
-                  fontSize: "16px"
+                  fontWeight: "bold",
+                  fontSize: "18px"
                 }}>
                 <NavDropdown.Item onClick={navigateToEngForAdult}>
                 {t('Inglise keel täiskasvanutele')}
@@ -132,8 +132,8 @@ const Header = () => {
                 style={{
                   marginLeft: "20px",
                   color: "#3F556B",
-                  fontWeight: "",
-                  fontSize: "16px"
+                  fontWeight: "bold",
+                  fontSize: "18px"
                 }}>
                 <NavDropdown.Item onClick={navigateToSchedule}>
                   {t('Ajakava')}

@@ -77,7 +77,7 @@ const Home = () => {
             <Col  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div className='about-content'>
                     <div style={{display:"flex"}} > 
-                        <div > <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Minust')}</Button> </div>
+                        <div> <Button style={{backgroundColor:"#FCE8A1", color: "#CF8353", paddingLeft: "20px", paddingRight: "20px",border: "4px", borderColor:"#FBE081"}}> {t('Minust')}</Button> </div>
                         <a className='ms-5 swinging-link' href="#Whoiteach" style={{ textDecoration: 'none' }}> {t('Keda ma õpetan')}<img className='ms-3' src={circlearrow} style={{height:"30px", width: "30px"}} alt="Tutor"/> </a>
                     </div>
                     <div className='mt-3' style={{maxWidth:"500px"}}>
