@@ -93,7 +93,9 @@ const Header = () => {
         <Navbar    expand="lg" fixed="top" style={{backgroundColor: "#ffffff"}}>
         <Container fluid>
         <Navbar.Brand style={{marginLeft: "", color: "#985421", fontWeight:"bold", fontSize:"30px", cursor: "pointer"}} 
-         onClick={toHome}> <img className='kelelogo' src={kelelogo} style={{height:"70px", width: "auto"}} alt="russian flag"/></Navbar.Brand>
+         onClick={toHome}> <img className='kelelogo' src={kelelogo} style={{height:"70px", width: "auto"}} alt="russian flag"/>
+         {/* <div style={{fontSize: "16px"}}>Registrikood: 16806917</div> */}
+         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav
