@@ -1,24 +1,21 @@
-import { Row, Col, Button, Form } from "react-bootstrap";
-import homeimg from "../../img/homeimg.png";
-import emailimg from "../../img/emailimg.png";
-import phoneimg from "../../img/phoneimg.png";
-import { Formik } from "formik";
-import * as yup from "yup";
+import { Row, Col, Button, Form } from 'react-bootstrap';
+import homeimg from '../../img/homeimg.png';
+import emailimg from '../../img/emailimg.png';
+import phoneimg from '../../img/phoneimg.png';
+import { Formik } from 'formik';
+import * as yup from 'yup';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useTranslation } from "react-i18next";
-import i18n from "../../i18n";
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 const validationSchema = yup.object({
-  name: yup.string().required(i18n.t("Nimi on nõutav")),
-  email: yup
-    .string()
-    .email(i18n.t("Invaliidne e-kiri"))
-    .required(i18n.t("Vajalik on e-posti aadress")),
-  languageLevel: yup.string().required(i18n.t("Nõutav keeletase")),
-  course: yup.string().required(i18n.t("Kursus on nõutav")),
-  lessonType: yup.string().required(i18n.t("Tundide tüüp on nõutav")),
-  courseExpectation: yup.string().required(i18n.t("Sõnum on nõutav")),
+  name: yup.string().required(i18n.t('Nimi on nõutav')),
+  email: yup.string().email(i18n.t('Invaliidne e-kiri')).required(i18n.t('Vajalik on e-posti aadress')),
+  languageLevel: yup.string().required(i18n.t('Nõutav keeletase')),
+  course: yup.string().required(i18n.t('Kursus on nõutav')),
+  // lessonType: yup.string().required(i18n.t('Tundide tüüp on nõutav')),
+  // courseExpectation: yup.string().required(i18n.t('Sõnum on nõutav')),
 });
 
 const Contact = () => {
@@ -27,77 +24,60 @@ const Contact = () => {
   return (
     <div style={{ width: "100%", overflowX: "hidden", overflowY: "hidden" }}>
       {/* banner  */}
-      <div
-        className="text-center mt-5 d-flex justify-content-center align-items-center"
-        style={{ backgroundColor: "#E2E5E9", height: "200px" }}
-      >
-        <h1 className="">{t("Võta meiega ühendust")}</h1>
+      <div className='text-center mt-5 d-flex justify-content-center align-items-center'
+        style={{ backgroundColor: "#E2E5E9", height: "200px" }}>
+        <h1 className="" >{t('Võta meiega ühendust')}</h1>
       </div>
       {/* contact details */}
       <div>
-        <Row className="mt-5">
+        <Row className='mt-5'>
           {/* <Row className='ms-4 mt-5' ><h3>Get in Touch With Us</h3></Row> */}
-          <Col className="ms-5 mt-1 ">
-            <div className="mt-3">
+          <Col className='ms-5 mt-1 '>
+            <div className='mt-3' >
               <div className="row">
                 <div className="col-md-1">
-                  <img
-                    src={homeimg}
-                    style={{ width: "35px", height: "35px" }}
-                    alt="home"
-                  />
+                  <img src={homeimg} style={{ width: "35px", height: "35px" }} alt="home" />
                 </div>
                 <div className="col-md-11">
-                  <h5>{t("Aadress")}</h5>{" "}
-                  <p>Kangelaste 36,Narva linn, Ida-Viru maakond, 20608</p>
-                </div>
-                <iframe
-                  title="address"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.6397950427397!2d28.168379976437475!3d59.38903760624067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469437e349fb01e3%3A0x6ab52b0bc5a9168!2sKangelaste%20prospekt%2036%2C%2020608%20Narva%2C%20Estonia!5e0!3m2!1sen!2sng!4v1706014835873!5m2!1sen!2sng"
+                  <h5>{t('Aadress')}</h5> <p>Kangelaste 36,Narva linn,
+                    Ida-Viru maakond, 20608
+                  </p></div>
+                <iframe title="address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.6397950427397!2d28.168379976437475!3d59.38903760624067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469437e349fb01e3%3A0x6ab52b0bc5a9168!2sKangelaste%20prospekt%2036%2C%2020608%20Narva%2C%20Estonia!5e0!3m2!1sen!2sng!4v1706014835873!5m2!1sen!2sng"
                   width="400"
                   height="350"
                   style={{ border: "0" }}
                   loading="lazy"
-                ></iframe>
+                >
+                </iframe>
               </div>
             </div>
 
-            <div className="mt-3">
+            <div className='mt-3'>
               <div className="row">
                 <div className="col-md-1">
-                  <img
-                    src={emailimg}
-                    style={{ width: "35px", height: "35px" }}
-                    alt="email"
-                  />
+                  <img src={emailimg} style={{ width: "35px", height: "35px" }} alt="email" />
                 </div>
                 <div className="col-md-11">
-                  <h5>{t("E-posti aadress")}</h5>
-                  <p>info@keeleroomud.ee</p>
+                  <h5>{t('E-posti aadress')}</h5><p>info@keeleroomud.ee
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="mt-3">
+            <div className='mt-3'>
               <div className="row">
                 <div className="col-md-1">
-                  <img
-                    src={phoneimg}
-                    style={{ width: "35px", height: "35px" }}
-                    alt="phone"
-                  />
+                  <img src={phoneimg} style={{ width: "35px", height: "35px" }} alt="phone" />
                 </div>
                 <div className="col-md-11">
-                  <h5>{t("Telefoninumber")}</h5> <p>+37255687860</p>
+                  <h5>{t('Telefoninumber')}</h5> <p>+37255687860</p>
                 </div>
               </div>
             </div>
-            <div className="mt-3">
-            </div>
+           
           </Col>
           {/* form column */}
-          <Col className=" d-flex justify-content-center align-items-center">
-            <div
-              className="me-5"
+          <Col className=' d-flex justify-content-center align-items-center'>
+            <div className='me-5'
               style={{
                 marginLeft: "30px",
                 backgroundColor: "#E2E5E9",
@@ -113,8 +93,10 @@ const Contact = () => {
                   email: "",
                   course: "",
                   languageLevel: "",
-                  lessonType: "",
-                  courseExpectation: "",
+                  // lessonType: "",
+                  // courseExpectation: "",
+
+
                 }}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                   const apiKey = process.env.REACT_APP_BREVO_API_KEY;
@@ -124,84 +106,19 @@ const Contact = () => {
                     return;
                   }
 
-                  // const bodytouser = JSON.stringify({
-                  //   "sender":{
-                  //     "name":"Language Website",
-                  //     "email":"olagbemiifeoluwa@gmail.com"
-                  //   },
-                  //   "to":[
-                  //     {
-                  //       "email": values.email,
-                  //     }
-                  //   ],
-                  //   "subject":"Confirmation: Registration for {{params.webinartopic}} on {{params.webinarDate}}",
-                  //   "htmlContent":`<html><head>
-                  //     <style>
-                  //         body {
-                  //             background-color:#696969;
-                  //         }
-                  //         .imgtag{
-                  //             justify-content: center;
-                  //             align-items: center;
-                  //             margin-left: 45%;
-                  //         }
-                  //         .welcome {
-                  //             text-align: center;
-                  //             color: #696969;
-                  //         }
-                  //         .content {
-                  //             background-color: #ffffff;
-                  //             margin: 15px;
-                  //             padding: 20px;
-                  //         }
-                  //     </style>
-                  // </head>
-                  // <body>
-                  //     <div class="imgtag">
-                  //         <img src="https://academy.doyenify.com/images/doyenifyAcademy.png" alt="img" />
-                  //     </div>
-                  //     <div class="content">
-                  //         <p>Dear ${values.name},</p>
-                  //         <p style="margin-bottom: 10px">Thank you for consulting for our language, "${values.course},"
-                  //         </p>
-
-                  //         <p style="margin-bottom: 5px">Here are the details of what you filled:</p>
-
-                  //         <h5 style="margin-bottom: 5px"><strong>Event Details:</strong></h5>
-                  //         <h5><strong>Name:</strong> <span style="margin-left: 7px;">${values.name}</span></h5>
-                  //         <h5><strong>Email: </strong> <span style="margin-left: 7px;">${values.email}</span></h5>
-                  //         <h5><strong>Course: </strong> <span style="margin-left: 7px;">${values.course}</span></h5>
-                  //         <h5><strong>Language Level: </strong> <span style="margin-left: 7px;">${values.languageLevel}</span></h5>
-                  //         <h5><strong>Course Expectation: </strong> <span style="margin-left: 7px;">${values.courseExpectation}</span></h5>
-
-                  //         <p>To ensure a seamless experience, please take note of the following recommendations:</p>
-
-                  //         <p>Langauage website</p>
-                  //     </div>
-                  // </body>
-                  // </html>`,
-                  //   "params": {
-                  //     "name": values.name,
-                  //     "email": values.email,
-                  //     "course": values.course,
-                  //     "languageLevel": values.languageLevel,
-                  //     "courseExpectation": values.courseExpectation
-
-                  //   }
-                  // });
-
+            
                   const bodyToDoyen = {
                     sender: {
                       name: "KEELERÕÕMUD LANGUAGE WEBSITE",
-                      email: values.email,
+                      email: values.email
                     },
                     to: [
                       {
-                        email: "info@keeleroomud.ee",
+                        email: "info@keeleroomud.ee"
                       },
                       {
-                        email: values.email,
-                      },
+                        email: values.email
+                      }
                     ],
                     subject: `KEELERÕÕMUD Contact Page '${values.course}'`,
                     htmlContent: `<html><head></head><body>
@@ -210,43 +127,41 @@ const Contact = () => {
                                       <p>Email: ${values.email}</p>
                                       <p>Course: ${values.course}</p>
                                       <p>Language Level: ${values.languageLevel}</p>
-                                      <p>Lesson Type: ${values.lessonType}</p>
-                                      <p>Course Expectation: ${values.courseExpectation}</p>
+                                     
                                   </body></html>`,
                   };
+                  //  <p>Lesson Type: ${values.lessonType}</p>
+                  //                     <p>Course Expectation: ${values.courseExpectation}</p>
+
 
                   fetch("https://api.brevo.com/v3/smtp/email", {
                     method: "POST",
                     headers: {
                       accept: "application/json",
                       "api-key": apiKey,
-                      "content-type": "application/json",
+                      "content-type": "application/json"
                     },
-                    body: JSON.stringify(bodyToDoyen),
+                    body: JSON.stringify(bodyToDoyen)
                   })
-                    .then((response) => {
+                    .then(response => {
                       if (!response.ok) {
-                        throw new Error(
-                          `HTTP error! Status: ${response.status}`
-                        );
+                        throw new Error(`HTTP error! Status: ${response.status}`);
                       }
 
-                      console.log("logging in", response);
+                      console.log('logging in', response);
                       setSubmitting(false);
                       resetForm();
                       resetForm();
-                      toast.success(
-                        "We have received your Message, We will get back to you shortly"
-                      );
+                      toast.success('We have received your Message, We will get back to you shortly');
                     })
-                    .catch((error) => {
-                      console.error("error submitting form", error);
+                    .catch(error => {
+                      console.error('error submitting form', error);
                       setSubmitting(false);
-                      toast.error(
-                        "Sorry we could not receive your Message. Please check your connection and try again"
-                      );
+                      toast.error("Sorry we could not receive your Message. Please check your connection and try again");
                     });
                 }}
+
+
                 validationSchema={validationSchema}
               >
                 {({
@@ -268,7 +183,7 @@ const Contact = () => {
                         controlId="validationCustom01"
                       >
                         <Form.Label className="input-label">
-                          {t("Nimi")}
+                          {t('Nimi')}
                         </Form.Label>
                         <Form.Control
                           className="contact-input"
@@ -289,7 +204,7 @@ const Contact = () => {
                         controlId="validationCustom01"
                       >
                         <Form.Label className="input-label">
-                          {t("E-posti aadress")}
+                          {t('E-posti aadress')}
                         </Form.Label>
                         <Form.Control
                           className="contact-input"
@@ -306,10 +221,10 @@ const Contact = () => {
                       </Form.Group>
                     </div>
                     <div className="col-12">
+
+
                       <Form.Group className="mb-3" controlId="languageLevel">
-                        <Form.Label className="input-label">
-                          {t("Kursus")}
-                        </Form.Label>
+                        <Form.Label className="input-label">{t('Kursus')}</Form.Label>
                         <Form.Control
                           className="contact-input"
                           as="select"
@@ -319,23 +234,12 @@ const Contact = () => {
                           onBlur={handleBlur}
                           isInvalid={!!errors.course}
                         >
-                          <option value="" disabled>
-                            {" "}
-                            {t("Valige kursus")}
-                          </option>
-                          <option value="English for adult">
-                            English for adult{" "}
-                          </option>
-                          <option value="English for school">
-                            English for school
-                          </option>
-                          <option value="Estonian for adult">
-                            Estonian for adult
-                          </option>
-                          <option value="Estonian for school">
-                            Estonian for school
-                          </option>
-                          <option value="Make enquiry<">Make enquiry</option>
+                          <option value="" disabled> {t('Valige kursus')}</option>
+                          <option value="English for adult"> {t('Inglise keel täiskasvanutele')}</option>
+                          <option value="English for school">{t('Inglise keel kooliõpilastele')}</option>
+                          <option value="Estonian for adult">{t('Eesti keel täiskasvanutele')}</option>
+                          <option value="Estonian for school">{t('Eesti keel kooliõpilastele')}</option>
+                          <option value="Make enquiry">{t('Tehke päringut')}</option>
                         </Form.Control>
                         <Form.Control.Feedback type="invalid">
                           {errors.languageLevel}
@@ -343,9 +247,7 @@ const Contact = () => {
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="languageLevel">
-                        <Form.Label className="input-label">
-                          {t("Keeletase")}
-                        </Form.Label>
+                        <Form.Label className="input-label">{t('Keeletase')}</Form.Label>
                         <Form.Control
                           className="contact-input"
                           as="select"
@@ -355,10 +257,7 @@ const Contact = () => {
                           onBlur={handleBlur}
                           isInvalid={!!errors.languageLevel}
                         >
-                          <option value="" disabled>
-                            {" "}
-                            {t("Vali keeletase")}
-                          </option>
+                          <option value="" disabled> {t('Vali keeletase')}</option>
                           <option value="A1">A1</option>
                           <option value="A2">A2</option>
                           <option value="B1">B1</option>
@@ -369,6 +268,39 @@ const Contact = () => {
                           {errors.languageLevel}
                         </Form.Control.Feedback>
                       </Form.Group>
+
+                      {/* <Form.Group className="mb-3" controlId="lessonType">
+                        <Form.Label className="input-label">{t('Tunni tüüp')}</Form.Label>
+                        <Form.Control
+                          className="contact-input"
+                          type="text"
+                          name="lessonType"
+                          value={values.lessonType}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          isInvalid={!!errors.lessonType}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.lessonType}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="validationCustom01">
+                        <Form.Label className="input-label">{t('Kursuse ootus')}</Form.Label>
+                        <Form.Control
+                          className="contact-input"
+                          as="textarea"  // Change this line
+                          placeholder=""
+                          rows={3}
+                          name="courseExpectation"
+                          value={values.courseExpectation}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          isInvalid={!!errors.courseExpectation}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.courseExpectation}
+                        </Form.Control.Feedback>
+                      </Form.Group> */}
                     </div>
                     <Button
                       className=" col-2 send-btn submit"
@@ -378,23 +310,24 @@ const Contact = () => {
                         marginTop: "10px",
                         borderRadius: "50px",
                         color: "#3F556B",
-                        width: "150px",
+                        width: "150px"
                       }}
                       disabled={isSubmitting}
                       type="submit"
                     >
-                      {t("Esita")}
+                      {t('Esita')}
                     </Button>
                     <ToastContainer />
                   </Form>
                 )}
               </Formik>
+
             </div>
           </Col>
         </Row>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

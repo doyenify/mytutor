@@ -14,9 +14,21 @@
     "Taotlus": "Taotlus",
     "Avaleht": "Home",
     
- 
+   "Valige keeletase": "Select language level",
+   "Valige kursus":  "Select course",
+   "Inglise keel täiskasvanutele": "English for adult",
+   "Inglise keel kooliõpilastele": "English for school",
+   "Eesti keel täiskasvanutele": "Estonian for adult",
+   "Eesti keel kooliõpilastele": "Estonian for school",
+   "Tehke päringut": "Make enquiry",
     
-  
+
+
+
+
+
+
+
     "Saame tuttavaks!": "Lets get acquainted!",
     "Natalia Komarova": "Natalia Komarova",
     "Asutaja ja koolitaja": "CEO and language instructor",
@@ -53,10 +65,7 @@
     "INGLISE KEEL KOOLIÕPILASTELE":  "ENGLISH FOR SCHOOL STUDENTS",
     "EESTI KEEL TÄISKASVANUTELE":  "ESTONIAN FOR ADULTS",
     "EESTI KEEL KOOLIÕPILASTELE": "ESTONIAN FOR SCHOOL STUDENTS",
-    "Inglise keel täiskasvanutele": "English For Adults",
-    "Inglise keel kooliõpilastele": "English For School Students",
-    "Eesti keel täiskasvanutele":"Estonian For Adults",
-    "Eesti keel kooliõpilastele": "Estonian For School Students",
+   
     "Kui olete huvitatud õppimisest, palun broneerige konsultatsioon minuga, klõpsates": "If you are interested in learning, you can please book a consultation with me by clicking this.",
     "et hinnata oma oskusi ja saada nõuetekohast juhendamist.": "to be able to assess your skills and for proper mentorship.",
     "Ootan kõiki huvilisi sõltumata vanusest õppima võõrkeeli rõõmuga, avastama keelte ilu,": "I welcome all enthusiasts, regardless of age, to joyfully learn foreign languages, explore their beauty,",
@@ -91,7 +100,7 @@
    "Kursus on nõutav": "Course is required",
    "Tundide tüüp on nõutav":"Lesson Type is required",
    "Sõnum on nõutav": "Message is required",
-   "Valige kursus": "Select course",
+
    "Vali keeletase": "Select Language Level",
    "Meie interaktiivsed ja kaasavad": "Our interactive and engaging",
    "õppetunnid muudavad õppimise lõbusaks ja nauditavaks": "lessons make learning fun and enjoyable",
