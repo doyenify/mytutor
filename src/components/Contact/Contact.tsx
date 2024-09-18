@@ -101,14 +101,14 @@ const Contact = () => {
                 }}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                   const apiKey = process.env.REACT_APP_BREVO_API_KEY;
+                  console.log (apiKey, "Api key" )
+                  console.log (values, "values" )
 
                   if (!apiKey) {
-                    console.log (apiKey, "Api key" )
                     console.error("Brevo API key is not defined.");
                     return;
                   }
 
-            
                   const bodyToDoyen = {
                     sender: {
                       name: "KEELERÕÕMUD LANGUAGE WEBSITE",
