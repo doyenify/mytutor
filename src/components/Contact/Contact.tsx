@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
+import { Console, log } from 'console';
 
 const validationSchema = yup.object({
   name: yup.string().required(i18n.t('Nimi on nõutav')),
@@ -102,6 +103,7 @@ const Contact = () => {
                   const apiKey = process.env.REACT_APP_BREVO_API_KEY;
 
                   if (!apiKey) {
+                    console.log (apiKey, "Api key" )
                     console.error("Brevo API key is not defined.");
                     return;
                   }
@@ -114,7 +116,7 @@ const Contact = () => {
                     },
                     to: [
                       {
-                        email: "info@keeleroomud.ee"
+                        email: "olagbemiifeoluwa@gmail.com"
                       },
                       {
                         email: values.email
