@@ -101,8 +101,6 @@ const Contact = () => {
                 }}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                   const apiKey = process.env.REACT_APP_BREVO_API_KEY;
-                  console.log (apiKey, "Api key" )
-                  console.log (values, "values" )
 
                   if (!apiKey) {
                     console.error("Brevo API key is not defined.");
@@ -116,7 +114,7 @@ const Contact = () => {
                     },
                     to: [
                       {
-                        email: "olagbemiifeoluwa@gmail.com"
+                        email: "info@keeleroomud.ee"
                       },
                       {
                         email: values.email
