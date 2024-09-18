@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
-import { Console, log } from 'console';
+
 
 const validationSchema = yup.object({
   name: yup.string().required(i18n.t('Nimi on nõutav')),
