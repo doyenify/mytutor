@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const {t} = useTranslation();
+  const date = new Date();
+  const year = date.getFullYear();
 
   return (
     <div  className='footer-container text-center mt-5 d-flex flex-column align-items-center justify-content-center' 
@@ -33,7 +35,7 @@ const Footer = () => {
         <a href="https://www.instagram.com" className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer"><Instagram className="footer-link" /> </a>
         <a href={window.location.href} className="mx-3" style={{color: "#050A27", fontSize: "25px", textDecoration: "none"}} target="_blank" rel="noopener noreferrer" ><Youtube className="footer-link" /> </a>
         </div>
-        <div className='mt-3'> <img  className="me-1" src={copyright} width="14px" alt="auto" /> {t(' 2024 Keelerõõmud Keeltekool OÜ')} 
+        <div className='mt-3'> <img  className="me-1" src={copyright} width="14px" alt="auto" /> {year} {t('Keelerõõmud Keeltekool OÜ')} 
          </div>
          <div className='mt-1'>
        {t('välja töötatud')} {'\n'}
