@@ -110,7 +110,7 @@ const Contact = () => {
                   const bodyToDoyen = {
                     sender: {
                       name: "KEELERÕÕMUD LANGUAGE WEBSITE",
-                      email: values.email
+                      email: "info@doyenify.com"
                     },
                     to: [
                       {
@@ -148,14 +148,14 @@ const Contact = () => {
                         throw new Error(`HTTP error! Status: ${response.status}`);
                       }
 
-                      console.log('logging in', response);
+                      // console.log('logging in', response);
                       setSubmitting(false);
                       resetForm();
                       resetForm();
                       toast.success('We have received your Message, We will get back to you shortly');
                     })
                     .catch(error => {
-                      console.error('error submitting form', error);
+                      // console.error('error submitting form', error);
                       setSubmitting(false);
                       toast.error("Sorry we could not receive your Message. Please check your connection and try again");
                     });
