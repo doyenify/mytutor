@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
+import axios from "axios";
 
 
 const validationSchema = yup.object({
@@ -99,22 +100,16 @@ const Contact = () => {
 
 
                 }}
-                onSubmit={(values, { setSubmitting, resetForm }) => {
-                  const apiKey = process.env.REACT_APP_BREVO_API_KEY;
-
-                  if (!apiKey) {
-                    console.error("Brevo API key is not defined.");
-                    return;
-                  }
+                onSubmit={async(values, { setSubmitting, resetForm }) => {
 
                   const bodyToDoyen = {
                     sender: {
                       name: "KEELERÕÕMUD LANGUAGE WEBSITE",
-                      email: "info@doyenify.com"
+                      email: process.env.REACT_APP_SENDER_EMAIL
                     },
                     to: [
                       {
-                        email: "info@keeleroomud.ee"
+                        email: process.env.REACT_APP_SENDER_EMAIL
                       },
                       {
                         email: values.email
@@ -133,32 +128,41 @@ const Contact = () => {
                   //  <p>Lesson Type: ${values.lessonType}</p>
                   //                     <p>Course Expectation: ${values.courseExpectation}</p>
 
+                  try{
+                    const response = await fetch("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=" +
+                      process.env.REACT_APP_SERVICE_KEY, {
+                      method: "post",
+                      body: JSON.stringify({
+                        email: process.env.REACT_APP_SERVICE_EMAIL,
+                        password: process.env.REACT_APP_SERVICE_PASSWORD,
+                        returnSecureToken: true,
+                      }),
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                    });
 
-                  fetch("https://api.brevo.com/v3/smtp/email", {
-                    method: "POST",
-                    headers: {
-                      accept: "application/json",
-                      "api-key": apiKey,
-                      "content-type": "application/json"
-                    },
-                    body: JSON.stringify(bodyToDoyen)
-                  })
-                    .then(response => {
-                      if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    const userToken = await response.json();
+                    await axios
+                    .post(String(process.env.REACT_APP_SERVICE_APP_URL), bodyToDoyen, {
+                        headers: { Authorization: `Bearer ${userToken.idToken}` },
                       }
-
-                      // console.log('logging in', response);
+                    )
+                    .then(() => {
                       setSubmitting(false);
                       resetForm();
                       resetForm();
                       toast.success('We have received your Message, We will get back to you shortly');
                     })
-                    .catch(error => {
-                      // console.error('error submitting form', error);
+                    .catch(() => {
                       setSubmitting(false);
                       toast.error("Sorry we could not receive your Message. Please check your connection and try again");
                     });
+                  } catch (e) {
+                    console.log("(catch) an error occurred")
+                        
+                  }
+                  
                 }}
 
 
